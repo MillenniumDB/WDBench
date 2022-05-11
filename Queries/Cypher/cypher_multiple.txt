@@ -1,0 +1,681 @@
+1,MATCH (:Entity {id:"Q8337"})-[:P50]->(x1),(:Entity {id:"Q8337"})-[:P674]->(x2) RETURN x1.id,x2.id
+2,MATCH (:Entity {id:"Q896916"})-[:P31]->(x1),(:Entity {id:"Q896916"})-[:P31]->(x2) RETURN x1.id,x2.id
+3,MATCH (x1)-[:P1010]->(x2),(x1)-[:P18]->(x3) RETURN x1.id,x2.id,x3.id
+4,MATCH (x1)-[:P1010]->(x2),(x3)-[:P18]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+5,MATCH (x1)-[:P1015]->(x2),(x3)-[:P131]->(:Entity {id:"Q585"}) RETURN x1.id,x2.id,x3.id
+6,MATCH (x1)-[:P1015]->(x2),(x3)-[:P937]->(:Entity {id:"Q6602"}) RETURN x1.id,x2.id,x3.id
+7,MATCH (x1)-[:P101]->(:Entity {id:"Q639669"}),(x2)-[:P136]->(x3) RETURN x1.id,x2.id,x3.id
+8,MATCH (x1)-[:P102]->(x2),(x1)-[:P19]->(x3),(x4)-[:P27]->(:Entity {id:"Q30"}),(x1)-[:P27]->(:Entity {id:"Q30"}) RETURN x4.id,x1.id,x2.id,x3.id
+9,MATCH (x1)-[:P103]->(:Entity {id:"Q150"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id,x2.id
+10,MATCH (x1)-[:P105]->(:Entity {id:"Q7432"}),(x1)-[:P141]->(:Entity {id:"Q219127"}) RETURN x1.id
+11,MATCH (x1)-[:P105]->(:Entity {id:"Q7432"}),(x1)-[:P141]->(:Entity {id:"Q239509"}) RETURN x1.id
+12,MATCH (x1)-[:P105]->(:Entity {id:"Q7432"}),(x1)-[:P141]->(:Entity {id:"Q278113"}) RETURN x1.id
+13,MATCH (x1)-[:P105]->(:Entity {id:"Q7432"}),(x1)-[:P1843]->(x2),(x1)-[:P627]->(x3) RETURN x1.id,x2.id,x3.id
+14,MATCH (x1)-[:P105]->(:Entity {id:"Q7432"}),(x1)-[:P225]->(x2) RETURN x1.id,x2.id
+15,MATCH (x1)-[:P105]->(:Entity {id:"Q7432"}),(x1)-[:P225]->(x2),(x1)-[:P627]->(x3) RETURN x1.id,x2.id,x3.id
+16,MATCH (x1)-[:P105]->(:Entity {id:"Q7432"}),(x2)-[:P171]->(x3),(x2)-[:P1843]->(x4),(x2)-[:P225]->(x5),(x1)-[:P31]->(:Entity {id:"Q16521"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+17,MATCH (x1)-[:P105]->(x2),(x3)-[:P105]->(x4),(x1)-[:P171]->(x3),(x1)-[:P31]->(:Entity {id:"Q16521"}),(x3)-[:P31]->(:Entity {id:"Q16521"}),(x4)-[:P361]->(x2) RETURN x4.id,x1.id,x2.id,x3.id
+18,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(:Entity {id:"Q220"})-[:P625]->(x2) RETURN x1.id,x2.id
+19,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x1)-[:P19]->(:Entity {id:"Q727"}),(x1)-[:P570]->(x2),(x3)-[:P800]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+20,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x1)-[:P19]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+21,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x1)-[:P937]->(x2),(:Entity {id:"Q2044"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+22,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x1)-[:P937]->(x2),(:Entity {id:"Q220"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+23,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x2)-[:P106]->(:Entity {id:"Q1028181"}),(x1)-[:P22]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+24,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x2)-[:P106]->(:Entity {id:"Q1028181"}),(x3)-[:P106]->(:Entity {id:"Q1028181"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+25,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x2)-[:P106]->(:Entity {id:"Q1028181"}),(x3)-[:P22]->(x2) RETURN x1.id,x2.id,x3.id
+26,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x2)-[:P17]->(:Entity {id:"Q38"}),(x1)-[:P19]->(x2),(:Entity {id:"Q220"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+27,MATCH (x1)-[:P106]->(:Entity {id:"Q1028181"}),(x2)-[:P625]->(x3),(x1)-[:P937]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+28,MATCH (x1)-[:P106]->(:Entity {id:"Q10297252"}),(x2)-[:P50]->(x3) RETURN x1.id,x2.id,x3.id
+29,MATCH (x1)-[:P106]->(:Entity {id:"Q10873124"}),(x1)-[:P1087]->(x2),(x1)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+30,MATCH (x1)-[:P106]->(:Entity {id:"Q11063"}),(x1)-[:P140]->(:Entity {id:"Q432"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+31,MATCH (x1)-[:P106]->(:Entity {id:"Q11303721"}),(x2)-[:P19]->(:Entity {id:"Q727"}) RETURN x1.id,x2.id
+32,MATCH (x1)-[:P106]->(:Entity {id:"Q1186921"}),(x2)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id
+33,MATCH (x1)-[:P106]->(:Entity {id:"Q12299841"}),(x2)-[:P166]->(x3),(x1)-[:P166]->(:Entity {id:"Q3569447"}) RETURN x1.id,x2.id,x3.id
+34,MATCH (x1)-[:P106]->(:Entity {id:"Q12299841"}),(x2)-[:P166]->(x3),(x1)-[:P166]->(:Entity {id:"Q671622"}) RETURN x1.id,x2.id,x3.id
+35,MATCH (x1)-[:P106]->(:Entity {id:"Q12299841"}),(x2)-[:P17]->(x3),(x1)-[:P19]->(x2),(x4)-[:P569]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+36,MATCH (x1)-[:P106]->(:Entity {id:"Q13382576"}),(x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+37,MATCH (x1)-[:P106]->(:Entity {id:"Q13382576"}),(x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P27]->(:Entity {id:"Q29"}),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+38,MATCH (x1)-[:P106]->(:Entity {id:"Q13382576"}),(x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P27]->(:Entity {id:"Q29"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+39,MATCH (x1)-[:P106]->(:Entity {id:"Q13382576"}),(x1)-[:P19]->(x2),(x1)-[:P27]->(:Entity {id:"Q29"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+40,MATCH (x1)-[:P106]->(:Entity {id:"Q13382576"}),(x1)-[:P19]->(x2),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+41,MATCH (x1)-[:P106]->(:Entity {id:"Q15981151"}),(x1)-[:P19]->(x2),(x1)-[:P20]->(:Entity {id:"Q61"}),(x1)-[:P570]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+42,MATCH (x1)-[:P106]->(:Entity {id:"Q1622272"}),(x1)-[:P108]->(:Entity {id:"Q214341"}),(x1)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id
+43,MATCH (x1)-[:P106]->(:Entity {id:"Q1622272"}),(x1)-[:P108]->(:Entity {id:"Q685557"}),(x1)-[:P19]->(x2),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+44,MATCH (x1)-[:P106]->(:Entity {id:"Q169470"}),(x1)-[:P1412]->(:Entity {id:"Q1860"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+45,MATCH (x1)-[:P106]->(:Entity {id:"Q169470"}),(x1)-[:P1412]->(:Entity {id:"Q1860"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+46,MATCH (x1)-[:P106]->(:Entity {id:"Q169470"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581097"}) RETURN x1.id,x2.id,x3.id
+47,MATCH (x1)-[:P106]->(:Entity {id:"Q169470"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+48,MATCH (x1)-[:P106]->(:Entity {id:"Q170790"}),(x2)-[:P21]->(x3),(x1)-[:P569]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+49,MATCH (x1)-[:P106]->(:Entity {id:"Q170790"}),(x2)-[:P27]->(:Entity {id:"Q142"}) RETURN x1.id,x2.id
+50,MATCH (x1)-[:P106]->(:Entity {id:"Q170790"}),(x2)-[:P27]->(:Entity {id:"Q70972"}) RETURN x1.id,x2.id
+51,MATCH (x1)-[:P106]->(:Entity {id:"Q170790"}),(x2)-[:P495]->(:Entity {id:"Q159"}) RETURN x1.id,x2.id
+52,MATCH (x1)-[:P106]->(:Entity {id:"Q177220"}),(x1)-[:P136]->(:Entity {id:"Q187760"}),(x1)-[:P735]->(x2) RETURN x1.id,x2.id
+53,MATCH (x1)-[:P106]->(:Entity {id:"Q182436"}),(x1)-[:P19]->(:Entity {id:"Q1486"}),(x1)-[:P569]->(x2),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+54,MATCH (x1)-[:P106]->(:Entity {id:"Q188094"}),(x1)-[:P27]->(:Entity {id:"Q155"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+55,MATCH (x1)-[:P106]->(:Entity {id:"Q188094"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P27]->(:Entity {id:"Q155"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+56,MATCH (x1)-[:P106]->(:Entity {id:"Q188094"}),(x2)-[:P27]->(:Entity {id:"Q155"}),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+57,MATCH (x1)-[:P106]->(:Entity {id:"Q188094"}),(x2)-[:P27]->(:Entity {id:"Q414"}),(x2)-[:P27]->(:Entity {id:"Q45"}),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+58,MATCH (x1)-[:P106]->(:Entity {id:"Q188094"}),(x2)-[:P27]->(:Entity {id:"Q414"}),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+59,MATCH (x1)-[:P106]->(:Entity {id:"Q18844224"}),(x2)-[:P106]->(:Entity {id:"Q81096"}),(x2)-[:P19]->(x3),(x2)-[:P20]->(x4),(x2)-[:P569]->(x5),(x2)-[:P570]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+60,MATCH (x1)-[:P106]->(:Entity {id:"Q18844224"}),(x2)-[:P19]->(x3),(x2)-[:P20]->(x4),(x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P569]->(x5),(x2)-[:P570]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+61,MATCH (x1)-[:P106]->(:Entity {id:"Q19507792"}),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+62,MATCH (x1)-[:P106]->(:Entity {id:"Q2066131"}),(x2)-[:P19]->(:Entity {id:"Q727"}) RETURN x1.id,x2.id
+63,MATCH (x1)-[:P106]->(:Entity {id:"Q2066131"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+64,MATCH (x1)-[:P106]->(:Entity {id:"Q2306091"}),(x1)-[:P19]->(x2),(x1)-[:P569]->(x3),(x1)-[:P570]->(x4),(x5)-[:P625]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+65,MATCH (x1)-[:P106]->(:Entity {id:"Q2306091"}),(x1)-[:P19]->(x2),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+66,MATCH (x1)-[:P106]->(:Entity {id:"Q2526255"}),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P31]->(:Entity {id:"Q11424"}),(x2)-[:P57]->(x3) RETURN x1.id,x2.id,x3.id
+67,MATCH (x1)-[:P106]->(:Entity {id:"Q2526255"}),(x2)-[:P577]->(x3) RETURN x1.id,x2.id,x3.id
+68,MATCH (x1)-[:P106]->(:Entity {id:"Q27349"}),(x1)-[:P106]->(:Entity {id:"Q36180"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+69,MATCH (x1)-[:P106]->(:Entity {id:"Q27349"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+70,MATCH (x1)-[:P106]->(:Entity {id:"Q28389"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+71,MATCH (x1)-[:P106]->(:Entity {id:"Q3282637"}),(x1)-[:P106]->(:Entity {id:"Q4610556"}),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id
+72,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x1)-[:P1412]->(:Entity {id:"Q1568"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+73,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x1)-[:P1412]->(:Entity {id:"Q1860"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+74,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+75,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x1)-[:P21]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P31]->(:Entity {id:"Q618779"}),(x1)-[:P569]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+76,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+77,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P345]->(x2),(x1)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+78,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P166]->(x3),(x1)-[:P21]->(x4),(x1)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P31]->(:Entity {id:"Q618779"}),(x1)-[:P569]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+79,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P18]->(x3) RETURN x1.id,x2.id,x3.id
+80,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id,x2.id,x3.id
+81,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+82,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q948"}) RETURN x1.id,x2.id
+83,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q948"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+84,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+85,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id
+86,MATCH (x1)-[:P106]->(:Entity {id:"Q33999"}),(x2)-[:P31]->(:Entity {id:"Q3863"}) RETURN x1.id,x2.id
+87,MATCH (x1)-[:P106]->(:Entity {id:"Q36180"}),(x2)-[:P136]->(:Entity {id:"Q24925"}) RETURN x1.id,x2.id
+88,MATCH (x1)-[:P106]->(:Entity {id:"Q36180"}),(x2)-[:P1412]->(:Entity {id:"Q1321"}) RETURN x1.id,x2.id
+89,MATCH (x1)-[:P106]->(:Entity {id:"Q36180"}),(x2)-[:P1412]->(:Entity {id:"Q1321"}),(x3)-[:P27]->(:Entity {id:"Q29"}) RETURN x1.id,x2.id,x3.id
+90,MATCH (x1)-[:P106]->(:Entity {id:"Q36180"}),(x2)-[:P1412]->(:Entity {id:"Q150"}),(x3)-[:P27]->(:Entity {id:"Q29"}) RETURN x1.id,x2.id,x3.id
+91,MATCH (x1)-[:P106]->(:Entity {id:"Q36180"}),(x2)-[:P19]->(x3),(x1)-[:P27]->(:Entity {id:"Q159"}) RETURN x1.id,x2.id,x3.id
+92,MATCH (x1)-[:P106]->(:Entity {id:"Q36834"}),(x1)-[:P106]->(:Entity {id:"Q486748"}),(x1)-[:P22]->(:Entity {id:"Q1339"}),(x1)-[:P25]->(:Entity {id:"Q57487"}) RETURN x1.id
+93,MATCH (x1)-[:P106]->(:Entity {id:"Q36834"}),(x1)-[:P19]->(:Entity {id:"Q183"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id,x2.id
+94,MATCH (x1)-[:P106]->(:Entity {id:"Q372436"}),(x2)-[:P27]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+95,MATCH (x1)-[:P106]->(:Entity {id:"Q4610556"}),(x2)-[:P17]->(x3) RETURN x1.id,x2.id,x3.id
+96,MATCH (x1)-[:P106]->(:Entity {id:"Q483501"}),(x2)-[:P17]->(x3) RETURN x1.id,x2.id,x3.id
+97,MATCH (x1)-[:P106]->(:Entity {id:"Q483501"}),(x2)-[:P19]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id
+98,MATCH (x1)-[:P106]->(:Entity {id:"Q483501"}),(x2)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id
+99,MATCH (x1)-[:P106]->(:Entity {id:"Q484188"}),(x1)-[:P19]->(x2) RETURN x1.id,x2.id
+100,MATCH (x1)-[:P106]->(:Entity {id:"Q484876"}),(x2)-[:P31]->(:Entity {id:"Q4830453"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+101,MATCH (x1)-[:P106]->(:Entity {id:"Q488111"}),(x1)-[:P18]->(x2),(x3)-[:P18]->(x4),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x4.id,x1.id,x2.id,x3.id
+102,MATCH (x1)-[:P106]->(:Entity {id:"Q4964182"}),(x1)-[:P27]->(x2),(x1)-[:P569]->(x3),(x1)-[:P570]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+103,MATCH (x1)-[:P106]->(:Entity {id:"Q4964182"}),(x2)-[:P19]->(:Entity {id:"Q142"}) RETURN x1.id,x2.id
+104,MATCH (x1)-[:P106]->(:Entity {id:"Q4964182"}),(x2)-[:P2860]->(x3) RETURN x1.id,x2.id,x3.id
+105,MATCH (x1)-[:P106]->(:Entity {id:"Q49757"}),(x1)-[:P19]->(:Entity {id:"Q1185"}),(x1)-[:P27]->(:Entity {id:"Q668"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+106,MATCH (x1)-[:P106]->(:Entity {id:"Q520549"}),(x2)-[:P734]->(x3) RETURN x1.id,x2.id,x3.id
+107,MATCH (x1)-[:P106]->(:Entity {id:"Q593644"}),(x1)-[:P18]->(x2),(x1)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x4),(x5)-[:P625]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+108,MATCH (x1)-[:P106]->(:Entity {id:"Q593644"}),(x1)-[:P18]->(x2),(x1)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P569]->(x4),(x5)-[:P625]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+109,MATCH (x1)-[:P106]->(:Entity {id:"Q593644"}),(x1)-[:P18]->(x2),(x3)-[:P19]->(x4),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P569]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+110,MATCH (x1)-[:P106]->(:Entity {id:"Q593644"}),(x1)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id
+111,MATCH (x1)-[:P106]->(:Entity {id:"Q593644"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+112,MATCH (x1)-[:P106]->(:Entity {id:"Q639669"}),(x2)-[:P106]->(:Entity {id:"Q82955"}),(x2)-[:P22]->(x3) RETURN x1.id,x2.id,x3.id
+113,MATCH (x1)-[:P106]->(:Entity {id:"Q644687"}),(x1)-[:P18]->(x2),(x1)-[:P19]->(:Entity {id:"Q10313"}),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+114,MATCH (x1)-[:P106]->(:Entity {id:"Q82594"}),(x1)-[:P18]->(x2),(x1)-[:P21]->(x3),(x1)-[:P569]->(x4),(x5)-[:P625]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+115,MATCH (x1)-[:P106]->(:Entity {id:"Q82594"}),(x1)-[:P18]->(x2),(x3)-[:P27]->(:Entity {id:"Q668"}),(x1)-[:P569]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+116,MATCH (x1)-[:P106]->(:Entity {id:"Q82594"}),(x2)-[:P17]->(:Entity {id:"Q668"}),(x1)-[:P18]->(x3),(x1)-[:P569]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+117,MATCH (x1)-[:P106]->(:Entity {id:"Q82594"}),(x2)-[:P17]->(x3),(x1)-[:P18]->(x4),(x1)-[:P21]->(x5),(x1)-[:P569]->(x6),(x2)-[:P625]->(x7) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+118,MATCH (x1)-[:P106]->(:Entity {id:"Q82594"}),(x2)-[:P17]->(x3),(x1)-[:P18]->(x4),(x1)-[:P21]->(x5),(x1)-[:P569]->(x6),(x7)-[:P625]->(x8) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x8.id,x3.id
+119,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q222"}) RETURN x1.id
+120,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x1)-[:P27]->(:Entity {id:"Q184"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+121,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P31]->(:Entity {id:"Q82799"}) RETURN x1.id,x2.id
+122,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x1)-[:P39]->(x2),(x1)-[:P735]->(x3) RETURN x1.id,x2.id,x3.id
+123,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x1)-[:P39]->(x2),(x3)-[:P735]->(:Entity {id:"Q18643532"}) RETURN x1.id,x2.id,x3.id
+124,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x2)-[:P106]->(:Entity {id:"Q82955"}) RETURN x1.id,x2.id
+125,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x2)-[:P17]->(:Entity {id:"Q414"}),(x3)-[:P19]->(x2),(x3)-[:P569]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+126,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x2)-[:P17]->(x3),(x1)-[:P19]->(x2) RETURN x1.id,x2.id,x3.id
+127,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x2)-[:P21]->(x3) RETURN x1.id,x2.id,x3.id
+128,MATCH (x1)-[:P106]->(:Entity {id:"Q82955"}),(x2)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id
+129,MATCH (x1)-[:P106]->(:Entity {id:"Q901"}),(x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+130,MATCH (x1)-[:P106]->(:Entity {id:"Q901"}),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+131,MATCH (x1)-[:P106]->(:Entity {id:"Q901"}),(x1)-[:P21]->(:Entity {id:"Q6591072"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+132,MATCH (x1)-[:P106]->(:Entity {id:"Q901"}),(x2)-[:P18]->(x3) RETURN x1.id,x2.id,x3.id
+133,MATCH (x1)-[:P106]->(:Entity {id:"Q901"}),(x2)-[:P18]->(x3),(x1)-[:P19]->(:Entity {id:"Q794"}) RETURN x1.id,x2.id,x3.id
+134,MATCH (x1)-[:P106]->(:Entity {id:"Q937857"}),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P27]->(:Entity {id:"Q948"}) RETURN x1.id
+135,MATCH (x1)-[:P106]->(:Entity {id:"Q937857"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+136,MATCH (x1)-[:P106]->(:Entity {id:"Q937857"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x2) RETURN x1.id,x2.id
+137,MATCH (x1)-[:P106]->(:Entity {id:"Q937857"}),(x2)-[:P1549]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P27]->(x2) RETURN x1.id,x2.id,x3.id
+138,MATCH (x1)-[:P106]->(:Entity {id:"Q937857"}),(x2)-[:P1549]->(x3),(x1)-[:P27]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+139,MATCH (x1)-[:P106]->(:Entity {id:"Q937857"}),(x2)-[:P19]->(x2),(x2)-[:P20]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+140,MATCH (x1)-[:P106]->(x2),(x1)-[:P106]->(:Entity {id:"Q36180"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+141,MATCH (x1)-[:P106]->(x2),(x1)-[:P106]->(:Entity {id:"Q82955"}),(x3)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id,x3.id
+142,MATCH (x1)-[:P106]->(x2),(x1)-[:P19]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x4)-[:P625]->(x5),(x1)-[:P69]->(:Entity {id:"Q574606"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+143,MATCH (x1)-[:P106]->(x2),(x1)-[:P19]->(x3),(x1)-[:P21]->(x4),(x1)-[:P27]->(x5),(x1)-[:P569]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+144,MATCH (x1)-[:P106]->(x2),(x1)-[:P19]->(x3),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+145,MATCH (x1)-[:P106]->(x2),(x1)-[:P21]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+146,MATCH (x1)-[:P106]->(x2),(x1)-[:P27]->(x3) RETURN x1.id,x2.id,x3.id
+147,MATCH (x1)-[:P106]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+148,MATCH (x1)-[:P106]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x3),(x1)-[:P735]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+149,MATCH (x1)-[:P106]->(x2),(x2)-[:P279]->(x3),(x2)-[:P279]->(x4),(x2)-[:P31]->(x5),(x2)-[:P31]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+150,MATCH (x1)-[:P106]->(x2),(x2)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+151,MATCH (x1)-[:P106]->(x2),(x2)-[:P31]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+152,MATCH (x1)-[:P106]->(x2),(x3)-[:P106]->(:Entity {id:"Q131524"}),(x3)-[:P106]->(:Entity {id:"Q82594"}),(x4)-[:P18]->(x5),(x6)-[:P569]->(x7) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+153,MATCH (x1)-[:P106]->(x2),(x3)-[:P106]->(:Entity {id:"Q18844224"}),(x1)-[:P21]->(x4),(x1)-[:P27]->(x5),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+154,MATCH (x1)-[:P106]->(x2),(x3)-[:P106]->(:Entity {id:"Q82594"}),(x4)-[:P18]->(x5),(x6)-[:P569]->(x7) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+155,MATCH (x1)-[:P106]->(x2),(x3)-[:P106]->(x2) RETURN x1.id,x2.id,x3.id
+156,MATCH (x1)-[:P106]->(x2),(x3)-[:P138]->(x1),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+157,MATCH (x1)-[:P106]->(x2),(x3)-[:P279]->(:Entity {id:"Q116"}) RETURN x1.id,x2.id,x3.id
+158,MATCH (x1)-[:P106]->(x2),(x3)-[:P279]->(x2) RETURN x1.id,x2.id,x3.id
+159,MATCH (x1)-[:P106]->(x2),(x3)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id,x3.id
+160,MATCH (x1)-[:P106]->(x2),(x3)-[:P27]->(:Entity {id:"Q30"}),(x3)-[:P735]->(:Entity {id:"Q4925477"}) RETURN x1.id,x2.id,x3.id
+161,MATCH (x1)-[:P106]->(x2),(x3)-[:P39]->(:Entity {id:"Q9134365"}) RETURN x1.id,x2.id,x3.id
+162,MATCH (x1)-[:P1080]->(:Entity {id:"Q18043309"}),(x1)-[:P31]->(:Entity {id:"Q95074"}) RETURN x1.id
+163,MATCH (x1)-[:P1082]->(x2),(x1)-[:P1448]->(x3),(x4)-[:P1448]->(x5),(x1)-[:P31]->(:Entity {id:"Q6256"}),(x1)-[:P36]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+164,MATCH (x1)-[:P1082]->(x2),(x1)-[:P17]->(:Entity {id:"Q29"}),(x1)-[:P31]->(:Entity {id:"Q2074737"}) RETURN x1.id,x2.id
+165,MATCH (x1)-[:P1082]->(x2),(x1)-[:P17]->(:Entity {id:"Q29"}),(x1)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id
+166,MATCH (x1)-[:P1082]->(x2),(x1)-[:P17]->(x3),(x1)-[:P31]->(:Entity {id:"Q515"}),(x1)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+167,MATCH (x1)-[:P1082]->(x2),(x1)-[:P17]->(x3),(x1)-[:P31]->(:Entity {id:"Q515"}),(x3)-[:P31]->(:Entity {id:"Q6256"}) RETURN x1.id,x2.id,x3.id
+168,MATCH (x1)-[:P1082]->(x2),(x1)-[:P17]->(x3),(x3)-[:P31]->(:Entity {id:"Q6256"}),(x3)-[:P463]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+169,MATCH (x1)-[:P1082]->(x2),(x1)-[:P2046]->(x3),(x1)-[:P281]->(x4),(x1)-[:P31]->(:Entity {id:"Q2039348"}),(x1)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+170,MATCH (x1)-[:P1082]->(x2),(x1)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id
+171,MATCH (x1)-[:P1082]->(x2),(x3)-[:P1082]->(x4),(x1)-[:P1448]->(x5),(x6)-[:P1448]->(x3),(x1)-[:P31]->(:Entity {id:"Q6256"}),(x1)-[:P36]->(x7) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+172,MATCH (x1)-[:P1082]->(x2),(x3)-[:P131]->(:Entity {id:"Q90"}) RETURN x1.id,x2.id,x3.id
+173,MATCH (x1)-[:P1082]->(x2),(x3)-[:P150]->(:Entity {id:"Q182624"}) RETURN x1.id,x2.id,x3.id
+174,MATCH (x1)-[:P1082]->(x2),(x3)-[:P276]->(:Entity {id:"Q90"}) RETURN x1.id,x2.id,x3.id
+175,MATCH (x1)-[:P1082]->(x2),(x3)-[:P31]->(:Entity {id:"Q484170"}) RETURN x1.id,x2.id,x3.id
+176,MATCH (x1)-[:P1082]->(x2),(x3)-[:P31]->(:Entity {id:"Q6256"}) RETURN x1.id,x2.id,x3.id
+177,MATCH (x1)-[:P1086]->(x2),(x3)-[:P246]->(x4),(x3)-[:P31]->(:Entity {id:"Q11344"}) RETURN x4.id,x1.id,x2.id,x3.id
+178,MATCH (x1)-[:P108]->(:Entity {id:"Q2283"}),(x2)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id
+179,MATCH (x1)-[:P1117]->(x2),(x1)-[:P2067]->(x3),(x4)-[:P2410]->(x5),(x4)-[:P527]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+180,MATCH (x1)-[:P1117]->(x2),(x3)-[:P1117]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+181,MATCH (x1)-[:P1117]->(x2),(x3)-[:P1117]->(x4),(x5)-[:P2410]->(x6),(x7)-[:P2410]->(x8),(x5)-[:P2888]->(x9),(x5)-[:P527]->(x1),(x7)-[:P527]->(x3) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x8.id,x9.id,x3.id
+182,MATCH (x1)-[:P1117]->(x2),(x3)-[:P527]->(x1) RETURN x1.id,x2.id,x3.id
+183,MATCH (x1)-[:P115]->(x2),(x1)-[:P31]->(:Entity {id:"Q476028"}),(x3)-[:P625]->(x3),(x2)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+184,MATCH (x1)-[:P115]->(x2),(x1)-[:P31]->(:Entity {id:"Q476028"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+185,MATCH (x1)-[:P1191]->(x2),(x1)-[:P155]->(x3),(x4)-[:P156]->(x5),(x1)-[:P179]->(:Entity {id:"Q18844729"}),(x1)-[:P31]->(:Entity {id:"Q21191270"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+186,MATCH (x1)-[:P1196]->(:Entity {id:"Q10737"}),(x1)-[:P27]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+187,MATCH (x1)-[:P1217]->(x2),(x3)-[:P17]->(:Entity {id:"Q211"}),(x3)-[:P31]->(:Entity {id:"Q16970"}) RETURN x1.id,x2.id,x3.id
+188,MATCH (x1)-[:P1217]->(x2),(x3)-[:P31]->(:Entity {id:"Q3914"}) RETURN x1.id,x2.id,x3.id
+189,MATCH (x1)-[:P1249]->(x2),(x3)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id,x3.id
+190,MATCH (x1)-[:P129]->(x2),(x3)-[:P31]->(x4),(x1)-[:P31]->(:Entity {id:"Q101497"}) RETURN x4.id,x1.id,x2.id,x3.id
+191,MATCH (x1)-[:P1301]->(x2),(x1)-[:P18]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+192,MATCH (x1)-[:P1301]->(x2),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+193,MATCH (x1)-[:P131]->(:Entity {id:"Q1486"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id,x3.id
+194,MATCH (x1)-[:P131]->(:Entity {id:"Q161491"}),(x2)-[:P18]->(x3),(x2)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+195,MATCH (x1)-[:P131]->(:Entity {id:"Q220"}),(x1)-[:P1705]->(x2),(x1)-[:P31]->(:Entity {id:"Q16970"}) RETURN x1.id,x2.id
+196,MATCH (x1)-[:P131]->(:Entity {id:"Q270704"}),(x2)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id
+197,MATCH (x1)-[:P131]->(:Entity {id:"Q490"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+198,MATCH (x1)-[:P131]->(:Entity {id:"Q5061"}),(x2)-[:P31]->(:Entity {id:"Q23442"}) RETURN x1.id,x2.id
+199,MATCH (x1)-[:P131]->(:Entity {id:"Q559931"}),(x1)-[:P31]->(:Entity {id:"Q1516079"}) RETURN x1.id
+200,MATCH (x1)-[:P131]->(:Entity {id:"Q579648"}),(x2)-[:P31]->(:Entity {id:"Q5153359"}) RETURN x1.id,x2.id
+201,MATCH (x1)-[:P131]->(:Entity {id:"Q64"}),(x1)-[:P31]->(:Entity {id:"Q30022"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+202,MATCH (x1)-[:P131]->(:Entity {id:"Q64"}),(x1)-[:P31]->(:Entity {id:"Q55488"}),(x1)-[:P625]->(x2) RETURN x1.id,x2.id
+203,MATCH (x1)-[:P131]->(:Entity {id:"Q64"}),(x2)-[:P31]->(:Entity {id:"Q486972"}),(x1)-[:P31]->(:Entity {id:"Q55488"}),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+204,MATCH (x1)-[:P131]->(:Entity {id:"Q661700"}),(x1)-[:P31]->(:Entity {id:"Q820477"}) RETURN x1.id
+205,MATCH (x1)-[:P131]->(:Entity {id:"Q72"}),(x2)-[:P18]->(x3) RETURN x1.id,x2.id,x3.id
+206,MATCH (x1)-[:P131]->(:Entity {id:"Q84"}),(x2)-[:P31]->(:Entity {id:"Q3918"}) RETURN x1.id,x2.id
+207,MATCH (x1)-[:P131]->(:Entity {id:"Q90"}),(x1)-[:P17]->(:Entity {id:"Q142"}),(x1)-[:P31]->(:Entity {id:"Q54114"}),(x2)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id
+208,MATCH (x1)-[:P131]->(:Entity {id:"Q9899"}),(x1)-[:P31]->(:Entity {id:"Q13691604"}) RETURN x1.id
+209,MATCH (x1)-[:P131]->(:Entity {id:"Q9899"}),(x1)-[:P31]->(:Entity {id:"Q79007"}),(x2)-[:P625]->(x2) RETURN x1.id,x2.id
+210,MATCH (x1)-[:P131]->(x2),(x1)-[:P138]->(x3),(x1)-[:P17]->(:Entity {id:"Q142"}),(x3)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id,x3.id
+211,MATCH (x1)-[:P131]->(x2),(x1)-[:P138]->(x3),(x1)-[:P17]->(:Entity {id:"Q414"}),(x4)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q79007"}) RETURN x4.id,x1.id,x2.id,x3.id
+212,MATCH (x1)-[:P131]->(x2),(x1)-[:P138]->(x3),(x3)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id,x3.id
+213,MATCH (x1)-[:P131]->(x2),(x1)-[:P17]->(:Entity {id:"Q40"}),(x3)-[:P31]->(:Entity {id:"Q2977"}) RETURN x1.id,x2.id,x3.id
+214,MATCH (x1)-[:P131]->(x2),(x2)-[:P131]->(:Entity {id:"Q12130"}),(x3)-[:P279]->(:Entity {id:"Q382617"}),(x1)-[:P31]->(:Entity {id:"Q484170"}),(x2)-[:P31]->(:Entity {id:"Q6465"}),(x4)-[:P39]->(x3) RETURN x4.id,x1.id,x2.id,x3.id
+215,MATCH (x1)-[:P131]->(x2),(x2)-[:P131]->(x3),(x4)-[:P31]->(:Entity {id:"Q532"}) RETURN x4.id,x1.id,x2.id,x3.id
+216,MATCH (x1)-[:P131]->(x2),(x2)-[:P17]->(:Entity {id:"Q668"}),(x2)-[:P31]->(:Entity {id:"Q1149652"}),(x1)-[:P31]->(:Entity {id:"Q532"}) RETURN x1.id,x2.id
+217,MATCH (x1)-[:P131]->(x2),(x2)-[:P31]->(:Entity {id:"Q211690"}),(:Entity {id:"Q531444"})-[:P625]->(x3),(:Entity {id:"Q985210"})-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+218,MATCH (x1)-[:P131]->(x2),(x3)-[:P1435]->(:Entity {id:"Q9259"}) RETURN x1.id,x2.id,x3.id
+219,MATCH (x1)-[:P131]->(x2),(x3)-[:P17]->(:Entity {id:"Q213"}),(x3)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id,x3.id
+220,MATCH (x1)-[:P131]->(x2),(x3)-[:P31]->(:Entity {id:"Q515"}),(x3)-[:P31]->(:Entity {id:"Q5153359"}) RETURN x1.id,x2.id,x3.id
+221,MATCH (x1)-[:P131]->(x2),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+222,MATCH (x1)-[:P1340]->(x2),(x3)-[:P27]->(:Entity {id:"Q159"}) RETURN x1.id,x2.id,x3.id
+223,MATCH (x1)-[:P1340]->(x2),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+224,MATCH (x1)-[:P1346]->(x2),(x2)-[:P17]->(x3),(x4)-[:P27]->(x3),(x5)-[:P31]->(:Entity {id:"Q34542757"}),(x1)-[:P3450]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+225,MATCH (x1)-[:P135]->(:Entity {id:"Q34636"}),(x1)-[:P170]->(:Entity {id:"Q215129"}),(x2)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+226,MATCH (x1)-[:P1369]->(x2),(x3)-[:P17]->(:Entity {id:"Q794"}),(x1)-[:P18]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+227,MATCH (x1)-[:P1369]->(x2),(x3)-[:P18]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+228,MATCH (x1)-[:P136]->(:Entity {id:"Q132311"}),(x1)-[:P31]->(:Entity {id:"Q7725634"}) RETURN x1.id
+229,MATCH (x1)-[:P136]->(:Entity {id:"Q188473"}),(x2)-[:P31]->(:Entity {id:"Q11424"}) RETURN x1.id,x2.id
+230,MATCH (x1)-[:P136]->(:Entity {id:"Q226730"}),(x2)-[:P345]->(x3) RETURN x1.id,x2.id,x3.id
+231,MATCH (x1)-[:P136]->(:Entity {id:"Q3071"}),(x2)-[:P31]->(:Entity {id:"Q215380"}) RETURN x1.id,x2.id
+232,MATCH (x1)-[:P136]->(:Entity {id:"Q38848"}),(x2)-[:P279]->(:Entity {id:"Q38848"}),(x1)-[:P495]->(:Entity {id:"Q33"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+233,MATCH (x1)-[:P136]->(:Entity {id:"Q38848"}),(x2)-[:P279]->(:Entity {id:"Q38848"}),(x1)-[:P495]->(:Entity {id:"Q33"}),(x3)-[:P625]->(x4),(x1)-[:P740]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+234,MATCH (x1)-[:P136]->(:Entity {id:"Q38848"}),(x2)-[:P279]->(:Entity {id:"Q38848"}),(x3)-[:P31]->(:Entity {id:"Q215380"}),(x1)-[:P495]->(:Entity {id:"Q33"}) RETURN x1.id,x2.id,x3.id
+235,MATCH (x1)-[:P136]->(:Entity {id:"Q638"}),(x2)-[:P31]->(:Entity {id:"Q482994"}) RETURN x1.id,x2.id
+236,MATCH (x1)-[:P136]->(:Entity {id:"Q959790"}),(x2)-[:P179]->(:Entity {id:"Q689438"}) RETURN x1.id,x2.id
+237,MATCH (x1)-[:P136]->(x2),(x1)-[:P136]->(:Entity {id:"Q38848"}),(x3)-[:P279]->(:Entity {id:"Q38848"}),(x1)-[:P495]->(:Entity {id:"Q33"}),(x4)-[:P625]->(x5),(x1)-[:P740]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+238,MATCH (x1)-[:P136]->(x2),(x1)-[:P31]->(:Entity {id:"Q215380"}) RETURN x1.id,x2.id
+239,MATCH (x1)-[:P136]->(x2),(x3)-[:P136]->(:Entity {id:"Q38848"}),(x4)-[:P279]->(:Entity {id:"Q38848"}) RETURN x4.id,x1.id,x2.id,x3.id
+240,MATCH (x1)-[:P136]->(x2),(x3)-[:P279]->(:Entity {id:"Q38848"}) RETURN x1.id,x2.id,x3.id
+241,MATCH (x1)-[:P136]->(x2),(x3)-[:P279]->(:Entity {id:"Q38848"}),(x1)-[:P495]->(:Entity {id:"Q33"}),(x4)-[:P625]->(x5),(x1)-[:P740]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+242,MATCH (x1)-[:P136]->(x2),(x3)-[:P279]->(:Entity {id:"Q38848"}),(x1)-[:P495]->(x4),(x5)-[:P625]->(x6),(x1)-[:P740]->(x7) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+243,MATCH (x1)-[:P136]->(x2),(x3)-[:P279]->(:Entity {id:"Q38848"}),(x4)-[:P31]->(:Entity {id:"Q188451"}) RETURN x4.id,x1.id,x2.id,x3.id
+244,MATCH (x1)-[:P136]->(x2),(x3)-[:P279]->(:Entity {id:"Q38848"}),(x4)-[:P31]->(:Entity {id:"Q215380"}),(x1)-[:P495]->(:Entity {id:"Q33"}),(x5)-[:P625]->(x6),(x1)-[:P740]->(x5) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+245,MATCH (x1)-[:P136]->(x2),(x3)-[:P31]->(:Entity {id:"Q11424"}) RETURN x1.id,x2.id,x3.id
+246,MATCH (x1)-[:P136]->(x2),(x3)-[:P31]->(:Entity {id:"Q571"}) RETURN x1.id,x2.id,x3.id
+247,MATCH (x1)-[:P137]->(:Entity {id:"Q755179"}),(x2)-[:P31]->(:Entity {id:"Q11446"}) RETURN x1.id,x2.id
+248,MATCH (x1)-[:P138]->(x2),(x1)-[:P17]->(:Entity {id:"Q29"}),(x3)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id,x3.id
+249,MATCH (x1)-[:P138]->(x2),(x1)-[:P17]->(:Entity {id:"Q414"}),(x3)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id,x3.id
+250,MATCH (x1)-[:P138]->(x2),(x3)-[:P17]->(:Entity {id:"Q213"}),(x3)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id,x3.id
+251,MATCH (x1)-[:P138]->(x2),(x3)-[:P31]->(:Entity {id:"Q15632617"}) RETURN x1.id,x2.id,x3.id
+252,MATCH (x1)-[:P1412]->(:Entity {id:"Q1860"}),(x2)-[:P30]->(:Entity {id:"Q15"}) RETURN x1.id,x2.id
+253,MATCH (x1)-[:P1412]->(x2),(x3)-[:P17]->(:Entity {id:"Q40"}),(x1)-[:P19]->(x3) RETURN x1.id,x2.id,x3.id
+254,MATCH (x1)-[:P1427]->(x2),(x2)-[:P625]->(x3),(x4)-[:P664]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+255,MATCH (x1)-[:P1433]->(x2),(x1)-[:P31]->(:Entity {id:"Q13442814"}) RETURN x1.id,x2.id
+256,MATCH (x1)-[:P1433]->(x2),(x1)-[:P433]->(x3),(x1)-[:P478]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+257,MATCH (x1)-[:P1435]->(:Entity {id:"Q17297633"}),(x2)-[:P4244]->(x3) RETURN x1.id,x2.id,x3.id
+258,MATCH (x1)-[:P1435]->(:Entity {id:"Q9259"}),(x1)-[:P17]->(x2),(x3)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id,x3.id
+259,MATCH (x1)-[:P1435]->(:Entity {id:"Q9259"}),(x2)-[:P17]->(x3) RETURN x1.id,x2.id,x3.id
+260,MATCH (x1)-[:P1435]->(:Entity {id:"Q9259"}),(x2)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+261,MATCH (x1)-[:P1435]->(x2),(:Entity {id:"Q1545193"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+262,MATCH (x1)-[:P1435]->(x2),(x2)-[:P1687]->(x3),(:Entity {id:"Q1545193"})-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+263,MATCH (x1)-[:P1441]->(:Entity {id:"Q8337"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id,x2.id
+264,MATCH (x1)-[:P1448]->(x2),(x1)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id
+265,MATCH (x1)-[:P1448]->(x2),(x3)-[:P31]->(:Entity {id:"Q1058914"}),(x4)-[:P361]->(:Entity {id:"Q507306"}) RETURN x4.id,x1.id,x2.id,x3.id
+266,MATCH (x1)-[:P1448]->(x2),(x3)-[:P31]->(:Entity {id:"Q1058914"}),(x4)-[:P452]->(:Entity {id:"Q880371"}) RETURN x4.id,x1.id,x2.id,x3.id
+267,MATCH (x1)-[:P1448]->(x2),(x3)-[:P31]->(:Entity {id:"Q23058"}) RETURN x1.id,x2.id,x3.id
+268,MATCH (x1)-[:P1448]->(x2),(x3)-[:P452]->(:Entity {id:"Q880371"}) RETURN x1.id,x2.id,x3.id
+269,MATCH (x1)-[:P1477]->(x2),(x3)-[:P495]->(:Entity {id:"Q30"}) RETURN x1.id,x2.id,x3.id
+270,MATCH (x1)-[:P150]->(x1),(x2)-[:P17]->(:Entity {id:"Q183"}) RETURN x1.id,x2.id
+271,MATCH (x1)-[:P150]->(x2),(x3)-[:P17]->(:Entity {id:"Q183"}),(x1)-[:P31]->(:Entity {id:"Q1221156"}) RETURN x1.id,x2.id,x3.id
+272,MATCH (x1)-[:P1533]->(x2),(x3)-[:P1533]->(x4),(x5)-[:P1533]->(x6),(x7)-[:P734]->(x2),(x8)-[:P734]->(x4),(x9)-[:P734]->(x6),(x8)-[:P735]->(x1),(x9)-[:P735]->(x3),(x9)-[:P735]->(x5) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x8.id,x9.id,x3.id
+273,MATCH (x1)-[:P1533]->(x2),(x3)-[:P1533]->(x4),(x5)-[:P1533]->(x6),(x7)-[:P734]->(x2),(x8)-[:P734]->(x4),(x9)-[:P734]->(x6),(x9)-[:P734]->(x10),(x8)-[:P735]->(x1),(x9)-[:P735]->(x3),(x9)-[:P735]->(x5) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x10.id,x5.id,x8.id,x9.id,x3.id
+274,MATCH (x1)-[:P1542]->(x2),(x3)-[:P31]->(:Entity {id:"Q16521"}) RETURN x1.id,x2.id,x3.id
+275,MATCH (x1)-[:P154]->(x2),(x3)-[:P31]->(:Entity {id:"Q1058914"}),(x4)-[:P452]->(:Entity {id:"Q880371"}) RETURN x4.id,x1.id,x2.id,x3.id
+276,MATCH (x1)-[:P156]->(:Entity {id:"Q1784017"}),(x1)-[:P361]->(:Entity {id:"Q1784017"}) RETURN x1.id
+277,MATCH (x1)-[:P1619]->(x2),(x3)-[:P31]->(:Entity {id:"Q55488"}) RETURN x1.id,x2.id,x3.id
+278,MATCH (x1)-[:P161]->(:Entity {id:"Q168049"}),(x2)-[:P31]->(:Entity {id:"Q11424"}),(x3)-[:P3383]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+279,MATCH (x1)-[:P161]->(:Entity {id:"Q258999"}),(x1)-[:P31]->(x2),(x3)-[:P577]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+280,MATCH (x1)-[:P161]->(x2),(x1)-[:P161]->(x3),(:Entity {id:"Q39071240"})-[:P161]->(x3) RETURN x1.id,x2.id,x3.id
+281,MATCH (x1)-[:P161]->(x2),(x1)-[:P161]->(x3),(:Entity {id:"Q39071240"})-[:P161]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+282,MATCH (x1)-[:P161]->(x2),(x1)-[:P2047]->(x3),(x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P577]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+283,MATCH (x1)-[:P161]->(x2),(x1)-[:P31]->(:Entity {id:"Q11424"}) RETURN x1.id,x2.id
+284,MATCH (x1)-[:P161]->(x2),(x3)-[:P161]->(x2),(x3)-[:P161]->(x4),(x5)-[:P161]->(x4),(x5)-[:P161]->(x6),(x7)-[:P161]->(x6),(x7)-[:P161]->(:Entity {id:"Q3454165"}) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+285,MATCH (x1)-[:P161]->(x2),(x3)-[:P577]->(x4),(:Entity {id:"Q39071240"})-[:P161]->(x2) RETURN x4.id,x1.id,x2.id,x3.id
+286,MATCH (x1)-[:P163]->(x2),(x1)-[:P31]->(:Entity {id:"Q6256"}),(x2)-[:P462]->(x3) RETURN x1.id,x2.id,x3.id
+287,MATCH (x1)-[:P166]->(:Entity {id:"Q1761"}),(x1)-[:P31]->(:Entity {id:"Q276"}) RETURN x1.id
+288,MATCH (x1)-[:P166]->(x2),(x1)-[:P166]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+289,MATCH (x1)-[:P166]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+290,MATCH (x1)-[:P166]->(x2),(x3)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P31]->(:Entity {id:"Q11424"}) RETURN x1.id,x2.id,x3.id
+291,MATCH (x1)-[:P1705]->(x2),(x3)-[:P31]->(:Entity {id:"Q101352"}) RETURN x1.id,x2.id,x3.id
+292,MATCH (x1)-[:P1705]->(x2),(x3)-[:P373]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+293,MATCH (x1)-[:P1705]->(x2),(x3)-[:P373]->(x4),(x5)-[:P735]->(x1) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+294,MATCH (x1)-[:P170]->(:Entity {id:"Q296"}),(x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q3305213"}),(x1)-[:P571]->(x3) RETURN x1.id,x2.id,x3.id
+295,MATCH (x1)-[:P170]->(:Entity {id:"Q41406"}),(x1)-[:P31]->(:Entity {id:"Q3305213"}) RETURN x1.id
+296,MATCH (x1)-[:P170]->(:Entity {id:"Q5598"}),(x2)-[:P17]->(:Entity {id:"Q142"}) RETURN x1.id,x2.id
+297,MATCH (x1)-[:P170]->(x2),(x1)-[:P195]->(:Entity {id:"Q2983474"}),(x2)-[:P19]->(x3),(x1)-[:P31]->(:Entity {id:"Q3305213"}),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+298,MATCH (x1)-[:P171]->(x2),(x1)-[:P171]->(:Entity {id:"Q140"}) RETURN x1.id,x2.id
+299,MATCH (x1)-[:P171]->(x2),(x1)-[:P225]->(x3) RETURN x1.id,x2.id,x3.id
+300,MATCH (x1)-[:P1741]->(x2),(x1)-[:P742]->(x3) RETURN x1.id,x2.id,x3.id
+301,MATCH (x1)-[:P175]->(:Entity {id:"Q15862"}),(x2)-[:P18]->(x3) RETURN x1.id,x2.id,x3.id
+302,MATCH (x1)-[:P175]->(:Entity {id:"Q261"}),(x1)-[:P31]->(:Entity {id:"Q482994"}) RETURN x1.id
+303,MATCH (x1)-[:P176]->(x2),(x1)-[:P179]->(x3),(x4)-[:P17]->(x4),(x1)-[:P31]->(:Entity {id:"Q3231690"}) RETURN x4.id,x1.id,x2.id,x3.id
+304,MATCH (x1)-[:P176]->(x2),(x3)-[:P17]->(x4),(x1)-[:P31]->(:Entity {id:"Q3231690"}) RETURN x4.id,x1.id,x2.id,x3.id
+305,MATCH (x1)-[:P179]->(:Entity {id:"Q117396"}),(x1)-[:P31]->(x2) RETURN x1.id,x2.id
+306,MATCH (x1)-[:P179]->(:Entity {id:"Q23572"}),(x1)-[:P31]->(:Entity {id:"Q21191270"}),(x2)-[:P361]->(x3) RETURN x1.id,x2.id,x3.id
+307,MATCH (x1)-[:P17]->(:Entity {id:"Q142"}),(x1)-[:P31]->(:Entity {id:"Q4022"}),(x1)-[:P625]->(x2),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+308,MATCH (x1)-[:P17]->(:Entity {id:"Q142"}),(x1)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id
+309,MATCH (x1)-[:P17]->(:Entity {id:"Q142"}),(x2)-[:P279]->(x3),(x1)-[:P279]->(x4),(x2)-[:P31]->(:Entity {id:"Q43229"}) RETURN x4.id,x1.id,x2.id,x3.id
+310,MATCH (x1)-[:P17]->(:Entity {id:"Q145"}),(x2)-[:P31]->(:Entity {id:"Q12280"}) RETURN x1.id,x2.id
+311,MATCH (x1)-[:P17]->(:Entity {id:"Q145"}),(x2)-[:P31]->(:Entity {id:"Q16970"}) RETURN x1.id,x2.id
+312,MATCH (x1)-[:P17]->(:Entity {id:"Q145"}),(x2)-[:P31]->(:Entity {id:"Q55488"}) RETURN x1.id,x2.id
+313,MATCH (x1)-[:P17]->(:Entity {id:"Q16"}),(x2)-[:P31]->(:Entity {id:"Q220505"}),(x1)-[:P856]->(x3) RETURN x1.id,x2.id,x3.id
+314,MATCH (x1)-[:P17]->(:Entity {id:"Q17"}),(x1)-[:P31]->(:Entity {id:"Q3917681"}) RETURN x1.id
+315,MATCH (x1)-[:P17]->(:Entity {id:"Q17"}),(x2)-[:P31]->(:Entity {id:"Q159821"}),(x3)-[:P31]->(:Entity {id:"Q82414"}) RETURN x1.id,x2.id,x3.id
+316,MATCH (x1)-[:P17]->(:Entity {id:"Q183"}),(x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q7075"}),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+317,MATCH (x1)-[:P17]->(:Entity {id:"Q183"}),(x1)-[:P31]->(:Entity {id:"Q1032372"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+318,MATCH (x1)-[:P17]->(:Entity {id:"Q183"}),(x1)-[:P31]->(:Entity {id:"Q3914"}) RETURN x1.id
+319,MATCH (x1)-[:P17]->(:Entity {id:"Q183"}),(x1)-[:P31]->(:Entity {id:"Q7138926"}) RETURN x1.id
+320,MATCH (x1)-[:P17]->(:Entity {id:"Q183"}),(x2)-[:P17]->(:Entity {id:"Q45"}) RETURN x1.id,x2.id
+321,MATCH (x1)-[:P17]->(:Entity {id:"Q183"}),(x2)-[:P279]->(x3) RETURN x1.id,x2.id,x3.id
+322,MATCH (x1)-[:P17]->(:Entity {id:"Q183"}),(x2)-[:P31]->(:Entity {id:"Q55488"}) RETURN x1.id,x2.id
+323,MATCH (x1)-[:P17]->(:Entity {id:"Q191"}),(x1)-[:P31]->(:Entity {id:"Q13358519"}) RETURN x1.id
+324,MATCH (x1)-[:P17]->(:Entity {id:"Q20"}),(x1)-[:P31]->(:Entity {id:"Q33506"}) RETURN x1.id
+325,MATCH (x1)-[:P17]->(:Entity {id:"Q213"}),(x2)-[:P31]->(:Entity {id:"Q811534"}) RETURN x1.id,x2.id
+326,MATCH (x1)-[:P17]->(:Entity {id:"Q29"}),(x1)-[:P31]->(:Entity {id:"Q486972"}) RETURN x1.id
+327,MATCH (x1)-[:P17]->(:Entity {id:"Q30"}),(x1)-[:P31]->(:Entity {id:"Q123705"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+328,MATCH (x1)-[:P17]->(:Entity {id:"Q30"}),(x1)-[:P31]->(:Entity {id:"Q41298"}),(x1)-[:P856]->(x2) RETURN x1.id,x2.id
+329,MATCH (x1)-[:P17]->(:Entity {id:"Q30"}),(x2)-[:P31]->(:Entity {id:"Q1248784"}) RETURN x1.id,x2.id
+330,MATCH (x1)-[:P17]->(:Entity {id:"Q34"}),(x2)-[:P17]->(:Entity {id:"Q55"}) RETURN x1.id,x2.id
+331,MATCH (x1)-[:P17]->(:Entity {id:"Q36"}),(x2)-[:P19]->(x3) RETURN x1.id,x2.id,x3.id
+332,MATCH (x1)-[:P17]->(:Entity {id:"Q36"}),(x2)-[:P19]->(x3),(x4)-[:P2044]->(x5),(x2)-[:P20]->(x4) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+333,MATCH (x1)-[:P17]->(:Entity {id:"Q36"}),(x2)-[:P2044]->(x3),(x2)-[:P31]->(:Entity {id:"Q8502"}) RETURN x1.id,x2.id,x3.id
+334,MATCH (x1)-[:P17]->(:Entity {id:"Q38"}),(x1)-[:P31]->(:Entity {id:"Q190107"}) RETURN x1.id
+335,MATCH (x1)-[:P17]->(:Entity {id:"Q40"}),(x2)-[:P31]->(:Entity {id:"Q2977"}) RETURN x1.id,x2.id
+336,MATCH (x1)-[:P17]->(:Entity {id:"Q414"}),(x1)-[:P31]->(:Entity {id:"Q8502"}) RETURN x1.id
+337,MATCH (x1)-[:P17]->(:Entity {id:"Q414"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q79007"}) RETURN x1.id,x2.id,x3.id
+338,MATCH (x1)-[:P17]->(:Entity {id:"Q668"}),(x2)-[:P31]->(:Entity {id:"Q1149652"}),(x1)-[:P31]->(:Entity {id:"Q532"}) RETURN x1.id,x2.id
+339,MATCH (x1)-[:P17]->(:Entity {id:"Q794"}),(x1)-[:P31]->(:Entity {id:"Q532"}) RETURN x1.id
+340,MATCH (x1)-[:P17]->(:Entity {id:"Q794"}),(x2)-[:P276]->(x3),(x2)-[:P31]->(:Entity {id:"Q744913"}) RETURN x1.id,x2.id,x3.id
+341,MATCH (x1)-[:P17]->(:Entity {id:"Q843"}),(x2)-[:P31]->(:Entity {id:"Q1248784"}) RETURN x1.id,x2.id
+342,MATCH (x1)-[:P17]->(:Entity {id:"Q858"}),(x2)-[:P17]->(:Entity {id:"Q858"}) RETURN x1.id,x2.id
+343,MATCH (x1)-[:P17]->(x2),(x1)-[:P17]->(x3),(x1)-[:P31]->(:Entity {id:"Q23442"}) RETURN x1.id,x2.id,x3.id
+344,MATCH (x1)-[:P17]->(x2),(x1)-[:P31]->(:Entity {id:"Q3918"}) RETURN x1.id,x2.id
+345,MATCH (x1)-[:P17]->(x2),(x1)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id
+346,MATCH (x1)-[:P17]->(x2),(x1)-[:P31]->(:Entity {id:"Q515"}),(x2)-[:P31]->(:Entity {id:"Q6256"}),(x3)-[:P39]->(:Entity {id:"Q30185"}),(x1)-[:P6]->(x3) RETURN x1.id,x2.id,x3.id
+347,MATCH (x1)-[:P17]->(x2),(x1)-[:P31]->(:Entity {id:"Q515"}),(x2)-[:P31]->(:Entity {id:"Q6256"}),(x3)-[:P39]->(:Entity {id:"Q30185"}),(x3)-[:P6]->(x1) RETURN x1.id,x2.id,x3.id
+348,MATCH (x1)-[:P17]->(x2),(x1)-[:P31]->(:Entity {id:"Q783794"}) RETURN x1.id,x2.id
+349,MATCH (x1)-[:P17]->(x2),(x1)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+350,MATCH (x1)-[:P17]->(x2),(x1)-[:P452]->(:Entity {id:"Q22687"}) RETURN x1.id,x2.id
+351,MATCH (x1)-[:P17]->(x2),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+352,MATCH (x1)-[:P17]->(x2),(x2)-[:P2184]->(x3) RETURN x1.id,x2.id,x3.id
+353,MATCH (x1)-[:P17]->(x2),(x2)-[:P2184]->(x3),(x4)-[:P237]->(x1) RETURN x4.id,x1.id,x2.id,x3.id
+354,MATCH (x1)-[:P17]->(x2),(x2)-[:P297]->(x3),(x1)-[:P31]->(:Entity {id:"Q3918"}) RETURN x1.id,x2.id,x3.id
+355,MATCH (x1)-[:P17]->(x2),(x2)-[:P297]->(x3),(x1)-[:P31]->(:Entity {id:"Q486972"}) RETURN x1.id,x2.id,x3.id
+356,MATCH (x1)-[:P17]->(x2),(x2)-[:P297]->(x3),(x1)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id,x3.id
+357,MATCH (x1)-[:P17]->(x2),(x2)-[:P30]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+358,MATCH (x1)-[:P17]->(x2),(x3)-[:P17]->(x2),(x1)-[:P31]->(:Entity {id:"Q1194951"}),(x3)-[:P31]->(:Entity {id:"Q2485448"}),(x1)-[:P641]->(:Entity {id:"Q847"}),(x3)-[:P641]->(:Entity {id:"Q847"}) RETURN x1.id,x2.id,x3.id
+359,MATCH (x1)-[:P17]->(x2),(x3)-[:P19]->(x1),(x4)-[:P39]->(:Entity {id:"Q967762"}) RETURN x4.id,x1.id,x2.id,x3.id
+360,MATCH (x1)-[:P17]->(x2),(x3)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P31]->(:Entity {id:"Q515"}),(x2)-[:P31]->(:Entity {id:"Q6256"}),(x3)-[:P39]->(:Entity {id:"Q30185"}),(x1)-[:P6]->(x3) RETURN x1.id,x2.id,x3.id
+361,MATCH (x1)-[:P17]->(x2),(x3)-[:P21]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+362,MATCH (x1)-[:P17]->(x2),(x3)-[:P279]->(:Entity {id:"Q6581072"}),(x2)-[:P31]->(:Entity {id:"Q6256"}),(x3)-[:P580]->(x4),(x5)-[:P6]->(x3) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+363,MATCH (x1)-[:P17]->(x2),(x3)-[:P31]->(:Entity {id:"Q1058914"}),(x4)-[:P361]->(:Entity {id:"Q507306"}) RETURN x4.id,x1.id,x2.id,x3.id
+364,MATCH (x1)-[:P17]->(x2),(x3)-[:P31]->(:Entity {id:"Q17544377"}) RETURN x1.id,x2.id,x3.id
+365,MATCH (x1)-[:P17]->(x2),(x3)-[:P31]->(:Entity {id:"Q3231690"}) RETURN x1.id,x2.id,x3.id
+366,MATCH (x1)-[:P17]->(x2),(x3)-[:P31]->(:Entity {id:"Q7278"}) RETURN x1.id,x2.id,x3.id
+367,MATCH (x1)-[:P180]->(x2),(x2)-[:P4389]->(x3) RETURN x1.id,x2.id,x3.id
+368,MATCH (x1)-[:P183]->(:Entity {id:"Q664"}),(x2)-[:P18]->(x3) RETURN x1.id,x2.id,x3.id
+369,MATCH (x1)-[:P186]->(x2),(x3)-[:P921]->(:Entity {id:"Q7802"}) RETURN x1.id,x2.id,x3.id
+370,MATCH (x1)-[:P1884]->(x2),(x3)-[:P61]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+371,MATCH (x1)-[:P1889]->(:Entity {id:"Q217594"}),(x2)-[:P279]->(x1),(x3)-[:P31]->(x2),(x2)-[:P910]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+372,MATCH (x1)-[:P18]->(x2),(:Entity {id:"Q1477"})-[:P2293]->(x3) RETURN x1.id,x2.id,x3.id
+373,MATCH (x1)-[:P18]->(x2),(x1)-[:P18]->(x3),(x1)-[:P2021]->(x4),(x1)-[:P485]->(:Entity {id:"Q964035"}) RETURN x4.id,x1.id,x2.id,x3.id
+374,MATCH (x1)-[:P18]->(x2),(x1)-[:P19]->(:Entity {id:"Q14318"}),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+375,MATCH (x1)-[:P18]->(x2),(x1)-[:P19]->(:Entity {id:"Q14318"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+376,MATCH (x1)-[:P18]->(x2),(x1)-[:P19]->(:Entity {id:"Q8692"}),(x1)-[:P20]->(x3),(x1)-[:P570]->(x4),(x3)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+377,MATCH (x1)-[:P18]->(x2),(x1)-[:P19]->(x3),(x1)-[:P569]->(x4),(x5)-[:P625]->(x6),(x1)-[:P69]->(:Entity {id:"Q319239"}) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+378,MATCH (x1)-[:P18]->(x2),(x1)-[:P19]->(x3),(x4)-[:P27]->(:Entity {id:"Q31"}),(x1)-[:P569]->(x5),(x1)-[:P569]->(x6),(x3)-[:P625]->(x7),(x1)-[:P641]->(:Entity {id:"Q3609"}) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+379,MATCH (x1)-[:P18]->(x2),(x1)-[:P2048]->(x3) RETURN x1.id,x2.id,x3.id
+380,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q146"}) RETURN x1.id,x2.id
+381,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q23397"}),(:Entity {id:"Q64"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+382,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q3305213"}),(x1)-[:P793]->(:Entity {id:"Q1756454"}) RETURN x1.id,x2.id
+383,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q41176"}),(:Entity {id:"Q1492"})-[:P131]->(x3) RETURN x1.id,x2.id,x3.id
+384,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q41176"}),(:Entity {id:"Q1492"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+385,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+386,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+387,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q7075"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+388,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q7138926"}),(:Entity {id:"Q1492"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+389,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q7138926"}),(:Entity {id:"Q64"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+390,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q7138926"}),(:Entity {id:"Q7038"})-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+391,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+392,MATCH (x1)-[:P18]->(x2),(x1)-[:P31]->(x3),(:Entity {id:"Q912767"})-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+393,MATCH (x1)-[:P18]->(x2),(x1)-[:P54]->(:Entity {id:"Q191264"}) RETURN x1.id,x2.id
+394,MATCH (x1)-[:P18]->(x2),(x1)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+395,MATCH (x1)-[:P18]->(x2),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+396,MATCH (x1)-[:P18]->(x2),(x3)-[:P18]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+397,MATCH (x1)-[:P18]->(x2),(x3)-[:P195]->(:Entity {id:"Q743206"}) RETURN x1.id,x2.id,x3.id
+398,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q121117"}) RETURN x1.id,x2.id,x3.id
+399,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q12280"}),(x1)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+400,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q131669"}) RETURN x1.id,x2.id,x3.id
+401,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q140"}) RETURN x1.id,x2.id,x3.id
+402,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q146"}) RETURN x1.id,x2.id,x3.id
+403,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q15141638"}) RETURN x1.id,x2.id,x3.id
+404,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q6256"}) RETURN x1.id,x2.id,x3.id
+405,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q634"}) RETURN x1.id,x2.id,x3.id
+406,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(:Entity {id:"Q756"}) RETURN x1.id,x2.id,x3.id
+407,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(x1) RETURN x1.id,x2.id,x3.id
+408,MATCH (x1)-[:P18]->(x2),(x3)-[:P31]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+409,MATCH (x1)-[:P18]->(x2),(x3)-[:P361]->(:Entity {id:"Q43478367"}) RETURN x1.id,x2.id,x3.id
+410,MATCH (x1)-[:P18]->(x2),(x3)-[:P551]->(:Entity {id:"Q668"}) RETURN x1.id,x2.id,x3.id
+411,MATCH (x1)-[:P18]->(x2),(x3)-[:P641]->(:Entity {id:"Q5386"}) RETURN x1.id,x2.id,x3.id
+412,MATCH (x1)-[:P190]->(x2),(x3)-[:P31]->(:Entity {id:"Q493522"}) RETURN x1.id,x2.id,x3.id
+413,MATCH (x1)-[:P197]->(x2),(x3)-[:P361]->(:Entity {id:"Q7733"}) RETURN x1.id,x2.id,x3.id
+414,MATCH (x1)-[:P19]->(:Entity {id:"Q1025095"}),(x2)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P27]->(:Entity {id:"Q145"}),(x4)-[:P31]->(:Entity {id:"Q5"}) RETURN x4.id,x1.id,x2.id,x3.id
+415,MATCH (x1)-[:P19]->(:Entity {id:"Q1156"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+416,MATCH (x1)-[:P19]->(:Entity {id:"Q17151"}),(x2)-[:P31]->(:Entity {id:"Q2389905"}),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+417,MATCH (x1)-[:P19]->(:Entity {id:"Q17151"}),(x2)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P361]->(:Entity {id:"Q2389905"}) RETURN x1.id,x2.id,x3.id
+418,MATCH (x1)-[:P19]->(:Entity {id:"Q21"}),(x2)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+419,MATCH (x1)-[:P19]->(:Entity {id:"Q40"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+420,MATCH (x1)-[:P19]->(:Entity {id:"Q90"}),(x2)-[:P279]->(x3) RETURN x1.id,x2.id,x3.id
+421,MATCH (x1)-[:P19]->(:Entity {id:"Q90"}),(x2)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+422,MATCH (x1)-[:P19]->(x2),(x1)-[:P19]->(:Entity {id:"Q668"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+423,MATCH (x1)-[:P19]->(x2),(x1)-[:P20]->(x3),(x1)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id,x2.id,x3.id
+424,MATCH (x1)-[:P19]->(x2),(x1)-[:P20]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x4),(x1)-[:P570]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+425,MATCH (x1)-[:P19]->(x2),(x1)-[:P20]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x4),(x1)-[:P570]->(x5),(x1)-[:P735]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+426,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5),(x1)-[:P69]->(:Entity {id:"Q981195"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+427,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P69]->(:Entity {id:"Q160302"}) RETURN x1.id,x2.id
+428,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P625]->(x3),(x4)-[:P69]->(:Entity {id:"Q161982"}) RETURN x4.id,x1.id,x2.id,x3.id
+429,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P569]->(x4),(x2)-[:P625]->(x5),(x1)-[:P69]->(:Entity {id:"Q160302"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+430,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581072"}),(x3)-[:P569]->(x4),(x2)-[:P625]->(x5),(x1)-[:P69]->(:Entity {id:"Q189441"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+431,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P27]->(:Entity {id:"Q30"}),(x1)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+432,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5),(x1)-[:P69]->(:Entity {id:"Q130965"}) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+433,MATCH (x1)-[:P19]->(x2),(x1)-[:P21]->(:Entity {id:"Q6581097"}),(x3)-[:P625]->(x4),(x1)-[:P69]->(:Entity {id:"Q130965"}) RETURN x4.id,x1.id,x2.id,x3.id
+434,MATCH (x1)-[:P19]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x3),(x1)-[:P735]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+435,MATCH (x1)-[:P19]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+436,MATCH (x1)-[:P19]->(x2),(x1)-[:P509]->(:Entity {id:"Q3235597"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+437,MATCH (x1)-[:P19]->(x2),(x1)-[:P569]->(x3),(x2)-[:P625]->(x4),(x1)-[:P641]->(:Entity {id:"Q3609"}),(:Entity {id:"Q64"})-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+438,MATCH (x1)-[:P19]->(x2),(x2)-[:P19]->(x3),(x1)-[:P735]->(:Entity {id:"Q603114"}) RETURN x1.id,x2.id,x3.id
+439,MATCH (x1)-[:P19]->(x2),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+440,MATCH (x1)-[:P19]->(x2),(x3)-[:P31]->(:Entity {id:"Q202444"}),(x2)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+441,MATCH (x1)-[:P19]->(x2),(x3)-[:P625]->(x4),(x1)-[:P69]->(:Entity {id:"Q1329269"}) RETURN x4.id,x1.id,x2.id,x3.id
+442,MATCH (x1)-[:P19]->(x2),(x3)-[:P625]->(x4),(x1)-[:P69]->(:Entity {id:"Q319239"}) RETURN x4.id,x1.id,x2.id,x3.id
+443,MATCH (x1)-[:P19]->(x2),(x3)-[:P641]->(:Entity {id:"Q1968"}) RETURN x1.id,x2.id,x3.id
+444,MATCH (x1)-[:P2003]->(x2),(x3)-[:P21]->(:Entity {id:"Q6581072"}) RETURN x1.id,x2.id,x3.id
+445,MATCH (x1)-[:P2043]->(x2),(x3)-[:P279]->(:Entity {id:"Q2920921"}),(x1)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+446,MATCH (x1)-[:P2044]->(x2),(x1)-[:P31]->(x3),(:Entity {id:"Q211861"})-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+447,MATCH (x1)-[:P2044]->(x2),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+448,MATCH (x1)-[:P2067]->(x2),(x3)-[:P2067]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+449,MATCH (x1)-[:P2093]->(x2),(x3)-[:P2860]->(x1),(x1)-[:P31]->(:Entity {id:"Q13442814"}),(x1)-[:P50]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+450,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q16"}),(x1)-[:P569]->(x2) RETURN x1.id,x2.id
+451,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q30"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P735]->(x2),(x1)-[:P735]->(x3) RETURN x1.id,x2.id,x3.id
+452,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q794"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x2),(x3)-[:P570]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+453,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q794"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P509]->(x3) RETURN x1.id,x2.id,x3.id
+454,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P27]->(:Entity {id:"Q794"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P509]->(x3),(x1)-[:P569]->(x4),(x1)-[:P570]->(x5),(x1)-[:P570]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+455,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+456,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P569]->(x2) RETURN x1.id,x2.id
+457,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P69]->(:Entity {id:"Q160302"}) RETURN x1.id
+458,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x1)-[:P69]->(:Entity {id:"Q51985"}) RETURN x1.id
+459,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P27]->(:Entity {id:"Q29"}),(x1)-[:P569]->(x3),(x1)-[:P69]->(:Entity {id:"Q51985"}) RETURN x1.id,x2.id,x3.id
+460,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P27]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P37]->(:Entity {id:"Q1321"}) RETURN x1.id,x2.id,x3.id
+461,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P31]->(:Entity {id:"Q571"}) RETURN x1.id,x2.id
+462,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P69]->(:Entity {id:"Q160302"}) RETURN x1.id,x2.id
+463,MATCH (x1)-[:P21]->(:Entity {id:"Q6581072"}),(x2)-[:P69]->(:Entity {id:"Q574606"}) RETURN x1.id,x2.id
+464,MATCH (x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P27]->(:Entity {id:"Q30"}) RETURN x1.id
+465,MATCH (x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P27]->(:Entity {id:"Q30"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+466,MATCH (x1)-[:P21]->(:Entity {id:"Q6581097"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P735]->(x2) RETURN x1.id,x2.id
+467,MATCH (x1)-[:P21]->(:Entity {id:"Q6581097"}),(x2)-[:P69]->(:Entity {id:"Q168756"}) RETURN x1.id,x2.id
+468,MATCH (x1)-[:P21]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x3),(x1)-[:P735]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+469,MATCH (x1)-[:P21]->(x2),(x1)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+470,MATCH (x1)-[:P21]->(x2),(x1)-[:P735]->(:Entity {id:"Q21069180"}) RETURN x1.id,x2.id
+471,MATCH (x1)-[:P21]->(x2),(x3)-[:P22]->(:Entity {id:"Q1339"}) RETURN x1.id,x2.id,x3.id
+472,MATCH (x1)-[:P21]->(x2),(x3)-[:P31]->(:Entity {id:"Q144"}) RETURN x1.id,x2.id,x3.id
+473,MATCH (x1)-[:P225]->(x2),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+474,MATCH (x1)-[:P22]->(:Entity {id:"Q1339"}),(x1)-[:P25]->(:Entity {id:"Q57487"}) RETURN x1.id
+475,MATCH (x1)-[:P231]->(x2),(x3)-[:P31]->(:Entity {id:"Q11173"}) RETURN x1.id,x2.id,x3.id
+476,MATCH (x1)-[:P238]->(x2),(x1)-[:P31]->(:Entity {id:"Q1248784"}) RETURN x1.id,x2.id
+477,MATCH (x1)-[:P2410]->(x2),(x1)-[:P2888]->(x3) RETURN x1.id,x2.id,x3.id
+478,MATCH (x1)-[:P2410]->(x2),(x1)-[:P2888]->(x3),(x1)-[:P703]->(:Entity {id:"Q15978631"}) RETURN x1.id,x2.id,x3.id
+479,MATCH (x1)-[:P2439]->(:Entity {id:"Q1860"}),(x2)-[:P360]->(:Entity {id:"Q8171"}),(x3)-[:P495]->(:Entity {id:"Q668"}) RETURN x1.id,x2.id,x3.id
+480,MATCH (x1)-[:P2561]->(:Entity {id:"Q2537"}),(x1)-[:P397]->(:Entity {id:"Q525"}) RETURN x1.id
+481,MATCH (x1)-[:P2670]->(x2),(x3)-[:P361]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+482,MATCH (x1)-[:P26]->(x2),(x3)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P39]->(:Entity {id:"Q11696"}) RETURN x1.id,x2.id,x3.id
+483,MATCH (x1)-[:P2750]->(x2),(x3)-[:P463]->(:Entity {id:"Q270920"}) RETURN x1.id,x2.id,x3.id
+484,MATCH (x1)-[:P276]->(:Entity {id:"Q1761"}),(x1)-[:P31]->(:Entity {id:"Q276"}) RETURN x1.id
+485,MATCH (x1)-[:P276]->(:Entity {id:"Q19675"}),(x1)-[:P31]->(:Entity {id:"Q3305213"}) RETURN x1.id
+486,MATCH (x1)-[:P276]->(x2),(x1)-[:P31]->(:Entity {id:"Q178561"}),(x1)-[:P361]->(x3),(x1)-[:P580]->(x4),(x2)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+487,MATCH (x1)-[:P276]->(x2),(x1)-[:P31]->(:Entity {id:"Q1965390"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+488,MATCH (x1)-[:P276]->(x2),(x3)-[:P31]->(:Entity {id:"Q5710433"}) RETURN x1.id,x2.id,x3.id
+489,MATCH (x1)-[:P2786]->(x2),(x3)-[:P31]->(:Entity {id:"Q515"}) RETURN x1.id,x2.id,x3.id
+490,MATCH (x1)-[:P279]->(:Entity {id:"Q116"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+491,MATCH (x1)-[:P279]->(:Entity {id:"Q131419"}),(x1)-[:P279]->(:Entity {id:"Q722218"}) RETURN x1.id
+492,MATCH (x1)-[:P279]->(:Entity {id:"Q177"}),(x2)-[:P527]->(x3) RETURN x1.id,x2.id,x3.id
+493,MATCH (x1)-[:P279]->(:Entity {id:"Q48352"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+494,MATCH (x1)-[:P279]->(x2),(x1)-[:P351]->(x3) RETURN x1.id,x2.id,x3.id
+495,MATCH (x1)-[:P279]->(x2),(x3)-[:P279]->(:Entity {id:"Q11660"}) RETURN x1.id,x2.id,x3.id
+496,MATCH (x1)-[:P279]->(x2),(x3)-[:P279]->(x1),(x4)-[:P279]->(x3),(x5)-[:P279]->(x4),(x6)-[:P279]->(x5),(x7)-[:P279]->(x6),(x8)-[:P279]->(x6),(x9)-[:P279]->(x8),(x2)-[:P279]->(:Entity {id:"Q151885"}) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x8.id,x9.id,x3.id
+497,MATCH (x1)-[:P279]->(x2),(x3)-[:P27]->(:Entity {id:"Q215"}),(x3)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P39]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+498,MATCH (x1)-[:P279]->(x2),(x3)-[:P31]->(x1),(x4)-[:P361]->(x1) RETURN x4.id,x1.id,x2.id,x3.id
+499,MATCH (x1)-[:P27]->(:Entity {id:"Q142"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+500,MATCH (x1)-[:P27]->(:Entity {id:"Q142"}),(x2)-[:P39]->(:Entity {id:"Q16886136"}) RETURN x1.id,x2.id
+501,MATCH (x1)-[:P27]->(:Entity {id:"Q183"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+502,MATCH (x1)-[:P27]->(:Entity {id:"Q213"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+503,MATCH (x1)-[:P27]->(:Entity {id:"Q29"}),(x1)-[:P286]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+504,MATCH (x1)-[:P27]->(:Entity {id:"Q29"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+505,MATCH (x1)-[:P27]->(:Entity {id:"Q30"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id
+506,MATCH (x1)-[:P27]->(:Entity {id:"Q30"}),(x1)-[:P39]->(:Entity {id:"Q30461"}) RETURN x1.id
+507,MATCH (x1)-[:P27]->(:Entity {id:"Q30"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+508,MATCH (x1)-[:P27]->(:Entity {id:"Q30"}),(x2)-[:P31]->(:Entity {id:"Q5"}),(x3)-[:P734]->(:Entity {id:"Q31046554"}) RETURN x1.id,x2.id,x3.id
+509,MATCH (x1)-[:P27]->(:Entity {id:"Q347"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+510,MATCH (x1)-[:P27]->(:Entity {id:"Q39"}),(x2)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+511,MATCH (x1)-[:P27]->(:Entity {id:"Q5705"}),(x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+512,MATCH (x1)-[:P27]->(x2),(x1)-[:P27]->(x3),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id,x3.id
+513,MATCH (x1)-[:P27]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+514,MATCH (x1)-[:P27]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x3),(x1)-[:P735]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+515,MATCH (x1)-[:P27]->(x2),(x3)-[:P31]->(:Entity {id:"Q3863"}),(x3)-[:P61]->(x1) RETURN x1.id,x2.id,x3.id
+516,MATCH (x1)-[:P281]->(x2),(x3)-[:P31]->(:Entity {id:"Q106658"}),(x1)-[:P31]->(:Entity {id:"Q262166"}),(x1)-[:P439]->(x4),(x1)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+517,MATCH (x1)-[:P281]->(x2),(x3)-[:P31]->(:Entity {id:"Q106658"}),(x4)-[:P31]->(:Entity {id:"Q1221156"}),(x1)-[:P31]->(:Entity {id:"Q262166"}),(x1)-[:P439]->(x5),(x1)-[:P625]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+518,MATCH (x1)-[:P2860]->(x2),(x2)-[:P31]->(x3) RETURN x1.id,x2.id,x3.id
+519,MATCH (x1)-[:P298]->(x2),(x1)-[:P31]->(:Entity {id:"Q6256"}),(x1)-[:P36]->(x3) RETURN x1.id,x2.id,x3.id
+520,MATCH (x1)-[:P304]->(x2),(x1)-[:P31]->(:Entity {id:"Q13442814"}) RETURN x1.id,x2.id
+521,MATCH (x1)-[:P306]->(:Entity {id:"Q14656"}),(x1)-[:P348]->(x2),(x3)-[:P856]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+522,MATCH (x1)-[:P31]->(:Entity {id:"Q101352"}),(x2)-[:P31]->(:Entity {id:"Q202444"}) RETURN x1.id,x2.id
+523,MATCH (x1)-[:P31]->(:Entity {id:"Q1028181"}),(x1)-[:P937]->(x2) RETURN x1.id,x2.id
+524,MATCH (x1)-[:P31]->(:Entity {id:"Q11344"}),(x1)-[:P361]->(x2) RETURN x1.id,x2.id
+525,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P364]->(x2) RETURN x1.id,x2.id
+526,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P495]->(:Entity {id:"Q801"}) RETURN x1.id
+527,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P495]->(x2) RETURN x1.id,x2.id
+528,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P577]->(x2) RETURN x1.id,x2.id
+529,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P57]->(:Entity {id:"Q8877"}) RETURN x1.id
+530,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P57]->(x2) RETURN x1.id,x2.id
+531,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x1)-[:P58]->(x2) RETURN x1.id,x2.id
+532,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x2)-[:P31]->(:Entity {id:"Q483394"}) RETURN x1.id,x2.id
+533,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x2)-[:P31]->(:Entity {id:"Q6256"}),(x1)-[:P495]->(x2) RETURN x1.id,x2.id
+534,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x2)-[:P3383]->(x3) RETURN x1.id,x2.id,x3.id
+535,MATCH (x1)-[:P31]->(:Entity {id:"Q11424"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+536,MATCH (x1)-[:P31]->(:Entity {id:"Q11512972"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+537,MATCH (x1)-[:P31]->(:Entity {id:"Q121117"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+538,MATCH (x1)-[:P31]->(:Entity {id:"Q12136"}),(x2)-[:P780]->(x3) RETURN x1.id,x2.id,x3.id
+539,MATCH (x1)-[:P31]->(:Entity {id:"Q123705"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+540,MATCH (x1)-[:P31]->(:Entity {id:"Q1248784"}),(:Entity {id:"Q100"})-[:P625]->(x2) RETURN x1.id,x2.id
+541,MATCH (x1)-[:P31]->(:Entity {id:"Q12973014"}),(x2)-[:P54]->(x3) RETURN x1.id,x2.id,x3.id
+542,MATCH (x1)-[:P31]->(:Entity {id:"Q133311"}),(x2)-[:P31]->(:Entity {id:"Q315"}),(x3)-[:P971]->(:Entity {id:"Q15"}) RETURN x1.id,x2.id,x3.id
+543,MATCH (x1)-[:P31]->(:Entity {id:"Q13406463"}),(x2)-[:P360]->(:Entity {id:"Q8171"}) RETURN x1.id,x2.id
+544,MATCH (x1)-[:P31]->(:Entity {id:"Q13406463"}),(x2)-[:P360]->(:Entity {id:"Q8171"}),(x3)-[:P495]->(:Entity {id:"Q668"}) RETURN x1.id,x2.id,x3.id
+545,MATCH (x1)-[:P31]->(:Entity {id:"Q13442814"}),(x1)-[:P31]->(:Entity {id:"Q13442814"}) RETURN x1.id
+546,MATCH (x1)-[:P31]->(:Entity {id:"Q13442814"}),(x1)-[:P356]->(x2) RETURN x1.id,x2.id
+547,MATCH (x1)-[:P31]->(:Entity {id:"Q13442814"}),(x1)-[:P50]->(x2) RETURN x1.id,x2.id
+548,MATCH (x1)-[:P31]->(:Entity {id:"Q13442814"}),(x1)-[:P921]->(x2) RETURN x1.id,x2.id
+549,MATCH (x1)-[:P31]->(:Entity {id:"Q13607440"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+550,MATCH (x1)-[:P31]->(:Entity {id:"Q146"}),(x1)-[:P31]->(:Entity {id:"Q7850"}) RETURN x1.id
+551,MATCH (x1)-[:P31]->(:Entity {id:"Q149789"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+552,MATCH (x1)-[:P31]->(:Entity {id:"Q15145593"}),(x1)-[:P361]->(:Entity {id:"Q129612"}) RETURN x1.id
+553,MATCH (x1)-[:P31]->(:Entity {id:"Q15416"}),(x2)-[:P345]->(x3),(x1)-[:P495]->(:Entity {id:"Q884"}) RETURN x1.id,x2.id,x3.id
+554,MATCH (x1)-[:P31]->(:Entity {id:"Q15416"}),(x2)-[:P495]->(:Entity {id:"Q884"}) RETURN x1.id,x2.id
+555,MATCH (x1)-[:P31]->(:Entity {id:"Q1589009"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+556,MATCH (x1)-[:P31]->(:Entity {id:"Q159821"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+557,MATCH (x1)-[:P31]->(:Entity {id:"Q16110"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+558,MATCH (x1)-[:P31]->(:Entity {id:"Q167037"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+559,MATCH (x1)-[:P31]->(:Entity {id:"Q16913666"}),(x1)-[:P393]->(x2) RETURN x1.id,x2.id
+560,MATCH (x1)-[:P31]->(:Entity {id:"Q16917"}),(x1)-[:P856]->(x2) RETURN x1.id,x2.id
+561,MATCH (x1)-[:P31]->(:Entity {id:"Q16917"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+562,MATCH (x1)-[:P31]->(:Entity {id:"Q17537576"}),(x2)-[:P921]->(x3) RETURN x1.id,x2.id,x3.id
+563,MATCH (x1)-[:P31]->(:Entity {id:"Q18608569"}),(x2)-[:P31]->(:Entity {id:"Q35657"}) RETURN x1.id,x2.id
+564,MATCH (x1)-[:P31]->(:Entity {id:"Q18624259"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+565,MATCH (x1)-[:P31]->(:Entity {id:"Q202444"}),(x2)-[:P734]->(x3) RETURN x1.id,x2.id,x3.id
+566,MATCH (x1)-[:P31]->(:Entity {id:"Q2085381"}),(x2)-[:P31]->(:Entity {id:"Q3918"}) RETURN x1.id,x2.id
+567,MATCH (x1)-[:P31]->(:Entity {id:"Q219577"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+568,MATCH (x1)-[:P31]->(:Entity {id:"Q2225692"}),(x1)-[:P625]->(x2) RETURN x1.id,x2.id
+569,MATCH (x1)-[:P31]->(:Entity {id:"Q23442"}),(:Entity {id:"Q252"})-[:P625]->(x2) RETURN x1.id,x2.id
+570,MATCH (x1)-[:P31]->(:Entity {id:"Q28640"}),(x2)-[:P50]->(x3) RETURN x1.id,x2.id,x3.id
+571,MATCH (x1)-[:P31]->(:Entity {id:"Q3305213"}),(x2)-[:P727]->(x3) RETURN x1.id,x2.id,x3.id
+572,MATCH (x1)-[:P31]->(:Entity {id:"Q33685"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+573,MATCH (x1)-[:P31]->(:Entity {id:"Q3624078"}),(x1)-[:P625]->(x2) RETURN x1.id,x2.id
+574,MATCH (x1)-[:P31]->(:Entity {id:"Q3624078"}),(x2)-[:P31]->(:Entity {id:"Q5119"}),(x3)-[:P31]->(:Entity {id:"Q6465"}),(x1)-[:P625]->(x4),(x3)-[:P625]->(x5),(x2)-[:P625]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+575,MATCH (x1)-[:P31]->(:Entity {id:"Q3918"}),(x2)-[:P31]->(:Entity {id:"Q3918"}) RETURN x1.id,x2.id
+576,MATCH (x1)-[:P31]->(:Entity {id:"Q4220917"}),(x2)-[:P527]->(x3) RETURN x1.id,x2.id,x3.id
+577,MATCH (x1)-[:P31]->(:Entity {id:"Q482994"}),(x1)-[:P577]->(:Entity {id:"Q25290"}) RETURN x1.id
+578,MATCH (x1)-[:P31]->(:Entity {id:"Q4830453"}),(x1)-[:P452]->(:Entity {id:"Q190117"}) RETURN x1.id
+579,MATCH (x1)-[:P31]->(:Entity {id:"Q4830453"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+580,MATCH (x1)-[:P31]->(:Entity {id:"Q4830453"}),(x1)-[:P749]->(x2),(x3)-[:P856]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+581,MATCH (x1)-[:P31]->(:Entity {id:"Q486972"}),(x2)-[:P495]->(:Entity {id:"Q159"}) RETURN x1.id,x2.id
+582,MATCH (x1)-[:P31]->(:Entity {id:"Q4887441"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+583,MATCH (x1)-[:P31]->(:Entity {id:"Q5051330"}),(x2)-[:P921]->(x3) RETURN x1.id,x2.id,x3.id
+584,MATCH (x1)-[:P31]->(:Entity {id:"Q515"}),(x1)-[:P571]->(x2) RETURN x1.id,x2.id
+585,MATCH (x1)-[:P31]->(:Entity {id:"Q515"}),(x2)-[:P31]->(:Entity {id:"Q6256"}),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+586,MATCH (x1)-[:P31]->(:Entity {id:"Q515"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+587,MATCH (x1)-[:P31]->(:Entity {id:"Q5185279"}),(x1)-[:P50]->(:Entity {id:"Q2312843"}) RETURN x1.id
+588,MATCH (x1)-[:P31]->(:Entity {id:"Q5185279"}),(x1)-[:P50]->(:Entity {id:"Q3141116"}) RETURN x1.id
+589,MATCH (x1)-[:P31]->(:Entity {id:"Q5225895"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+590,MATCH (x1)-[:P31]->(:Entity {id:"Q5621421"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+591,MATCH (x1)-[:P31]->(:Entity {id:"Q5633421"}),(x2)-[:P921]->(:Entity {id:"Q27720013"}) RETURN x1.id,x2.id
+592,MATCH (x1)-[:P31]->(:Entity {id:"Q571"}),(x1)-[:P50]->(:Entity {id:"Q968721"}) RETURN x1.id
+593,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P345]->(x2) RETURN x1.id,x2.id
+594,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P39]->(:Entity {id:"Q11696"}),(x2)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+595,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x2) RETURN x1.id,x2.id
+596,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x2),(x1)-[:P570]->(x3) RETURN x1.id,x2.id,x3.id
+597,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P570]->(x2) RETURN x1.id,x2.id
+598,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P646]->(x2) RETURN x1.id,x2.id
+599,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x2) RETURN x1.id,x2.id
+600,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x2),(x1)-[:P734]->(x3),(x1)-[:P735]->(x4),(x1)-[:P735]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+601,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x2),(x1)-[:P735]->(x3) RETURN x1.id,x2.id,x3.id
+602,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P734]->(x2),(x3)-[:P735]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+603,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P937]->(x2) RETURN x1.id,x2.id
+604,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P569]->(x3),(x2)-[:P569]->(x3),(x1)-[:P570]->(x4),(x2)-[:P570]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+605,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P31]->(:Entity {id:"Q5"}),(x1)-[:P69]->(x3),(x2)-[:P69]->(x3) RETURN x1.id,x2.id,x3.id
+606,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P360]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+607,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P39]->(:Entity {id:"Q11696"}) RETURN x1.id,x2.id
+608,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P39]->(:Entity {id:"Q842606"}) RETURN x1.id,x2.id
+609,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P39]->(x3),(x2)-[:P39]->(:Entity {id:"Q11696"}),(x2)-[:P569]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+610,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P463]->(:Entity {id:"Q123885"}) RETURN x1.id,x2.id
+611,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P485]->(:Entity {id:"Q1289222"}) RETURN x1.id,x2.id
+612,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P495]->(:Entity {id:"Q810"}) RETURN x1.id,x2.id
+613,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P50]->(x1) RETURN x1.id,x2.id
+614,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P50]->(x1),(x3)-[:P50]->(x1),(x2)-[:P577]->(x4),(x3)-[:P577]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+615,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+616,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+617,MATCH (x1)-[:P31]->(:Entity {id:"Q5"}),(x2)-[:P625]->(x3),(x1)-[:P69]->(:Entity {id:"Q13371"}) RETURN x1.id,x2.id,x3.id
+618,MATCH (x1)-[:P31]->(:Entity {id:"Q6256"}),(x1)-[:P36]->(x2),(x3)-[:P625]->(x4),(x2)-[:P6]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+619,MATCH (x1)-[:P31]->(:Entity {id:"Q6256"}),(x1)-[:P6]->(x2) RETURN x1.id,x2.id
+620,MATCH (x1)-[:P31]->(:Entity {id:"Q6256"}),(x2)-[:P36]->(x3) RETURN x1.id,x2.id,x3.id
+621,MATCH (x1)-[:P31]->(:Entity {id:"Q7187"}),(x2)-[:P703]->(:Entity {id:"Q21102938"}) RETURN x1.id,x2.id
+622,MATCH (x1)-[:P31]->(:Entity {id:"Q783794"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+623,MATCH (x1)-[:P31]->(:Entity {id:"Q783794"}),(x2)-[:P646]->(x3) RETURN x1.id,x2.id,x3.id
+624,MATCH (x1)-[:P31]->(:Entity {id:"Q786820"}),(x2)-[:P495]->(:Entity {id:"Q34"}) RETURN x1.id,x2.id
+625,MATCH (x1)-[:P31]->(:Entity {id:"Q786820"}),(x2)-[:P495]->(:Entity {id:"Q36"}) RETURN x1.id,x2.id
+626,MATCH (x1)-[:P31]->(:Entity {id:"Q891723"}),(x1)-[:P452]->(x2) RETURN x1.id,x2.id
+627,MATCH (x1)-[:P31]->(:Entity {id:"Q928830"}),(x1)-[:P361]->(:Entity {id:"Q462201"}) RETURN x1.id
+628,MATCH (x1)-[:P31]->(x2),(x1)-[:P31]->(:Entity {id:"Q35657"}) RETURN x1.id,x2.id
+629,MATCH (x1)-[:P31]->(x2),(x1)-[:P31]->(:Entity {id:"Q5"}) RETURN x1.id,x2.id
+630,MATCH (x1)-[:P31]->(x2),(x1)-[:P3345]->(x3) RETURN x1.id,x2.id,x3.id
+631,MATCH (x1)-[:P31]->(x2),(x1)-[:P571]->(x3) RETURN x1.id,x2.id,x3.id
+632,MATCH (x1)-[:P31]->(x2),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+633,MATCH (x1)-[:P31]->(x2),(x1)-[:P698]->(x3) RETURN x1.id,x2.id,x3.id
+634,MATCH (x1)-[:P31]->(x2),(x2)-[:P31]->(:Entity {id:"Q1998962"}) RETURN x1.id,x2.id
+635,MATCH (x1)-[:P31]->(x2),(x2)-[:P31]->(x3),(x3)-[:P31]->(x4),(x5)-[:P31]->(x6),(x6)-[:P31]->(x7),(x7)-[:P31]->(x4) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+636,MATCH (x1)-[:P31]->(x2),(x3)-[:P31]->(:Entity {id:"Q1129645"}) RETURN x1.id,x2.id,x3.id
+637,MATCH (x1)-[:P31]->(x2),(x3)-[:P31]->(x1),(x4)-[:P31]->(x3),(x5)-[:P31]->(x4) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+638,MATCH (x1)-[:P31]->(x2),(x3)-[:P31]->(x2),(x4)-[:P31]->(x2),(:Entity {id:"Q937"})-[:P19]->(x1) RETURN x4.id,x1.id,x2.id,x3.id
+639,MATCH (x1)-[:P31]->(x2),(x3)-[:P31]->(x4),(x5)-[:P31]->(x6),(x7)-[:P31]->(x8),(x1)-[:P31]->(:Entity {id:"Q5153359"}) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x8.id,x3.id
+640,MATCH (x1)-[:P31]->(x2),(x3)-[:P361]->(x2) RETURN x1.id,x2.id,x3.id
+641,MATCH (x1)-[:P345]->(x2),(x3)-[:P496]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+642,MATCH (x1)-[:P35]->(x2),(x3)-[:P495]->(:Entity {id:"Q142"}) RETURN x1.id,x2.id,x3.id
+643,MATCH (x1)-[:P360]->(:Entity {id:"Q5"}),(x2)-[:P569]->(x3) RETURN x1.id,x2.id,x3.id
+644,MATCH (x1)-[:P360]->(:Entity {id:"Q8171"}),(x2)-[:P495]->(:Entity {id:"Q668"}) RETURN x1.id,x2.id
+645,MATCH (x1)-[:P361]->(:Entity {id:"Q7733"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+646,MATCH (x1)-[:P361]->(x2),(x1)-[:P4614]->(x3),(x2)-[:P4614]->(x4),(x4)-[:P4614]->(x3) RETURN x4.id,x1.id,x2.id,x3.id
+647,MATCH (x1)-[:P375]->(x2),(x3)-[:P495]->(x4),(x2)-[:P516]->(x3),(x5)-[:P625]->(x6),(x4)-[:P625]->(x7) RETURN x1.id,x2.id,x4.id,x6.id,x7.id,x5.id,x3.id
+648,MATCH (x1)-[:P3911]->(x2),(x3)-[:P3911]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+649,MATCH (x1)-[:P39]->(:Entity {id:"Q13217683"}),(x2)-[:P580]->(x3) RETURN x1.id,x2.id,x3.id
+650,MATCH (x1)-[:P39]->(:Entity {id:"Q13217683"}),(x2)-[:P582]->(x3) RETURN x1.id,x2.id,x3.id
+651,MATCH (x1)-[:P39]->(:Entity {id:"Q3044918"}),(x2)-[:P580]->(x3),(x2)-[:P582]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+652,MATCH (x1)-[:P39]->(:Entity {id:"Q4970706"}),(x2)-[:P569]->(x3),(x1)-[:P734]->(x4),(x1)-[:P735]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+653,MATCH (x1)-[:P39]->(:Entity {id:"Q83307"}),(x2)-[:P69]->(x3) RETURN x1.id,x2.id,x3.id
+654,MATCH (x1)-[:P39]->(x2),(x3)-[:P39]->(:Entity {id:"Q27169"}) RETURN x1.id,x2.id,x3.id
+655,MATCH (x1)-[:P39]->(x2),(x3)-[:P39]->(:Entity {id:"Q4970706"}) RETURN x1.id,x2.id,x3.id
+656,MATCH (x1)-[:P40]->(x2),(x2)-[:P40]->(x1) RETURN x1.id,x2.id
+657,MATCH (x1)-[:P463]->(:Entity {id:"Q12357993"}),(x2)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+658,MATCH (x1)-[:P463]->(x2),(:Entity {id:"Q142"})-[:P35]->(x1) RETURN x1.id,x2.id
+659,MATCH (x1)-[:P50]->(x2),(x3)-[:P50]->(x2),(x1)-[:P577]->(x4),(x3)-[:P577]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+660,MATCH (x1)-[:P54]->(:Entity {id:"Q1543"}),(x2)-[:P580]->(x3) RETURN x1.id,x2.id,x3.id
+661,MATCH (x1)-[:P54]->(x2),(x3)-[:P54]->(:Entity {id:"Q1543"}) RETURN x1.id,x2.id,x3.id
+662,MATCH (x1)-[:P569]->(x2),(x1)-[:P570]->(x3) RETURN x1.id,x2.id,x3.id
+663,MATCH (x1)-[:P569]->(x2),(x3)-[:P674]->(:Entity {id:"Q26702"}) RETURN x1.id,x2.id,x3.id
+664,MATCH (x1)-[:P625]->(x2),(x3)-[:P921]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+665,MATCH (x1)-[:P649]->(x2),(x1)-[:P649]->(x3),(:Entity {id:"Q61"})-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+666,MATCH (x1)-[:P69]->(:Entity {id:"Q1329269"}),(x1)-[:P69]->(:Entity {id:"Q49117"}) RETURN x1.id
+667,MATCH (x1)-[:P734]->(x2),(x1)-[:P735]->(x3) RETURN x1.id,x2.id,x3.id
+668,MATCH (x1)-[:P774]->(x2),(x3)-[:P856]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
+669,MATCH (x1)-[:P971]->(x2),(x3)-[:P971]->(x2) RETURN x1.id,x2.id,x3.id
+670,MATCH (x1)-[x2]->(:Entity {id:"Q11631"}),(x1)-[:P18]->(x3),(x1)-[:P569]->(x4),(x5)-[:P625]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+671,MATCH (x1)-[x2]->(:Entity {id:"Q155223"}),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+672,MATCH (x1)-[x2]->(:Entity {id:"Q182436"}),(x1)-[:P19]->(:Entity {id:"Q1486"}),(x1)-[:P569]->(x3),(x4)-[:P625]->(x5) RETURN x1.id,x2.id,x4.id,x5.id,x3.id
+673,MATCH (x1)-[x2]->(:Entity {id:"Q183"}),(x1)-[:P31]->(:Entity {id:"Q1248784"}),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+674,MATCH (x1)-[x2]->(:Entity {id:"Q187432"}),(x1)-[x2]->(:Entity {id:"Q899523"}) RETURN x1.id,x2.id
+675,MATCH (x1)-[x2]->(:Entity {id:"Q298"}),(x3)-[:P106]->(:Entity {id:"Q188094"}),(x1)-[:P27]->(:Entity {id:"Q414"}),(x4)-[:P31]->(:Entity {id:"Q5"}) RETURN x4.id,x1.id,x2.id,x3.id
+676,MATCH (x1)-[x2]->(:Entity {id:"Q2"}),(x1)-[:P17]->(x3) RETURN x1.id,x2.id,x3.id
+677,MATCH (x1)-[x2]->(:Entity {id:"Q31"}),(x1)-[:P31]->(:Entity {id:"Q1248784"}),(x1)-[:P625]->(x3) RETURN x1.id,x2.id,x3.id
+678,MATCH (x1)-[x2]->(:Entity {id:"Q484876"}),(x1)-[:P18]->(x3),(x4)-[:P26]->(x5),(x1)-[:P569]->(x6) RETURN x1.id,x2.id,x4.id,x6.id,x5.id,x3.id
+679,MATCH (x1)-[x2]->(:Entity {id:"Q5"}),(x1)-[:P1433]->(x3) RETURN x1.id,x2.id,x3.id
+680,MATCH (x1)-[x2]->(:Entity {id:"Q653645"}),(x1)-[:P31]->(:Entity {id:"Q11424"}) RETURN x1.id,x2.id
+681,MATCH (x1)-[x2]->(:Entity {id:"Q7075"}),(x3)-[:P625]->(x4) RETURN x4.id,x1.id,x2.id,x3.id
