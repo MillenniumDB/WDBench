@@ -269,6 +269,28 @@ Our scripts will execute a list of queries for a certain engine, one at a time, 
 Every time you want to run a benchmark script you must clear the cache of the system before. To do this, run as root:
 - `sync; echo 3 > /proc/sys/vm/drop_caches`
 
+
+Then you have 2 scripts for executing the benchmarks, one for SPARQL engines and another for NEO4J. They are placed in the `Execution` folder.
+
 Each script has a **parameters section** near the beginning of the file, (e.g. database paths, output folder) make sure to edit the script to set them properly.
+
+To execute the benchmark for a SPARQL engine you need to pass 4 parameters:
+1. the engine name (`JENA`, `BLAZEGRAPH` or `VIRTUOSO`).
+2. the limit for the queries
+3. the absolute path to the query file.
+4. Any name you want to give as a prefix for the output file.
+
+E.g.
+
+- `python Execution/benchmark.py JENA ~/WDBench/Queries/paths.txt 100000 paths`
+
+To execute the benchmark for NEO4J you need to manually start the server after clearing the cache. Then you can execute the script passing 3 parameters:
+1. the path (absolute or relative) to the query file.
+2. the limit for the queries
+3. Any name you want to give as a prefix for the output file.
+
+E.g.
+
+- `python Execution/cypher_benchmark.py Cypher/cypher_opts.txt 100000 opts`
 
 
