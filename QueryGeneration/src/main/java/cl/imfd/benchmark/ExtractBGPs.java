@@ -23,8 +23,13 @@ public class ExtractBGPs {
 		TreeSet<String> singleBGP = new TreeSet<String>();
 
 		QueryIterator queryIter = new QueryIterator();
+		if (args.length > 0){
+			queryIter = new QueryFolderIterator(args[0]);
+		}
+
 
 		for (String query : queryIter) {
+			System.out.println(query);
 			Op op = null;
 			try {
 				op = (new AlgebraGenerator()).compile(QueryFactory.create(query));

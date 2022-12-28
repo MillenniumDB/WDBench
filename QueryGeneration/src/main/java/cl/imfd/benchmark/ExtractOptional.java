@@ -17,6 +17,10 @@ public class ExtractOptional {
 		TreeSet<String> optQueries = new TreeSet<String>();
 
 		QueryIterator queryIter = new QueryIterator();
+		if (args.length > 0){
+			queryIter = new QueryFolderIterator(args[0]);
+		}
+		
 		for (String query : queryIter) {
 			Op op = null;
 			ExtractOptionalVisitor visitor = new ExtractOptionalVisitor();
