@@ -1,0 +1,16 @@
+# SELECT ?item ?articlename  ?itemDescription ?sl
+# WHERE {
+#    VALUES ?dod {"+2001-08-25"^^xsd:dateTime}
+#     ?dod ^wdt:P570 ?item .
+#     ?item wikibase:sitelinks ?sl .
+#     ?item ^schema:about ?article .
+#     ?article schema:isPartOf <https://en.wikipedia.org/>;
+#     schema:name ?articlename .
+#   SERVICE wikibase:label
+#     {
+#       bd:serviceParam wikibase:language "en" .
+#       ?item rdfs:label  .
+#       ?item schema:description ?itemDescription .
+#     }
+#   BIND(REPLACE(, "^.*(?<! [Vv][ao]n| [Dd][aeiu]| [Dd][e][lns]| [Ll][ae]) (?!([SJ]r\\.?|[XVI]+)$)", "") AS ?sortname)  
+# } ORDER BY ASC(UCASE(?sortname)) ASC(UCASE())

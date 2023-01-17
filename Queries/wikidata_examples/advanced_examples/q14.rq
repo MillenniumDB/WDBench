@@ -1,0 +1,3 @@
+# Added 2022-03
+# people and institutions that have the affiliation attribute assigned to Russia 
+select ?item ?itemDescription where { ?item wdt:P1416 wd:Q159. } limit 100

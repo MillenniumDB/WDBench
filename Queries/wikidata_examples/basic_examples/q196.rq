@@ -1,0 +1,7 @@
+SELECT ?formule ?picture ?molecule
+WHERE
+{
+  ?molecule  wdt:P31 wd:Q12140
+  ; wdt:P274 ?formule
+  ; wdt:P117 ?picture 
+}

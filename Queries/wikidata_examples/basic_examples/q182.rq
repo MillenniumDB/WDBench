@@ -1,0 +1,5 @@
+SELECT ?pathway ?wpid WHERE {
+   ?pathway wdt:P2410 ?wpid ;
+            wdt:P703 wd:Q15978631 .
+  
+}

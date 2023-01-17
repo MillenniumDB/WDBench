@@ -1,0 +1,16 @@
+# # Lexeme languages by number of usage examples
+# # by Vesihiisi
+# # improved by So9q 23-20-2020 to only show those with both a form and a sense, 
+# # because that's what we really want 
+
+# #defaultView:BubbleChart
+# SELECT ?languageLabel (COUNT(?example) AS ?count ) WHERE {
+#   ?l a ontolex:LexicalEntry; dct:language ?language.
+#   ?l p:P5831 ?statement.
+#   ?statement ps:P5831 ?example;
+#              pq:P6072 [];
+#              pq:P5830 [].
+  
+# }
+# GROUP BY ?languageLabel
+# ORDER BY DESC(?count)

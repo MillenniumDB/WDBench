@@ -1,0 +1,8 @@
+# #title:Danish idioms
+# # Author: So9q 
+# # Date: 2021-04-11
+# SELECT ?l ?lemma  WHERE {
+#   ?l dct:language wd:Q9035; # Danish (Q9035)
+#      wikibase:lemma ?lemma;
+#      wikibase:lexicalCategory wd:Q184511. # idiom (Q184511)
+# }

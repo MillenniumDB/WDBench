@@ -1,0 +1,11 @@
+#title:Popular eye colors among humans
+#illustrates bubblechart view, count
+
+#defaultView:BubbleChart
+SELECT (COUNT(?human) AS ?count)
+WHERE
+{
+  ?human wdt:P31 wd:Q5.
+  ?human wdt:P1340 ?eyeColor.
+  
+}

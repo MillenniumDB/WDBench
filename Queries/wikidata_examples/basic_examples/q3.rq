@@ -1,0 +1,15 @@
+#Illustrates optional fields, instances of subclasses, language fallback on label service, date to year conversion
+#title: Horses on Wikidata
+SELECT DISTINCT ?horse ?mother ?father (year(?birthdate) as ?birthyear) (year(?deathdate) as ?deathyear)
+WHERE
+{
+  ?horse wdt:P31/wdt:P279* wd:Q726 .     # Instance et sous-classes de Q726-Cheval
+   
+  OPTIONAL{?horse wdt:P25 ?mother .}       # P25  : Mère
+  OPTIONAL{?horse wdt:P22 ?father .}       # P22  : Père
+  OPTIONAL{?horse wdt:P569 ?birthdate .} # P569 : Date de naissance
+  OPTIONAL{?horse wdt:P570 ?deathdate .}     # P570 : Date de décès
+  OPTIONAL{?horse wdt:P21 ?gender .}       # P21  : Sexe
+ 
+}
+ORDER BY ?horse

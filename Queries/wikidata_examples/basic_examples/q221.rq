@@ -1,0 +1,9 @@
+SELECT ?discoverer ?name (COUNT(?asteroid) AS ?count)
+WHERE
+{
+  ?asteroid wdt:P31 wd:Q3863 .
+  ?asteroid wdt:P61 ?discoverer .
+}
+GROUP BY ?discoverer ?name
+ORDER BY DESC(?count)
+LIMIT 20

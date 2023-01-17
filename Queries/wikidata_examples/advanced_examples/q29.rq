@@ -1,0 +1,10 @@
+#defaultView:LineChart
+SELECT ?year (COUNT(?_genre) AS ?count )  WHERE {
+  ?item wdt:P31 wd:Q571;
+        wdt:P577 ?_publication_date;
+        wdt:P136 ?_genre.
+  BIND(str(YEAR(?_publication_date)) AS ?year)
+ FILTER (?_publication_date >= "2000-00-00T00:00:00Z"^^xsd:dateTime)
+}
+GROUP BY  ?year
+HAVING (?count > 10)

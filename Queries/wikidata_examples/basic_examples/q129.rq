@@ -1,0 +1,4 @@
+SELECT ?item  ?inseeCode {
+  ?item wdt:P374 ?inseeCode .
+  FILTER (?inseeCode in ("75056", "69123", "13055"))
+}

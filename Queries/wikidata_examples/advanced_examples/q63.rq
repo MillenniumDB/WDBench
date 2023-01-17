@@ -1,0 +1,7 @@
+#defaultView:Map
+select ?museum ?layer (sample(?location) as ?location) where {
+  ?museum wdt:P31/wdt:P279* wd:Q33506;
+          wdt:P17 wd:Q55;
+          wdt:P625 ?location.
+  optional { ?museum wdt:P2851 ?layer. }
+} group by ?museum ?layer

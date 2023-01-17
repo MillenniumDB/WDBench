@@ -1,0 +1,6 @@
+SELECT ?play
+WHERE
+{
+  ?play wdt:P31 wd:Q25379 .
+}
+LIMIT 1000

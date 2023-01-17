@@ -1,0 +1,11 @@
+# # persons who were stateless (country of citizenship: no value) for some time (start time and end time qualifiers)
+# SELECT ?person ?start ?end WHERE {
+#   ?person wdt:P31 wd:Q5;
+#           p:P27 [
+#             rdf:type wdno:P27;
+#             pq:P580 ?start;
+#             pq:P582 ?end
+#           ].
+  
+# }
+# ORDER BY DESC(?end - ?start)

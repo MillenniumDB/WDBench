@@ -1,0 +1,6 @@
+SELECT ?char ?charName 
+WHERE {
+  ?char wdt:P1080 wd:Q931597;
+          wdt:P31 ?type ;
+          wdt:P1080 ?universe .
+} GROUP BY ?char ?charName

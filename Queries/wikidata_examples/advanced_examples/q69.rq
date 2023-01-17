@@ -1,0 +1,16 @@
+# #defaultView:Map
+# select distinct ?monument (sample(?distance) as ?distance) (sample(?location) as ?location) (sample(?image) as ?image) where {
+#   ?monument wdt:P1435 ?heritage.
+  
+#   service wikibase:around {   
+#     ?monument wdt:P625 ?location.
+#     bd:serviceParam wikibase:center "[AUTO_COORDINATES]".
+#     bd:serviceParam wikibase:radius "1" . 
+#     bd:serviceParam wikibase:distance ?distance .
+#   }
+  
+#   optional {
+#     ?monument wdt:P18 ?image.
+#   }
+  
+# } group by ?monument order by ?distance

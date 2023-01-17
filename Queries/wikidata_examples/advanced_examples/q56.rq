@@ -1,0 +1,8 @@
+#defaultView:Map
+SELECT ?coord ?place ?image
+WHERE {
+	?place wdt:P31 wd:Q14276458 ;  # instance of deck arch bridge
+            wdt:P186 wd:Q22731 ;  # made of stone
+            wdt:P625 ?coord .
+	OPTIONAL { ?place wdt:P18 ?image }
+}

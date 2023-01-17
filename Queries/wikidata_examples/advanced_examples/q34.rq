@@ -1,0 +1,8 @@
+#defaultView:BarChart
+SELECT (SAMPLE(?year) AS ?year) (COUNT(?_country) AS ?count)  WHERE {
+  ?object wdt:P31/wdt:P279* wd:Q134447. # Power stations or subtypes
+  BIND(STR(YEAR(?_inception)) AS ?year)
+  ?object wdt:P571 ?_inception;
+          wdt:P17 ?_country.
+}
+GROUP BY ?year ?_country

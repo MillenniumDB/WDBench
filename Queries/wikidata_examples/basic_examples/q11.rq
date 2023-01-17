@@ -1,0 +1,9 @@
+# #title: Humans born in New York City
+# select distinct ?item  ?itemDescription ?sitelinks where {
+#     ?item wdt:P31 wd:Q5;  # Any instance of a human.
+#           wdt:P19/wdt:P131* wd:Q60;  #  Who was born in any value (eg. a hospital)
+# # that has the property of 'administrative area of' New York City or New York City itself.
+#              wikibase:sitelinks ?sitelinks.
+   
+# }
+# ORDER BY DESC(?sitelinks)

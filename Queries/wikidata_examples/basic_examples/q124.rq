@@ -1,0 +1,8 @@
+#defaultView:Map
+# Venues in Broadway
+SELECT DISTINCT ?venue {
+    ?venue wdt:P1217 ?IDBDB .
+    wd:Q235065 wdt:P625 ?broadWayLoc .
+
+    
+}

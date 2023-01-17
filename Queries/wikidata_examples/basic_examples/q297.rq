@@ -1,0 +1,7 @@
+SELECT DISTINCT ?item  ?website
+WHERE {
+?item wdt:P31/wdt:P279* wd:Q212805   # digital libraries or subtypes
+OPTIONAL { ?item wdt:P856 ?website }   # Official URL if known
+MINUS { ?item wdt:P576 [] }   # Exclude those that have shut down
+}
+ORDER BY 

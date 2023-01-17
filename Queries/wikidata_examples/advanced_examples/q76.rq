@@ -1,0 +1,17 @@
+# # Sample of scientific articles missing description in any language
+# # by So9q inspired by Lucas Werkmeister
+# # 2021-04-18
+# # This query can be used with PetScan to work on items that are normally not queryable because of timeouts on query.wikidata.org.
+# SELECT ?item 
+# WHERE 
+# {
+#   SERVICE bd:sample {
+#     ?item wdt:P31 wd:Q13442814.
+#     bd:serviceParam bd:sample.limit 100000
+#   }
+#   minus {
+#     ?item schema:description [].
+#   }
+#   
+# }
+# limit 500

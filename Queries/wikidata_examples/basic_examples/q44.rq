@@ -1,0 +1,8 @@
+#Properties grouped by their type with number of properties
+SELECT (COUNT(?property) as ?pcount ) ?wbtype WHERE {
+  ?property rdf:type               wikibase:Property.
+  ?property wikibase:propertyType  ?wbtype.
+  
+}
+GROUP BY ?wbtype
+ORDER BY DESC(?pcount)

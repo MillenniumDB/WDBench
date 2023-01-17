@@ -1,0 +1,9 @@
+# SELECT ?show ?showLabel ?seasonNumber ?episode ?episodeLabel
+# WHERE {
+#   BIND(wd:Q886 as ?show) .
+#   ?season wdt:P361 ?show .
+#   ?episode wdt:P361 ?season .
+#   ?season p:P179 [
+#           pq:P1545 ?seasonNumber] .
+#   
+# } ORDER BY xsd:integer(?seasonNumber)

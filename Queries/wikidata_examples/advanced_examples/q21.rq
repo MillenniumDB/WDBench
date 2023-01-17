@@ -1,0 +1,10 @@
+#defaultView:Dimensions
+SELECT  ?boiling_point ?melting_point ?electronegativity ?density ?mass WHERE {
+?element wdt:P31 wd:Q11344;
+   wdt:P2102 ?boiling_point;
+   wdt:P2101 ?melting_point;
+   wdt:P1108 ?electronegativity;
+   wdt:P2054 ?density;
+   wdt:P2067 ?mass.
+}
+LIMIT 100

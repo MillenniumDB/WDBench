@@ -1,0 +1,8 @@
+SELECT ?short_author (count(?item) as ?count)
+WHERE
+{
+  { ?item wdt:P921 wd:Q202864 . } UNION { ?item wdt:P921 wd:Q8071861 . }
+  {?item wdt:P2093 ?short_author .} UNION {?item wdt:P50 ?short_author .}
+}
+GROUP BY ?short_author
+ORDER BY DESC(?count)

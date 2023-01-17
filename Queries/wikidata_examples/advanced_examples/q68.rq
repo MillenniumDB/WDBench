@@ -1,0 +1,8 @@
+#defaultView:Map{"layer":"}
+SELECT ?item ?geo ?type (SAMPLE(?_image) AS ?image) WHERE {
+  ?type wdt:P279* wd:Q3839081 .
+  ?item wdt:P31 ?type ;
+        wdt:P625 ?geo .
+  OPTIONAL { ?item wdt:P18 ?_image }
+}
+GROUP BY ?item ?geo ?type

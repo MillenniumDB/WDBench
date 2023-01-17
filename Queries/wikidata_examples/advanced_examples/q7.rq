@@ -1,0 +1,10 @@
+#Whose birthday is today?
+SELECT ?entity ?entityDescription (YEAR(?date) as ?year)
+WHERE {
+    BIND(MONTH(NOW()) AS ?nowMonth)
+    BIND(DAY(NOW()) AS ?nowDay)
+    ?entity wdt:P569 ?date .
+    FILTER (MONTH(?date) = ?nowMonth && DAY(?date) = ?nowDay)
+
+}
+LIMIT 20

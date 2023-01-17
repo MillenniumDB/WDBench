@@ -1,0 +1,13 @@
+# All popes with number of children
+SELECT  (SAMPLE(?father) as ?father)  (SAMPLE(?picture) as ?picture) (COUNT(?father) as ?children)
+WHERE
+{
+  ?subj wdt:P22 ?father .
+    ?father wdt:P31 wd:Q5 .
+    ?father wdt:P39 wd:Q19546 .
+  OPTIONAL {
+    ?father wdt:P18 ?picture .
+    }
+}
+ORDER BY DESC(?children)
+LIMIT 50

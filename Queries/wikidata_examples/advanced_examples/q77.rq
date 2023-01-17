@@ -1,0 +1,23 @@
+# #Combine the Wikidata Query Service and the Mediawiki API
+# #https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual/MWAPI
+# #(which is backed by Elasticsearch) to perform very fast searching of entities by their label.
+# #
+# #This query will first contact EntitySearch (an alias to wbsearchentities)
+# #which will pass the items with a label of "soriano" it found to the triple store
+# #which in turn can now query the graph in a timely manner and filter those entities that are not humans.
+# #This solution only works if the number of items returned by wbsearchentities remains reasonable.
+
+# SELECT ?item  WHERE {
+#   SERVICE wikibase:mwapi {
+#       bd:serviceParam wikibase:endpoint "www.wikidata.org";
+#         wikibase:api "EntitySearch";
+#         mwapi:search "soriano"; # Search for things named "soriano"
+#         mwapi:language "en".
+#       ?item wikibase:apiOutputItem mwapi:item.
+#   }
+#   MINUS {
+#     ?item wdt:P31 wd:Q5 . # but MINUS or negate any of those things that are instances of human
+#   }
+#   SERVICE wikibase:label {bd:serviceParam wikibase:language "en".}
+# }
+# LIMIT 100

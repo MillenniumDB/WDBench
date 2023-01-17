@@ -1,0 +1,7 @@
+#defaultView:Map
+SELECT ?coord ?image ?site
+WHERE {
+   ?site wdt:P31/wdt:P279* wd:Q839954 ;
+      wdt:P625 ?coord ;
+      wdt:P18 ?image .
+}

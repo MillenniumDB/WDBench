@@ -1,0 +1,100 @@
+# # Added 2020-07
+# # All persons who have been the oldest living US ex-president with dates in chronological order
+# SELECT DISTINCT ?date ?president ?presidentLabel
+# WITH
+# {
+#   # Persons who is/were president of USA
+#   SELECT ?president ?presidentLabel ?president_enddate ?president_birthdate ?president_deathdate
+#   WHERE
+#   {
+#     ?president wdt:P31 wd:Q5.
+#     ?president_statement ps:P39 wd:Q11696.
+#     ?president_statement pq:P582 ?president_enddate.
+#     ?president wdt:P569 ?president_birthdate.
+#     OPTIONAL { ?president wdt:P570 ?president_deathdate. }
+#     FILTER (LANG(?presidentLabel) = "en")
+#   }
+# } AS %presidents
+# WITH
+# {
+#   # Dates where who is oldest living expresident can change
+#   SELECT DISTINCT ?date
+#   WHERE
+#   {
+#     {
+#       INCLUDE %presidents
+#       BIND(?president_enddate + "P1D"^^xsd:duration AS ?date)
+#     }
+#     UNION
+#     {
+#       INCLUDE %presidents
+#       BIND(?president_deathdate + "P1D"^^xsd:duration AS ?date)
+#     }
+#   }
+# } AS %dates
+# WITH
+# {
+#   # Find the age for all living expresidents for each value of ?date
+#   SELECT ?date ?age ?president ?presidentLabel ?president_birthdate
+#   WHERE
+#   {
+#     INCLUDE %dates
+#     INCLUDE %presidents
+#     FILTER (?president_enddate < ?date) # Must have become expresident
+#     FILTER IF(BOUND(?president_deathdate), ?president_deathdate >= ?date, true) # Must still be living
+#     BIND (?date - ?president_birthdate AS ?age)
+#   }
+# } AS %ages
+# WITH
+# {
+#   # Find the oldest age for a living expresident for each value of ?date
+#   SELECT ?date (MAX(?age) AS ?oldest)
+#   WHERE
+#   {
+#     INCLUDE %ages
+#   }
+#   GROUP BY ?date
+# } AS %oldest
+# WITH
+# {
+#   SELECT DISTINCT ?date ?age ?president ?presidentLabel ?president_birthdate
+#   WHERE
+#   {
+#     INCLUDE %dates
+#     OPTIONAL
+#     {
+#       INCLUDE %ages
+#       INCLUDE %oldest
+#       FILTER (?age = ?oldest)
+#     }
+#   }
+# } AS %result
+# WHERE
+# {
+#   # A result is a change from the previous date if ?president's presidency ended the day before ?date,
+#   # or if an older expresident died the day before ?date. Filter out results that don't fulfill this.
+#   INCLUDE %result
+#   BIND (?date - "P1D"^^xsd:duration AS ?day_before)
+#   FILTER
+#   (
+#     ! BOUND(?president)||
+#     EXISTS
+#     {
+#       ?president p:P39 ?president_statement.
+#       ?president_statement ps:P39 wd:Q11696.
+#       ?president_statement pq:P582 ?day_before.
+#     } ||
+#     EXISTS
+#     {
+#       ?other_president wdt:P31 wd:Q5.
+#       ?other_president p:P39 ?president_statement.
+#       ?president_statement ps:P39 wd:Q11696.
+#       ?president_statement pq:P582 ?other_president_end.
+#       ?other_president wdt:P569 ?other_president_birthdate.
+#       ?other_president wdt:P570 ?day_before.
+#       FILTER (?other_president_birthdate < ?president_birthdate) # Other president is oldest
+#       FILTER (?other_president_end < ?day_before) # other president died as expresident
+#     }
+#   )
+# }
+# ORDER BY ?date

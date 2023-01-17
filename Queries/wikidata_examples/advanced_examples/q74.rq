@@ -1,0 +1,21 @@
+#added before 2016-10
+SELECT ?item ?dob
+WHERE
+{
+  	# place of birth = Scotland (Q22)
+  	{ ?item wdt:P19 wd:Q22 }
+	# OR place of birth within Scotland.
+	UNION  { ?item wdt:P19 ?pob . ?pob wdt:P131* wd:Q22 }
+
+	# humans only
+  	?item wdt:P31 wd:Q5 .
+
+	# get DOB for ordering.
+	OPTIONAL { ?item wdt:P569 ?dob  }
+}
+#Order by date of birth, avoid overriding this in the template with sort=
+ORDER BY ?dob
+#Listeria can only handle up to 5000
+LIMIT 4000
+#start at the first item
+OFFSET 0 #change to OFFSET 4000 to start at the 4001th item

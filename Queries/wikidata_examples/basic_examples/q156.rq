@@ -1,0 +1,6 @@
+SELECT *
+WHERE
+{
+   ?subj wdt:P39 wd:Q654291  .
+   ?subj wdt:P21 ?gender .
+}

@@ -1,0 +1,8 @@
+SELECT ?item  (MIN(?date) AS ?firstReleased) ?_image
+WHERE {
+  ?item wdt:P161 wd:Q221074;
+        wdt:P577 ?date
+  
+  OPTIONAL { ?item wdt:P18 ?_image. }
+} GROUP BY ?item  ?_image
+ORDER BY (?date)

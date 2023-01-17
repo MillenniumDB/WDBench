@@ -1,0 +1,6 @@
+SELECT ?place (COUNT(*) AS ?count) WHERE {
+  ?item wdt:P136 wd:Q557141 .
+  ?item wdt:P131 ?place .
+}
+GROUP BY ?place 
+ORDER BY DESC(?count) ?place

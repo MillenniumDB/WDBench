@@ -1,0 +1,29 @@
+# SELECT
+#   ?item
+#   (SAMPLE (?itemL) AS ?title)
+#   (SAMPLE (?y) AS ?year)
+#   (SAMPLE (?typeL) AS ?type)
+#   (group_concat(distinct ?materialL ; separator = ", ") as ?materials)
+#   (SAMPLE (?collectionL) AS ?collection)
+#   (SAMPLE (?img) AS ?image)
+# {
+#   SELECT ?item ?itemL (YEAR(?date) AS ?y) ?typeL ?collectionL ?img ?materialL
+#   WHERE {
+#     ?item wdt:P179 wd:Q471379 .
+#     ?item wdt:P18 ?img .
+#     ?item wdt:P571 ?date .
+#     ?item wdt:P31 ?instance .
+#     ?item rdfs:label ?itemL filter (lang(?itemL) = "en").
+#     ?instance rdfs:label ?typeL filter (lang(?typeL) = "en").
+#     OPTIONAL {
+#       ?item wdt:P195 ?collection .
+#       ?collection rdfs:label ?collectionL filter (lang(?collectionL) = "en").
+#     }
+#     OPTIONAL {
+#       ?item wdt:P186 ?material .
+#       ?material rdfs:label ?materialL filter (lang(?materialL) = "en").
+#     }
+#   }
+# }
+# GROUP BY ?item
+# ORDER BY ?year ?item 

@@ -1,0 +1,20 @@
+# SELECT ?monthLabel (?day_int as ?d) ?personLabel ?personDesc
+#    (URI(CONCAT("https://tools.wmflabs.org/reasonator/?q=", SUBSTR(STR(?rperson),32) )) as ?link) WHERE {
+# { SELECT ?month_int ?month ?day_int (SAMPLE(?person) AS ?rperson) WHERE {
+# ?month wdt:P31 wd:Q47018901; wdt:P1545 ?month_ordinal. # These lines generate a calendar from January 1 to December 31
+# ?day p:P361 [ps:P361 ?month; pq:P1545 ?day_ordinal ].
+#  BIND(xsd:integer(?month_ordinal) AS ?month_int)
+#  BIND(xsd:integer(?day_ordinal) AS ?day_int)
+# OPTIONAL {
+# # Define the people we're interested in
+# {?person wdt:P69 wd:Q34433 } UNION {?person wdt:P69/wdt:P31 wd:Q2581649 } # educated at Oxford or an Oxford college
+# ?person wdt:P21 wd:Q6581072 ; # female
+#    p:P569/psv:P569 ?date_node. # birth date
+# ?date_node wikibase:timePrecision "11"^^xsd:integer ; # birth date has specific day
+#    wikibase:timeValue ?birthdate .        
+# filter(DAY(?birthdate)=?day_int) filter (MONTH(?birthdate)=?month_int )
+# }
+# } GROUP BY ?month_int ?month ?day_int }
+# SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
+# ?rperson rdfs:label ?personLabel. ?rperson schema:description ?personDesc. ?month rdfs:label ?monthLabel }
+# } ORDER BY ?month_int ?day_int
