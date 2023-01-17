@@ -214,11 +214,11 @@ Edit the text file `conf/neo4j.conf`
 
 ### 3. Convert .nt to .csv files
 
-Use the script [nt_to_neo4j.py](/src/database_generation/nt_to_neo4j.py) to generate the .csv files `entities.csv`, `literals.csv` and `edges.csv`
+Use the script [nt_to_neo4j.py](/DatabaseGeneration/nt_to_neo4j.py) to generate the .csv files `entities.csv`, `literals.csv` and `edges.csv`
 
 ### 4. Bulk import and index
 
-Execute the data import
+Execute the data import (the command supposes that `.csv` files are in the `wikidata_csv` folder)
 
 ```
 bin/neo4j-admin import --database wikidata \
@@ -228,7 +228,6 @@ bin/neo4j-admin import --database wikidata \
  --delimiter "," --array-delimiter ";" --skip-bad-relationships true
 ```
 
-You should have the `.csv` files in the `wikidata_csv` folder.
 
 Now we have to create the index for entities:
 
