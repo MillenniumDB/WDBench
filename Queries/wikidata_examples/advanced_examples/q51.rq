@@ -1,0 +1,8 @@
+# #defaultView:Map
+# # Places with free wi-fi
+# SELECT ?item  (SAMPLE(?coord) AS ?coord)
+# WHERE {
+# 	?item wdt:P2848 wd:Q1543615 ;  # wi-fi gratis
+# 	      wdt:P625 ?coord .
+# 	
+# } GROUP BY ?item 

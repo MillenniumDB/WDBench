@@ -1,0 +1,6 @@
+SELECT  ?coord ?place
+WHERE
+{
+   ?subj wdt:P31 wd:Q744913  .
+   ?subj wdt:P625 ?coord .
+}

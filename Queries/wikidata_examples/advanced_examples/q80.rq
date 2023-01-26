@@ -1,0 +1,20 @@
+# #title: Find metadata like artist and license for an image
+# SELECT ?image ?filename ?license ?artist ?licenseurl WHERE {
+#   wd:Q20 wdt:P948 ?image . # Change here to select any other image, by changing item and property
+#   # The following line transforms the image to be used in the Commons API
+#   BIND(wikibase:decodeUri(STRAFTER(STR(?image), "http://commons.wikimedia.org/wiki/Special:FilePath/")) AS ?filename)
+#   # Below is the call to the Wikimedia Commons API
+#   SERVICE wikibase:mwapi {
+#     bd:serviceParam wikibase:endpoint "commons.wikimedia.org";
+#                     wikibase:api "Generator";
+#                     mwapi:generator "allpages";
+#                     mwapi:prop "imageinfo";
+#                     mwapi:iiprop "extmetadata";
+#                     mwapi:gapfrom ?filename ;
+#                     mwapi:gapto ?filename;
+#                     mwapi:gapnamespace "6".
+#     ?license wikibase:apiOutput "imageinfo/ii/extmetadata/LicenseShortName/@value" .
+#     ?artist wikibase:apiOutput "imageinfo/ii/extmetadata/Artist/@value" .
+#     ?licenseurl wikibase:apiOutput "imageinfo/ii/extmetadata/LicenseUrl/@value" .                    
+#   }
+# }

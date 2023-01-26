@@ -1,0 +1,9 @@
+#defaultView:Timeline
+SELECT ?item  ?launchdate (SAMPLE(?image) AS ?image)
+WHERE
+{
+	?item wdt:P31 wd:Q26529 .
+    ?item wdt:P619 ?launchdate .
+    OPTIONAL { ?item wdt:P18 ?image }
+}
+GROUP BY ?item  ?launchdate

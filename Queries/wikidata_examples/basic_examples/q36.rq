@@ -1,0 +1,11 @@
+# # Lexemes describing a color
+# # By Vesihiisi
+
+# SELECT ?l ?lemma ?languageLabel  WHERE {
+#   ?l a ontolex:LexicalEntry; 
+#        dct:language ?language; 
+#        wikibase:lemma ?lemma .
+#   ?l wdt:P31 wd:Q376431.
+  
+# }
+# ORDER BY ?languageLabel

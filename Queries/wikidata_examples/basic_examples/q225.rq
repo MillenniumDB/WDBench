@@ -1,0 +1,6 @@
+#defaultView:ImageGrid
+SELECT ?exoplanet ?image WHERE {
+  ?exoplanet wdt:P31 wd:Q44559 ;
+             wdt:P18 ?image .
+  
+}

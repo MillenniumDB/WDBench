@@ -1,0 +1,16 @@
+#added before 2016-10
+
+#defaultView:BubbleChart
+SELECT ?surname  ?count
+WHERE
+{
+  {
+    SELECT ?surname (COUNT(?person) AS ?count) WHERE {
+      ?person (wdt:P31/wdt:P279*) wd:Q95074.
+      ?person wdt:P734 ?surname.
+    }
+    GROUP BY ?surname
+  }
+}
+ORDER BY DESC(?count)
+LIMIT 100

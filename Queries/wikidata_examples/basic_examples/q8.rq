@@ -1,0 +1,8 @@
+#Demonstrates "no value" handling
+#title: Humans without children
+SELECT ?human
+WHERE
+{
+  ?human wdt:P31 wd:Q5 .       #find humans
+  ?human rdf:type wdno:P40 .   #with at least one truthy P40 (child) statement defined to be "no value"
+}

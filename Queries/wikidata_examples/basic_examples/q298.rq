@@ -1,0 +1,7 @@
+# Canadian libraries on a map (must have coordinates!)
+#defaultView:Map
+SELECT ?library ?coords WHERE {
+  ?library (wdt:P31/wdt:P279*) wd:Q7075.
+  ?library wdt:P17 wd:Q16.
+  ?library wdt:P625 ?coords.
+}

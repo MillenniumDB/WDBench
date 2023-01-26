@@ -1,0 +1,9 @@
+#defaultView:BubbleChart
+SELECT DISTINCT ?item  (?end - ?start AS ?duration)
+WHERE
+{
+	?item wdt:P361* wd:Q362 ;
+          wdt:P31/wdt:P279* wd:Q178561 ;
+          wdt:P580 ?start ;
+          wdt:P582 ?end .
+}

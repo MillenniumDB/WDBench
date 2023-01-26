@@ -1,0 +1,13 @@
+#defaultView:Map
+
+SELECT ?itemDescription ?image ?coord WHERE {
+
+  ?item (wdt:P31/wdt:P279*) wd:Q23397.
+
+  ?item wdt:P17 wd:Q1009.
+
+  ?item wdt:P625 ?coord.
+
+  OPTIONAL {?item wdt:P18 ?image.}
+
+}

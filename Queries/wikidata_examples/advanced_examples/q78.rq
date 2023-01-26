@@ -1,0 +1,15 @@
+# # Use the MediaWiki API to get the articles from a specific category in a specific Wikipedia language version.
+# # Then use this results as usual in a query, in this example a simple query for the gender.
+# # By User:Ainali with the help of User:Dipsacus fullonum  2021-02
+# SELECT ?item  ?genderLabel WHERE {
+#   SERVICE wikibase:mwapi {
+#      bd:serviceParam wikibase:endpoint "sv.wikipedia.org";     # Set the project here
+#                      wikibase:api "Generator";
+#                      mwapi:generator "categorymembers";        # Selects the content from a category
+#                      mwapi:gcmtitle "Category:Födda 2001";.    # Specifies the category (Born in 2001)
+#      ?item wikibase:apiOutputItem mwapi:item.
+#   } 
+#   FILTER BOUND (?item)                                         # Safeguard to not get a timeout from unbound items when using ?item below
+#   ?item wdt:P21 ?gender .                                      # Example retrieval of a value
+# SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en,sv". }    
+# }

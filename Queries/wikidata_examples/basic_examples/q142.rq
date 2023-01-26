@@ -1,0 +1,16 @@
+# Ten largest islands in the world
+# Inspired by this infographic: https://redd.it/a6423t
+
+#defaultView:ImageGrid
+SELECT DISTINCT ?island ?islandImage WHERE {
+  # Instances of island (or of subclasses of island)
+  ?island (wdt:P31/wdt:P279*) wd:Q23442.
+  # Optionally with an image
+  OPTIONAL { ?island wdt:P18 ?islandImage. }
+  # Get the area of the island
+  # Use the psn: prefix to normalize the values to a common unit of area
+  ?island p:P2046/psn:P2046/wikibase:quantityAmount ?islandArea.
+  # Use the label service to automatically fill ?islandLabel
+}
+ORDER BY DESC(?islandArea)
+LIMIT 10

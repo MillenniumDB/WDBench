@@ -1,0 +1,10 @@
+# #illustrates sitelink selection, ";" notation
+# #title: Items with a Wikispecies sitelink
+# SELECT ?item  ?article
+# WHERE
+# {
+#   ?article  schema:about ?item ;
+#       schema:isPartOf <https://species.wikimedia.org/> .
+#   
+# }
+# LIMIT 200

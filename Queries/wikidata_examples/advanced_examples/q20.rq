@@ -1,0 +1,7 @@
+#defaultView:Timeline
+SELECT DISTINCT ?item  ?catalog_code ?publication_date
+WHERE {
+	?item wdt:P86 wd:Q254 ; # composer: W. A. Mozart
+          wdt:P528 ?catalog_code ;
+          wdt:P577 ?publication_date .
+}

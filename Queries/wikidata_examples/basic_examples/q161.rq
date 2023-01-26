@@ -1,0 +1,9 @@
+#defaultView:ImageGrid
+SELECT ?building ?country ?picture
+WHERE
+{
+  ?building wdt:P31 wd:Q7138926 .
+  ?building wdt:P18 ?picture .
+  OPTIONAL { ?building wdt:P17 ?country } .   #if available
+}
+LIMIT 188

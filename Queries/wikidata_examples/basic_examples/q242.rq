@@ -1,0 +1,8 @@
+#title:Most popular subjects of scientific articles
+select (count(?work) as ?count) ?subject where {
+  ?work wdt:P31 wd:Q13442814;
+        wdt:P921 ?subject .
+}
+group by ?subject
+order by desc(?count)
+limit 200

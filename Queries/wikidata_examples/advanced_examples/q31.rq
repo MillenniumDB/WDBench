@@ -1,0 +1,15 @@
+#defaultView:BarChart
+
+SELECT(SAMPLE(?year) AS ?year) (COUNT(?_country) AS ?battles)   WHERE {
+  ?subj wdt:P31 wd:Q178561.  # instance of battle
+  OPTIONAL { ?subj wdt:P580 ?d1. }  # start time
+  OPTIONAL { ?subj wdt:P585 ?d2. }  # point in time
+  OPTIONAL { ?subj wdt:P582 ?d3. }  # end time
+  BIND(IF(!BOUND(?d1), IF(!BOUND(?d2), ?d3, ?d2), ?d1) AS ?date)
+  BIND(STR(YEAR(?date)) AS ?year)
+  FILTER(BOUND(?year))
+  ?subj wdt:P276/wdt:P17 ?_country.  # country of location of battle
+  BIND((NOW()) - ?date AS ?distance)
+  FILTER((0 <= ?distance) && (?distance < 31 * 12 * 80))
+}
+GROUP BY ?year ?_country

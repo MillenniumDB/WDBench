@@ -1,0 +1,8 @@
+#defaultView:Map
+SELECT ?city ?coordinates
+WHERE
+{
+   VALUES ?highway { wd:Q559037 wd:Q58767 }
+   ?highway wdt:P2789 ?city .
+    ?city wdt:P625 ?coordinates .
+}

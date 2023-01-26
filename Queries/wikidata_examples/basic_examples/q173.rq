@@ -1,0 +1,8 @@
+#defaultView:BarChart
+SELECT  (count(*) as ?counts)
+WHERE
+{
+  ?item wdt:P3329 ?civic_id ;
+          wdt:P31 ?variant_type .
+}
+ORDER BY ?counts

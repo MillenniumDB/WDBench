@@ -1,0 +1,5 @@
+# SELECT ?property ?propertyType ?propertyLabel ?propertyDescription ?propertyAltLabel WHERE {
+#   ?property wikibase:propertyType ?propertyType .
+  
+# }
+# ORDER BY ASC(xsd:integer(STRAFTER(STR(?property), 'P')))

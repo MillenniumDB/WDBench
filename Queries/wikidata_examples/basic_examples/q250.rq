@@ -1,0 +1,6 @@
+SELECT ?item  ?url ?licence
+WHERE {
+  ?item wdt:P31 wd:Q4117139.
+  OPTIONAL { ?item wdt:P856 ?url }
+  OPTIONAL { ?item wdt:P275 ?licence }
+}

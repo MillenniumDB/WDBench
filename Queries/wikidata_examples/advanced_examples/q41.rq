@@ -1,0 +1,14 @@
+# #defaultView:TreeMap
+# SELECT ?eyes ?hairColorLabel (COUNT(?person) as ?count)
+# WHERE
+# {
+# 	?person wdt:P1340 ?eyeColor.
+#     ?person wdt:P1884 ?hairColor.
+#     ?person wdt:P2048 ?height.
+#     ?eyeColor rdfs:label ?_eyeColorLabel.
+#     FILTER((LANG(?_eyeColorLabel)) = "en")
+#     BIND(CONCAT(?_eyeColorLabel, " eyes") AS ?eyes)
+   
+# 	SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+# }
+# GROUP BY ?eyes ?hairColorLabel

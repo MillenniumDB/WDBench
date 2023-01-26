@@ -1,0 +1,23 @@
+#title: Distinct billionaires
+
+SELECT ?item  (MAX(?billion) as ?billions)
+
+WHERE
+
+{
+
+  ?item wdt:P2218 ?worth.
+
+  ?item wdt:P19 ?location .
+
+  
+
+  FILTER(?worth>1000000000).
+
+  BIND(?worth/1000000000 AS ?billion).
+
+}
+
+GROUP BY ?item 
+
+ORDER BY DESC(?billions)

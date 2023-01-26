@@ -1,0 +1,20 @@
+#defaultView:AreaChart
+
+SELECT ?cod (STR(SAMPLE(?yearOfDeath)) AS ?YEAR_Of_DEATH) (COUNT(*) AS ?NUMBER_OF_DEATHS) ?cause WHERE {
+
+  ?pid wdt:P31 wd:Q5;  # instance of human
+
+       wdt:P509 ?cod;  # cause of death
+
+       wdt:P570 ?_date_of_death.
+
+  ?cod wdt:P279* wd:Q12078.  # type of cancer
+
+
+  BIND ( YEAR(?_date_of_death) AS ?yearOfDeath )
+
+  FILTER( ?yearOfDeath > 1960 )
+
+}
+
+GROUP BY ?cod ?cause ?yearOfDeath

@@ -1,0 +1,12 @@
+# #added before 2016-10
+#  #defaultView:Map
+# SELECT ?item  ?coord
+# WHERE
+# {
+# 	?item wdt:P31/wdt:P279* wd:Q486972;
+#     	      wdt:P17 wd:Q183;
+#     	      rdfs:label ;
+#     	      wdt:P625 ?coord;
+#     	 FILTER (lang() = "de") .
+#     	 FILTER regex (, "(ow|itz)$").
+# }
