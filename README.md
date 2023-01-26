@@ -17,7 +17,7 @@ In this repository you can find the data files and queries used in the benchmark
 
 The data used in this benchmark is based on the [Wikidata Truthy](https://iccl.inf.tu-dresden.de/web/Wikidata_SPARQL_Logs/en) from 2021-06-23. We cleaned the data removing all triples whose predicate is not a direct property (i.e `http://www.wikidata.org/prop/direct/P*`). The data is available to download from [Figshare](https://figshare.com/s/50b7544ad6b1f51de060).
 
-The script to generate these data from the [original data](https://www.wikidata.org/wiki/Wikidata:Database_download) is in our [source folder](/src/database_generation/filter_direct_properties.py).
+The script to generate these data from the [original data](https://www.wikidata.org/wiki/Wikidata:Database_download) is in our [source folder](/DatabaseGeneration/filter_direct_properties.py).
 
 # Data loading
 
