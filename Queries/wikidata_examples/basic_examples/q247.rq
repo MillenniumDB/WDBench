@@ -1,7 +1,0 @@
-SELECT DISTINCT *
-WHERE
-{
-  ?item   wdt:P31 wd:Q8513 .
-  OPTIONAL {  ?item  wdt:P275 ?licenseItem .
-      ?licenseItem rdfs:label ?license .}
-}

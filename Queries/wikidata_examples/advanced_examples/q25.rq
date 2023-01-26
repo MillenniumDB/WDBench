@@ -1,7 +1,0 @@
-#defaultView:Graph
-SELECT ?char ?group ?groupLabel ("7FFF00" as ?rgb)
-WHERE {
-	?group wdt:P31 wd:Q14514600 ;  # group of fictional characters
-          wdt:P1080 wd:Q931597.  # from Marvel universe
- ?char wdt:P463 ?group # member of group
-}

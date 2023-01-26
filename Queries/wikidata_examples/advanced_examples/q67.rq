@@ -1,8 +1,0 @@
-# #defaultView:Map
-# select ?item ?coords_ where {
-#   ?item wdt:P17 wd:Q712 .
-#   ?item p:P625/psv:P625 ?coords .
-#   ?coords wikibase:geoLatitude ?lat ;
-#           wikibase:geoLongitude ?lon .
-#   bind(strdt(concat("Point(", if((?lon < 0), str(?lon + 360), str(?lon)), " ", str(?lat), ")"), geo:wktLiteral) as ?coords_) .
-# } limit 1000

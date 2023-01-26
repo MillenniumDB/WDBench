@@ -1,8 +1,0 @@
-SELECT DISTINCT ?women
-WHERE
-{
-       ?women wdt:P31 wd:Q5 .
-       ?women wdt:P21 wd:Q6581072 .
-       ?women wdt:P106/wdt:P279* wd:Q483501 . # artists
-}
-LIMIT 500

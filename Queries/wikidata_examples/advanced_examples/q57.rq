@@ -1,8 +1,0 @@
-#defaultView:Map
-SELECT ?place ?coord ?layer
-WHERE {
-   ?place wdt:P31/wdt:P279? wd:Q474 ; # instance of aqueduct
-          wdt:P625 ?coord ;
-          wdt:P31 ?type.
-  ?type wdt:P279* wd:Q474
-}

@@ -1,6 +1,0 @@
-SELECT ?h ?cause (YEAR(?date) AS ?year) WHERE {
-?h wdt:P39 wd:Q11696;
-   wdt:P509 ?cause;
-   wdt:P570 ?date
-
-} ORDER BY ?year

@@ -1,9 +1,0 @@
-#added before 2016-10
-#defaultView:Map
-SELECT DISTINCT ?item ?coords ?image
-WHERE {
-	?item wdt:P31 wd:Q39715 ;
-          wdt:P17 wd:Q20 ;
-          wdt:P625 ?coords
-	OPTIONAL { ?item wdt:P18 ?image } 
-}

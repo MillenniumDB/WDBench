@@ -1,8 +1,0 @@
-# defaultView:BubbleChart
-SELECT DISTINCT ?population
-{
-  ?country wdt:P31 wd:Q6256 ;
-           wdt:P1082 ?population .
-}
-GROUP BY ?population
-ORDER BY DESC(?population)

@@ -1,5 +1,0 @@
-SELECT ?q 
-WHERE
-{
-  ?q wdt:P31 wd:Q15841920.
-}

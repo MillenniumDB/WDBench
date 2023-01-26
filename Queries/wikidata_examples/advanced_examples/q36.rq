@@ -1,8 +1,0 @@
-#defaultView:BarChart
-select (count(?gender) as ?genderCount) where {
-  ?item wdt:P136 wd:Q557141;
-        wdt:P131 wd:Q47887;
-        wdt:P170 ?creator. 
-    
-  ?creator wdt:P21 ?gender.
-} group by ?genderCount

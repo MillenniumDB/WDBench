@@ -1,9 +1,0 @@
-select distinct ?language where {
-  ?language wdt:P31 ?instance;
-            wdt:P17 wd:Q55.
-  filter (?instance in (wd:Q34770, wd:Q33384)).
-  optional { 
-    ?wikipedia wdt:P31 wd:Q10876391;
-               wdt:P407 ?language. 
-  }
-} group by ?language 

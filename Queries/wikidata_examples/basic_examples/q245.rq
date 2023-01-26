@@ -1,5 +1,0 @@
-SELECT ?proof
-WHERE
-{
-  ?proof wdt:P31 wd:Q11538.
-}

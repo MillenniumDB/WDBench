@@ -1,7 +1,0 @@
-#added before 2016-10
-#defaultView:Map
-SELECT ?coord
-WHERE {
-	?station wdt:P81 wd:Q99691 ;
-		 wdt:P625 ?coord .
-}

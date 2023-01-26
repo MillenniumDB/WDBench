@@ -1,7 +1,0 @@
-# This query collects burial places of individuals, and sorts them in decreasing order
-SELECT ?human (COUNT(?place) AS ?count) WHERE {
-  ?human wdt:P31 wd:Q5.
-  ?human wdt:P119 ?place.
-}
-GROUP BY ?human 
-ORDER BY DESC(?count)

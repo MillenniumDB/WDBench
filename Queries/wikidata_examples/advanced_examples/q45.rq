@@ -1,8 +1,0 @@
-#defaultView:Map
-SELECT ?objectDescription ?link ?coord
-WHERE {
-  ?object wdt:P31/wdt:P279? wd:Q46169 .
-          OPTIONAL { ?object wdt:P856 ?link. } 
-          OPTIONAL { ?object wdt:P625 ?coord . }
-
-}

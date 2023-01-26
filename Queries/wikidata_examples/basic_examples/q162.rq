@@ -1,5 +1,0 @@
-SELECT (COUNT(?jurisdiction) AS ?count)
-WHERE
-{
-  ?jurisdiction wdt:P1622 ?side.
-}

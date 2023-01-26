@@ -1,9 +1,0 @@
-#graph rendering could be slow due to large number of results
-
-#defaultView:Graph
-SELECT ?item  ?_image ?_subclass_of
-WHERE {
-  ?item wdt:P31 wd:Q188451;
-        wdt:P279 ?_subclass_of.
-  OPTIONAL { ?item wdt:P18 ?_image. }
-}

@@ -1,8 +1,0 @@
-#defaultView:BubbleChart
-#TEMPLATE={"template":"Overall causes of death ranking of ?thing ","variables":{"?thing": {"query":"SELECT ?id  (COUNT(?id) AS ?count) WHERE {  ?sub wdt:P509 ?y.  ?sub wdt:P31 ?id. } GROUP BY ?id "} } }
-SELECT ?cid ?cause (COUNT(*) AS ?count) WHERE {
-  BIND(wd:Q5 AS ?thing)
-  ?pid wdt:P31 ?thing;
-      wdt:P509 ?cid.
-GROUP BY ?cid ?cause
-ORDER BY DESC(?count) ?cause

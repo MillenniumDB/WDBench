@@ -1,7 +1,0 @@
-SELECT ?ereader
-
-WHERE {
-  ?ereader wdt:P31  wd:Q726235 .
-  ?ereader wdt:P1072 wd:Q1941622 .
- 
-  }

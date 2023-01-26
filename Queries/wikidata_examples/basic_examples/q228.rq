@@ -1,9 +1,0 @@
-#defaultView:BubbleChart
-SELECT (count(DISTINCT ?author) as ?count)
-WHERE
-{
-        ?object wdt:P31 wd:Q13442814
-        ; wdt:P50 ?author .
-        ?author wdt:P106 ?occupation .
-}
-ORDER BY DESC(?count)

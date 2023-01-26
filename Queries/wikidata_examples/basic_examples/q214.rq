@@ -1,5 +1,0 @@
-SELECT DISTINCT ?compound ?cas
-WHERE
-{
-  ?compound wdt:P231 ?cas .
-}

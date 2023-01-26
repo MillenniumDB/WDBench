@@ -1,5 +1,0 @@
-SELECT ?inventor ?gadget WHERE {
-  ?inventor wdt:P157 ?gadget.
-  ?gadget wdt:P61 ?inventor.
-  
-}

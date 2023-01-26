@@ -1,7 +1,0 @@
-#defaultView:Map
-SELECT ?item ?geoLocation ?image
-WHERE {
-    ?item wdt:P463 wd:Q1010307 ;  # member of Les Plus Beaux Villages de France (organisation)
-          wdt:P625 ?geoLocation .
-    OPTIONAL { ?item wdt:P18 ?image }
-}

@@ -1,8 +1,0 @@
-#defaultView:BarChart
-SELECT ?year (COUNT(?year) as ?count) WHERE {
-  ?painting wdt:P31 wd:Q3305213.
-  ?painting wdt:P170 wd:Q151803.
-  ?painting wdt:P571 ?inception.
-  BIND(str(year(?inception)) AS ?year)
-  OPTIONAL { ?painting wdt:P18 ?image. }
-} GROUP BY ?year ?count ORDER BY ?year

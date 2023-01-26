@@ -1,7 +1,0 @@
-#defaultView:ImageGrid
-SELECT ?item  ?pic
-WHERE
-{
-?item wdt:P31 wd:Q146 .
-?item wdt:P18 ?pic
-}

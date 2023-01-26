@@ -1,7 +1,0 @@
-#defaultView:Map
-SELECT  ?coord ?subj
-WHERE {
-   ?subj wdt:P31 wd:Q839954 ; # instance of archaeological site
-         wdt:P31/wdt:P279* wd:Q23413 ;  # instance or subclass of castle
-         wdt:P625 ?coord .
-}

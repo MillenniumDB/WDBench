@@ -1,7 +1,0 @@
-SELECT ?item  ?_PubMed_ID
-WHERE
-{
-  ?item wdt:P31 wd:Q13442814 .
- 
-  OPTIONAL { ?item wdt:P698 ?_PubMed_ID. }
-}

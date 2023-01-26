@@ -1,6 +1,0 @@
-SELECT DISTINCT ?standard ?website
-WHERE
-{
-        ?standard wdt:P1462 wd:Q37033 .
-        OPTIONAL{ ?standard wdt:P856 ?website }
-}

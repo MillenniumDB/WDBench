@@ -1,7 +1,0 @@
-SELECT ?song ?code
-WHERE
-{
-  ?song wdt:P1236 ?code.
-}
-ORDER BY DESC(STRLEN(REPLACE(?code, " ", "")))
-LIMIT 10

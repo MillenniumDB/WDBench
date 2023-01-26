@@ -1,7 +1,0 @@
-SELECT ?tonality (COUNT(?tonality) as ?count)
-WHERE
-{
-  ?work wdt:P826 ?tonality.
-}
-GROUP BY ?tonality
-ORDER BY DESC(?count)

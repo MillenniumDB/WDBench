@@ -1,7 +1,0 @@
-SELECT DISTINCT ?item WHERE {
-  ?item wdt:P30 wd:Q15 ;
-        wdt:P37 ?officiallanguage ;
-        wdt:P31 wd:Q6256 .
-  ?officiallanguage wdt:P424 ?langcode .
-}
-ORDER BY ?item

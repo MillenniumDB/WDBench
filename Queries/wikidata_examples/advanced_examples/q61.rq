@@ -1,9 +1,0 @@
-# #added before 2016-10
-
-# #defaultView:Map
-# SELECT ?item  ?_coordinate_location ?_image WHERE {
-#   ?item wdt:P31/wdt:P279* wd:Q1370598.
-#   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-#    ?item wdt:P625 ?_coordinate_location.
-#   ?item wdt:P18 ?_image.
-# }

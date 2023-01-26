@@ -1,7 +1,0 @@
-SELECT ?wpid ?item 
-WHERE
-{
-  ?item wdt:P2410 ?wpid ;
-          wdt:P2860 ?reference ;
-   
-}

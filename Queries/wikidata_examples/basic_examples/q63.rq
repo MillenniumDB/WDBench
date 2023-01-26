@@ -1,5 +1,0 @@
-SELECT ?band 
-WHERE
-{
-  ?band wdt:P31 wd:Q5741069 .
-}

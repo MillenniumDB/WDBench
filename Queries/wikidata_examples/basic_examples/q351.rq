@@ -1,8 +1,0 @@
-SELECT ?id ?item 
-WHERE
-{
-  {?item wdt:P3937 ?id } UNION
-        {?item wdt:P2410 ?id }
-        ?item wdt:P2860 ?reference .
-   
-}

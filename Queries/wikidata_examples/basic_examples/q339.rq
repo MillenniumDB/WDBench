@@ -1,8 +1,0 @@
-#defaultView:ImageGrid
-SELECT ?item  ?_image
-WHERE
-{
-  ?item wdt:P279 wd:Q28803.
-OPTIONAL { ?item wdt:P18 ?_image. }
-}
-LIMIT 100

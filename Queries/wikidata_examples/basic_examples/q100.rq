@@ -1,9 +1,0 @@
-#defaultView:Map
-SELECT DISTINCT ?connection ?connectedWith ?coor
-WHERE
-{
-  VALUES ?city {wd:Q3001} # wd:Q3001 = Paramaribo}
-  ?connection wdt:P2789+ ?city ;
-              wdt:P2789+ ?connectedWith .
-  ?connectedWith wdt:P625 ?coor .
-  }

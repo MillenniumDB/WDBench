@@ -1,4 +1,0 @@
-select distinct ?item  where {
-    ?item wdt:P106/wdt:P279* wd:Q639669 .
-    ?item wdt:P19/wdt:P131* wd:Q34370 .
-}

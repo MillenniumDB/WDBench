@@ -1,7 +1,0 @@
-# #title:Lexemes by number of statements
-# #author:Nikki 2021-09-15
-# select * {
-#   ?l dct:language [];
-#      wikibase:statements ?c.
-# }
-# order by desc(?c) limit 50

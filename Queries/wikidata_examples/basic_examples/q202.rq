@@ -1,6 +1,0 @@
-SELECT DISTINCT ?instance_of ?official_website WHERE {
-  
-  ?instance_of (wdt:P31/(wdt:P279*)) wd:Q341.
-  OPTIONAL { ?instance_of wdt:P856 ?official_website. }
-  ?instance_of wdt:P277 wd:Q37227.
-}

@@ -1,6 +1,0 @@
-# SELECT DISTiNCT ?item  WHERE {
-#    ?item ?p ?statement.
-#    ?statement prov:wasDerivedFrom ?ref . 
-#    ?ref ?prop wd:Q28061352 .
-   
-# }

@@ -1,8 +1,0 @@
-SELECT ?universe (COUNT(?planet) AS ?count)
-WHERE
-{
-  ?planet wdt:P31 wd:Q2775969;
-          wdt:P1080 ?universe.
-}
-GROUP BY ?universe
-ORDER BY DESC(?count)

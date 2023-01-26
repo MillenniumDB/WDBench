@@ -1,8 +1,0 @@
-#List of airports in Belgium
-#defaultView:Map
-SELECT DISTINCT ?airport ?coor
-WHERE {
-  ?airport wdt:P31 wd:Q1248784 ;
-          ?range wd:Q31;
-          wdt:P625 ?coor.
-}

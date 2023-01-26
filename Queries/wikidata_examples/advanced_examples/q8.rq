@@ -1,5 +1,0 @@
-#added before 2016-10
- SELECT * WHERE {
-  ?p wdt:P1080 wd:Q620588 . # from fictional universe: Terminator
-  ?p wdt:P25 ?m .  # ?m is mother of ?p
-}

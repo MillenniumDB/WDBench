@@ -1,7 +1,0 @@
-#defaultView:Map
-select ?painting ?location ?image where {
-  ?painting wdt:P276 ?collection;
-            wdt:P170 wd:Q41264;
-            wdt:P18 ?image.
-  ?collection wdt:P625 ?location.
-}
