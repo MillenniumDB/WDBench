@@ -4,7 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 import java.util.Map.Entry;
 import java.util.TreeSet;
 
@@ -18,6 +23,37 @@ import org.apache.jena.sparql.algebra.Op;
 import org.apache.jena.sparql.core.Var;
 
 public class ExtractBGPs {
+	
+	private static boolean hasCrossProduct(String query) {
+		List<Set<String>> variableSetList = new ArrayList<Set<String>>();
+		List<String> tripleList = new ArrayList<String>(Arrays.asList(query.replaceAll("\\{", "").replaceAll("\\}", "")
+				.replaceAll("OPTIONAL", "").strip().split("\\s\\.\\s")));
+		for (String triplePattern : tripleList) {
+			Set<String> elementSet = new HashSet<String>();
+			for(String tripleElement : triplePattern.split("\\s")){
+				elementSet.add(tripleElement.strip());
+			}
+			variableSetList.add(elementSet);
+		}
+		Iterator<Set<String>> variableSetListIterator = variableSetList.iterator(); 
+		while(variableSetListIterator.hasNext()) {
+			boolean empty = false;
+			Set<String> variableList = variableSetListIterator.next();
+			Iterator<Set<String>> variableSetListIteratorInner = variableSetList.iterator();
+			while(variableSetListIteratorInner.hasNext()) {
+				variableList.retainAll(variableSetListIteratorInner.next());
+				if(variableList.isEmpty()) {
+					empty = true;
+				}
+			}
+			if(empty) {
+				System.out.println(query);
+				return empty;
+			}
+		}
+		return false;
+	}
+	
 	public static void main(String[] args) throws UnsupportedEncodingException, IOException {
 		TreeSet<String> multipleBGP = new TreeSet<String>();
 		TreeSet<String> singleBGP = new TreeSet<String>();
@@ -29,7 +65,7 @@ public class ExtractBGPs {
 
 
 		for (String query : queryIter) {
-			System.out.println(query);
+//			System.out.println(query);
 			Op op = null;
 			try {
 				op = (new AlgebraGenerator()).compile(QueryFactory.create(query));
@@ -208,11 +244,13 @@ public class ExtractBGPs {
 
 		      int multipleCount = 0;
 		      for (String query : multipleBGP) {
-		    	  multipleCount++;
-		    	  multipleBGPFile.write(Integer.toString(multipleCount));
-		    	  multipleBGPFile.write(',');
-		    	  multipleBGPFile.write(query);
-		    	  multipleBGPFile.write('\n');
+		    	  if(!hasCrossProduct(query)) {
+			    	  multipleCount++;
+			    	  multipleBGPFile.write(Integer.toString(multipleCount));
+			    	  multipleBGPFile.write(',');
+			    	  multipleBGPFile.write(query);
+			    	  multipleBGPFile.write('\n');
+		    	  }
 		      }
 
 		      singleBGPFile.close();

@@ -4,9 +4,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.TreeSet;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.Triple;
@@ -18,6 +23,38 @@ import org.apache.jena.sparql.algebra.Op;
 import org.apache.jena.sparql.core.Var;
 
 public class ExtractC2RPQ {
+	
+	private static boolean hasCrossProduct(String query) {
+		List<Set<String>> variableSetList = new ArrayList<Set<String>>();
+		// Lista de conjuntos de variables
+		List<String> tripleList = new ArrayList<String>(Arrays.asList(query.replaceAll("\\{", "").replaceAll("\\}", "")
+				.replaceAll("OPTIONAL", "").strip().split("\\s\\.\\s")));
+		for (String triplePattern : tripleList) {
+			Set<String> elementSet = new HashSet<String>();
+			for(String tripleElement : triplePattern.split("\\s")){
+				elementSet.add(tripleElement.strip());
+			}
+			variableSetList.add(elementSet);
+		}
+		// luego con un doble for me aseguro de que cada triple tenga interseccion en algun otro triple, sino devuelvo false
+		Iterator<Set<String>> variableSetListIterator = variableSetList.iterator(); 
+		while(variableSetListIterator.hasNext()) {
+			boolean empty = false;
+			Set<String> variableList = variableSetListIterator.next();
+			Iterator<Set<String>> variableSetListIteratorInner = variableSetList.iterator();
+			while(variableSetListIteratorInner.hasNext()) {
+				variableList.retainAll(variableSetListIteratorInner.next());
+				if(variableList.isEmpty()) {
+					empty = true;
+				}
+			}
+			if(empty) {
+				System.out.println(query);
+				return empty;
+			}
+		}
+		return false;
+	}
 
 	public static void main(String[] args) throws UnsupportedEncodingException, IOException {
 		TreeSet<String> pathQueries = new TreeSet<String>();
@@ -233,11 +270,13 @@ public class ExtractC2RPQ {
 
 		      int count = 0;
 		      for (String query : pathQueries) {
-		    	  count++;
-		    	  pathsFile.write(Integer.toString(count));
-		    	  pathsFile.write(',');
-		    	  pathsFile.write(query);
-		    	  pathsFile.write('\n');
+		    	  if (!hasCrossProduct(query)) {
+			    	  count++;
+			    	  pathsFile.write(Integer.toString(count));
+			    	  pathsFile.write(',');
+			    	  pathsFile.write(query);
+			    	  pathsFile.write('\n');
+		    	  }
 		      }
 
 		      pathsFile.close();
