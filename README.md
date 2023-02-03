@@ -107,7 +107,7 @@ We used Virtuoso Open Source Edition, version 7.2.6.
 
   - `cp database/virtuoso.ini.sample wikidata.ini`
 
-- Edit `wikidata.ini` with a text editor, when you edit a path, we recomend using the absolute path:
+- Edit `wikidata.ini` with a text editor, when you edit a path, we recommend using the absolute path:
 
   - replace every `../database/` with the path of the database folder you want to create.
 
@@ -123,7 +123,7 @@ We used Virtuoso Open Source Edition, version 7.2.6.
 
   - revise `MaxQueryCostEstimationTime`, our experiments commented this out with ';' before the line removing the limit
 
-  - revise `MaxQueryExecutionTime`, our experiments used `600` for 10 minute timeouts
+  - revise `MaxQueryExecutionTime`, our experiments used `60` for 1 minute timeouts
 
   - add at the end of the file these lines:
 
@@ -184,7 +184,7 @@ Blazegraph can't load big files in a reasonable time, so we need to split the .n
 - Edit the script file `runBlazegraph.sh` with any text editor.
   - configure main memory here: `HEAP_SIZE=${HEAP_SIZE:-"64g"}` (You may use other value depending on how much RAM your machine has)
   - set the log folder `LOG_DIR=${LOG_DIR:-"/path/to/logs"}`, replace `/path/to/logs` with the absolute path of the `logs` dir you created in the previous step.
-  - add `-Dorg.wikidata.query.rdf.tool.rdf.RdfRepository.timeout=600` to the `exec java` command to specify the timeout (value is in seconds).
+  - add `-Dorg.wikidata.query.rdf.tool.rdf.RdfRepository.timeout=60` to the `exec java` command to specify the timeout (value is in seconds).
   - also change `-Dcom.bigdata.rdf.sparql.ast.QueryHints.analyticMaxMemoryPerQuery=0` which removes per-query memory limits.
 
 ### 5. Load the splitted data
