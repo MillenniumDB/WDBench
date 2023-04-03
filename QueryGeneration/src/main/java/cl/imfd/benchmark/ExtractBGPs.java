@@ -18,42 +18,12 @@ import org.apache.jena.graph.Triple;
 import org.apache.jena.query.QueryException;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QueryParseException;
+import org.apache.jena.sparql.algebra.Algebra;
 import org.apache.jena.sparql.algebra.AlgebraGenerator;
 import org.apache.jena.sparql.algebra.Op;
 import org.apache.jena.sparql.core.Var;
 
-public class ExtractBGPs {
-	
-	private static boolean hasCrossProduct(String query) {
-		List<Set<String>> variableSetList = new ArrayList<Set<String>>();
-		List<String> tripleList = new ArrayList<String>(Arrays.asList(query.replaceAll("\\{", "").replaceAll("\\}", "")
-				.replaceAll("OPTIONAL", "").strip().split("\\s\\.\\s")));
-		for (String triplePattern : tripleList) {
-			Set<String> elementSet = new HashSet<String>();
-			for(String tripleElement : triplePattern.split("\\s")){
-				elementSet.add(tripleElement.strip());
-			}
-			variableSetList.add(elementSet);
-		}
-		Iterator<Set<String>> variableSetListIterator = variableSetList.iterator(); 
-		while(variableSetListIterator.hasNext()) {
-			boolean empty = false;
-			Set<String> variableList = variableSetListIterator.next();
-			Iterator<Set<String>> variableSetListIteratorInner = variableSetList.iterator();
-			while(variableSetListIteratorInner.hasNext()) {
-				variableList.retainAll(variableSetListIteratorInner.next());
-				if(variableList.isEmpty()) {
-					empty = true;
-				}
-			}
-			if(empty) {
-				System.out.println(query);
-				return empty;
-			}
-		}
-		return false;
-	}
-	
+public class ExtractBGPs {	
 	public static void main(String[] args) throws UnsupportedEncodingException, IOException {
 		TreeSet<String> multipleBGP = new TreeSet<String>();
 		TreeSet<String> singleBGP = new TreeSet<String>();
@@ -62,23 +32,42 @@ public class ExtractBGPs {
 		if (args.length > 0){
 			queryIter = new QueryFolderIterator(args[0]);
 		}
-
-
+		// TODO: intentar no perder tantas consultas
+// 		sacando Label
+//		1089
+//		145
+		
+//		Sin sacar Label
+//		1115
+//		32
+		int QueryParseExceptionCount = 0;
+		int QueryExceptionCount = 0;
 		for (String query : queryIter) {
-//			System.out.println(query);
 			Op op = null;
+//			query = query.replace("Label", "");
 			try {
-				op = (new AlgebraGenerator()).compile(QueryFactory.create(query));
+				op = Algebra.compile(QueryFactory.create(query));
 			} catch (QueryParseException e) {
+				System.out.println("QueryParseException");
+				System.out.println(query);
+				System.out.println(e);
+				QueryParseExceptionCount++;
 				continue;
 			} catch (QueryException e) {
+				System.out.println("QueryException");
+				System.out.println(query);
+				System.out.println(e);
+				QueryExceptionCount++;
 				continue;
 			}
 
 			ExtractBGPsVisitor visitor = new ExtractBGPsVisitor();
 			op.visit(visitor);
 
-			if (visitor.mainBGP.size() > 0 && !visitor.hasUnsuportedOp) {
+			if (visitor.mainBGP.size() > 0
+				&& !visitor.hasUnsuportedOp
+				&& !visitor.hasCrossProduct())
+			{
 				// order triples ignoring variable names
 				// eg: ?x1 P1 ?x2 is the same as ?x2 P1 ?x1
 
@@ -181,7 +170,7 @@ public class ExtractBGPs {
 						}
 					}
 
-					transformedBgp.add(new Triple(newS, newP, newO));
+					transformedBgp.add(Triple.create(newS, newP, newO));
 				}
 
 				StringBuilder sb = new StringBuilder();
@@ -227,6 +216,9 @@ public class ExtractBGPs {
 				}
 			}
 		}
+		
+		System.out.println(QueryParseExceptionCount);
+		System.out.println(QueryExceptionCount);
 
 		// Write BGPs into files
 		try {
@@ -244,13 +236,11 @@ public class ExtractBGPs {
 
 		      int multipleCount = 0;
 		      for (String query : multipleBGP) {
-		    	  if(!hasCrossProduct(query)) {
-			    	  multipleCount++;
-			    	  multipleBGPFile.write(Integer.toString(multipleCount));
-			    	  multipleBGPFile.write(',');
-			    	  multipleBGPFile.write(query);
-			    	  multipleBGPFile.write('\n');
-		    	  }
+		    	  multipleCount++;
+		    	  multipleBGPFile.write(Integer.toString(multipleCount));
+		    	  multipleBGPFile.write(',');
+		    	  multipleBGPFile.write(query);
+		    	  multipleBGPFile.write('\n');
 		      }
 
 		      singleBGPFile.close();
