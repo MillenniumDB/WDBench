@@ -1,9 +1,14 @@
 package cl.imfd.benchmark;
 
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.TreeSet;
 
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.Triple;
+import org.apache.jena.ontology.OntTools.Path;
 import org.apache.jena.sparql.algebra.op.OpBGP;
 import org.apache.jena.sparql.algebra.op.OpLeftJoin;
 import org.apache.jena.sparql.algebra.op.OpPath;
@@ -228,5 +233,88 @@ public class ExtractC2RPQVisitor extends VisitorBase implements PathVisitor {
 	@Override
 	public void visit(P_OneOrMoreN path) {
 		throw new UnsupportedOperationException();
+	}
+	
+	public boolean hasCrossProduct() {
+//		ArrayList<Triple> allBGPS = new ArrayList<Triple>();
+		
+		// TODO: rellenar BGPS
+//		addTriples(allBGPS, optionalNode);
+
+		if ((mainBGP.size() + paths.size()) <= 1) {
+			return false;
+		}
+		HashMap<String, TreeSet<String>> graph = new HashMap<String, TreeSet<String>>();
+		for (Triple triple : mainBGP) {
+			String s = triple.getSubject().toString();
+			String p = triple.getPredicate().toString();
+			String o = triple.getObject().toString();
+			
+			graph.put(s, new TreeSet<String>());
+			if (p.charAt(0) == '?') {
+				graph.put(p, new TreeSet<String>());
+			}
+			graph.put(o, new TreeSet<String>());
+		}
+		int i = 0;
+		for (String path : paths) {
+			String p = path.toString();	
+			String o = pathsO.get(i).toString();
+			String s = pathsS.get(i).toString();
+			graph.put(s, new TreeSet<String>());
+			if (p.charAt(0) == '?') {
+				graph.put(p, new TreeSet<String>());
+			}
+			graph.put(o, new TreeSet<String>());
+			i += 1;
+		}
+		
+		for (Triple triple : mainBGP) {
+			String s = triple.getSubject().toString();
+			String p = triple.getPredicate().toString();
+			String o = triple.getObject().toString();
+			if (p.charAt(0) == '?') {
+				graph.get(s).add(p);
+				graph.get(p).add(s); 
+				graph.get(p).add(o);
+				graph.get(o).add(p);
+			}
+			graph.get(s).add(o);
+			graph.get(o).add(s);
+		}
+		
+		i = 0;
+		for (String path : paths) {
+			String s = pathsS.get(i).toString();
+			String p = path;
+			String o = pathsO.get(i).toString();
+			if (p.charAt(0) == '?') {
+				graph.get(s).add(p);
+				graph.get(p).add(s); 
+				graph.get(p).add(o);
+				graph.get(o).add(p);
+			}
+			graph.get(s).add(o);
+			graph.get(o).add(s);
+			i += 1;
+		}
+		
+		TreeSet<String> visited = new TreeSet<String>();
+		LinkedList<String> queue = new LinkedList<String>();
+		queue.add(mainBGP.get(0).getSubject().toString());
+		
+		while (!queue.isEmpty()) {
+			String current = queue.poll();
+			visited.add(current);
+			
+			for (String neighbour : graph.get(current)) {
+				System.out.println(current + "->" + neighbour);
+				if (!visited.contains(neighbour)) {
+					visited.add(neighbour);
+					queue.add(neighbour);
+				}
+			}
+		}
+		return visited.size() != graph.size();
 	}
 }
