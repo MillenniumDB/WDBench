@@ -34,29 +34,37 @@ VIRTUOSO_LOCK_FILE = f'{BENCHMARK_ROOT}/virtuoso/wikidata/virtuoso.lck'
 ENGINES_PATHS = {
     'BLAZEGRAPH': f'{BENCHMARK_ROOT}/blazegraph/service',
     'JENA':       f'{BENCHMARK_ROOT}/jena',
+    'JENA-HDT':   f'{BENCHMARK_ROOT}/jena-hdt',
     'VIRTUOSO':   f'{BENCHMARK_ROOT}/virtuoso',
     'QLEVER':     f'{BENCHMARK_ROOT}/qlever',
+    'RDF4J':      f'{BENCHMARK_ROOT}/rdf4j',
 }
 
 ENGINES_PORTS = {
     'BLAZEGRAPH': 9999,
     'JENA':       3030,
+    'JENA-HDT':       3030,
     'VIRTUOSO':   1111,
     'QLEVER':     7001,
+    'RDF4J':     7001,
 }
 
 ENDPOINTS = {
     'BLAZEGRAPH': 'http://localhost:9999/bigdata/namespace/wdq/sparql',
     'JENA':       'http://localhost:3030/jena/sparql',
+    'JENA-HDT':   'http://localhost:3030/wikidata-hdt-service/sparql',
     'VIRTUOSO':   'http://localhost:8890/sparql',
     'QLEVER':     'http://localhost:7001/sparql',
+    'RDF4J':      'http://localhost:7001/sparql',
 }
 
 SERVER_CMD = {
     'BLAZEGRAPH': ['./runBlazegraph.sh'],
     'JENA': f'java -Xmx64g -jar apache-jena-fuseki-4.1.0/fuseki-server.jar --loc=apache-jena-4.1.0/wikidata --timeout={TIMEOUT*1000} /jena'.split(' '),
+    'JENA-HDT': f'java -Xmx64g -jar apache-jena-fuseki-4.1.0-hdt/fuseki-server.jar --timeout={TIMEOUT*1000} /jena'.split(' '),
     'VIRTUOSO': ['bin/virtuoso-t', '-c', 'wikidata.ini', '+foreground'],
-    'QLEVER': f'TIMEOUT=600; PORT=7001; docker run --rm -v $QLEVER_HOME/qlever-indices/wikidata:/index  -p $PORT:7001 -e INDEX_PREFIX=wikidata --name qlever.wikidata qlever-docker'
+    'QLEVER': f'TIMEOUT=600; PORT=7001; docker run --rm -v $QLEVER_HOME/qlever-indices/wikidata:/index  -p $PORT:7001 -e INDEX_PREFIX=wikidata --name qlever.wikidata qlever-docker',
+    'RDF4J': f'TIMEOUT=600; PORT=7001; docker run --rm -v $QLEVER_HOME/qlever-indices/wikidata:/index  -p $PORT:7001 -e INDEX_PREFIX=wikidata --name qlever.wikidata qlever-docker',
 }
 #######################################################
 
