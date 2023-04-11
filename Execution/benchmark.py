@@ -43,10 +43,10 @@ ENGINES_PATHS = {
 ENGINES_PORTS = {
     'BLAZEGRAPH': 9999,
     'JENA':       3030,
-    'JENA-HDT':       3030,
+    'JENA-HDT':   3030,
     'VIRTUOSO':   1111,
     'QLEVER':     7001,
-    'RDF4J':     7001,
+    'RDF4J':      7001,
 }
 
 ENDPOINTS = {
