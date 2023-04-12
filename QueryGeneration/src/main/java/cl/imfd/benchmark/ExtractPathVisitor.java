@@ -96,7 +96,7 @@ public class ExtractPathVisitor extends VisitorBase implements PathVisitor {
 
 	@Override
 	public void visit(OpLeftJoin opLeftJoin) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 

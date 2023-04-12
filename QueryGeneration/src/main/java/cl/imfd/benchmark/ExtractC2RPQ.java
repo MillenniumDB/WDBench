@@ -39,7 +39,7 @@ public class ExtractC2RPQ {
 			ExtractC2RPQVisitor visitor = new ExtractC2RPQVisitor();
 			op.visit(visitor);
 
-			if (visitor.paths.size() == 0 || visitor.mainBGP.size() == 0 || visitor.hasUnsuportedOp) {
+			if (visitor.paths.size() == 0 || visitor.mainBGP.size() == 0 || visitor.hasUnsupportedOp) {
 				continue;
 			}
 

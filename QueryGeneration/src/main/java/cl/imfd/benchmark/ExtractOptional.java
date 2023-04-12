@@ -34,7 +34,7 @@ public class ExtractOptional {
 			} catch (QueryException e) {
 				continue;
 			}
-			if (!visitor.hasUnsuportedOp && visitor.optionalNode.bgp.size() > 0
+			if (!visitor.hasUnsupportedOp && visitor.optionalNode.bgp.size() > 0
 					&& visitor.optionalNode.optionalChildren.size() > 0
 					&& !visitor.hasCrossProduct()) {
 				String str = visitor.optionalNode.toString();

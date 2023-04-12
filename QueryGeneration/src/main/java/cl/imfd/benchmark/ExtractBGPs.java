@@ -4,12 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 import java.util.Map.Entry;
 import java.util.TreeSet;
 
@@ -19,55 +14,47 @@ import org.apache.jena.query.QueryException;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QueryParseException;
 import org.apache.jena.sparql.algebra.Algebra;
-import org.apache.jena.sparql.algebra.AlgebraGenerator;
 import org.apache.jena.sparql.algebra.Op;
 import org.apache.jena.sparql.core.Var;
 
-public class ExtractBGPs {	
+public class ExtractBGPs {
 	public static void main(String[] args) throws UnsupportedEncodingException, IOException {
 		TreeSet<String> multipleBGP = new TreeSet<String>();
 		TreeSet<String> singleBGP = new TreeSet<String>();
 
 		QueryIterator queryIter = new QueryIterator();
-		if (args.length > 0){
+		if (args.length > 0) {
 			queryIter = new QueryFolderIterator(args[0]);
 		}
-		// TODO: intentar no perder tantas consultas
-// 		sacando Label
-//		1089
-//		145
-		
-//		Sin sacar Label
-//		1115
-//		32
+
 		int QueryParseExceptionCount = 0;
 		int QueryExceptionCount = 0;
 		for (String query : queryIter) {
 			Op op = null;
-//			query = query.replace("Label", "");
 			try {
 				op = Algebra.compile(QueryFactory.create(query));
 			} catch (QueryParseException e) {
-				System.out.println("QueryParseException");
-				System.out.println(query);
-				System.out.println(e);
+//				System.out.println("QueryParseException");
+//				System.out.println(query);
+//				System.out.println(e);
 				QueryParseExceptionCount++;
 				continue;
 			} catch (QueryException e) {
-				System.out.println("QueryException");
-				System.out.println(query);
-				System.out.println(e);
+//				System.out.println("QueryException");
+//				System.out.println(query);
+//				System.out.println(e);
 				QueryExceptionCount++;
 				continue;
 			}
 
+//			System.out.println(query);
+//			System.out.println(op);
 			ExtractBGPsVisitor visitor = new ExtractBGPsVisitor();
 			op.visit(visitor);
 
 			if (visitor.mainBGP.size() > 0
-				&& !visitor.hasUnsuportedOp
-				&& !visitor.hasCrossProduct())
-			{
+					&& !visitor.hasUnsupportedOp
+					&& !visitor.hasCrossProduct()) {
 				// order triples ignoring variable names
 				// eg: ?x1 P1 ?x2 is the same as ?x2 P1 ?x1
 
@@ -119,8 +106,7 @@ public class ExtractBGPs {
 				}
 
 				// rename variables
-				// OldName -> NewName
-				HashMap<String, String> variableMap = new HashMap<String, String>();
+				HashMap<String, String> variableMap = new HashMap<String, String>(); // <OldName, NewName>
 				ArrayList<Triple> transformedBgp = new ArrayList<Triple>();
 
 				int currentNewVar = 1;
@@ -216,38 +202,38 @@ public class ExtractBGPs {
 				}
 			}
 		}
-		
-		System.out.println(QueryParseExceptionCount);
-		System.out.println(QueryExceptionCount);
+
+		System.out.println("QueryParseException count: " + QueryParseExceptionCount);
+		System.out.println("QueryException count: " + QueryExceptionCount);
 
 		// Write BGPs into files
 		try {
-		      FileWriter singleBGPFile = new FileWriter("single_bgps.txt");
-		      FileWriter multipleBGPFile = new FileWriter("multiple_bgps.txt");
+			FileWriter singleBGPFile = new FileWriter("single_bgps.txt");
+			FileWriter multipleBGPFile = new FileWriter("multiple_bgps.txt");
 
-		      int singleCount = 0;
-		      for (String query : singleBGP) {
-		    	  singleCount++;
-		    	  singleBGPFile.write(Integer.toString(singleCount));
-		    	  singleBGPFile.write(',');
-		    	  singleBGPFile.write(query);
-		    	  singleBGPFile.write('\n');
-		      }
+			int singleCount = 0;
+			for (String query : singleBGP) {
+				singleCount++;
+				singleBGPFile.write(Integer.toString(singleCount));
+				singleBGPFile.write(',');
+				singleBGPFile.write(query);
+				singleBGPFile.write('\n');
+			}
 
-		      int multipleCount = 0;
-		      for (String query : multipleBGP) {
-		    	  multipleCount++;
-		    	  multipleBGPFile.write(Integer.toString(multipleCount));
-		    	  multipleBGPFile.write(',');
-		    	  multipleBGPFile.write(query);
-		    	  multipleBGPFile.write('\n');
-		      }
+			int multipleCount = 0;
+			for (String query : multipleBGP) {
+				multipleCount++;
+				multipleBGPFile.write(Integer.toString(multipleCount));
+				multipleBGPFile.write(',');
+				multipleBGPFile.write(query);
+				multipleBGPFile.write('\n');
+			}
 
-		      singleBGPFile.close();
-		      multipleBGPFile.close();
-	    } catch (IOException e) {
-	    	System.out.println("An error occurred.");
-	    	e.printStackTrace();
-	    }
+			singleBGPFile.close();
+			multipleBGPFile.close();
+		} catch (IOException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
+		}
 	}
 }

@@ -47,7 +47,7 @@ public class QueryFolderIterator extends QueryIterator {
 
     private String mQueryFolder;
 
-    public QueryFolderIterator(String queryFolder){
+    public QueryFolderIterator(String queryFolder) {
         mQueryFolder = queryFolder;
     }
 
@@ -70,7 +70,7 @@ public class QueryFolderIterator extends QueryIterator {
 
                 private String currentQuery;
 
-                private Iterator queries = queryFiles.stream().iterator();
+                private Iterator<String> queries = queryFiles.stream().iterator();
 
                 @Override
                 public boolean hasNext() {
@@ -99,7 +99,6 @@ public class QueryFolderIterator extends QueryIterator {
             };
             return it;
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return it;

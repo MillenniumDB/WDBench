@@ -35,7 +35,7 @@ import org.apache.jena.sparql.algebra.op.OpUnion;
 
 public abstract class VisitorBase implements OpVisitor  {
 
-	public boolean hasUnsuportedOp = false;
+	public boolean hasUnsupportedOp = false;
 
 	@Override
 	public void visit(OpService opService) {
@@ -92,102 +92,102 @@ public abstract class VisitorBase implements OpVisitor  {
 
 	@Override
 	public void visit(OpQuadPattern quadPattern) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpQuadBlock quadBlock) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpTriple opTriple) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpQuad opQuad) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpTable opTable) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpNull opNull) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpProcedure opProc) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpPropFunc opPropFunc) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpFilter opFilter) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpGraph opGraph) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpDatasetNames dsNames) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpLabel opLabel) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpAssign opAssign) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpExtend opExtend) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpUnion opUnion) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpDiff opDiff) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpMinus opMinus) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpConditional opCondition) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpDisjunction opDisjunction) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
 	public void visit(OpList opList) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 }

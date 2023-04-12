@@ -118,7 +118,7 @@ public class GetCypherPathVisitor extends VisitorBase implements PathVisitor {
 		if (!n.isURI()) throw new UnsupportedOperationException();
 
 		if (!n.getURI().contains("http://www.wikidata.org/prop/direct/P")) {
-			hasUnsuportedOp = true;
+			hasUnsupportedOp = true;
 		} else {
 			String currentEdge = n.getURI().replace("http://www.wikidata.org/prop/direct/P", "P");
 			alternatives.add(currentEdge);
@@ -140,7 +140,7 @@ public class GetCypherPathVisitor extends VisitorBase implements PathVisitor {
 	@Override
 	public void visit(P_Seq pathSeq) {
 		if (insideRecursion || insideAlt) {
-			hasUnsuportedOp = true;
+			hasUnsupportedOp = true;
 			return;
 		}
 		boolean originalInverse = currentInverse;
@@ -177,7 +177,7 @@ public class GetCypherPathVisitor extends VisitorBase implements PathVisitor {
 	@Override
 	public void visit(P_Inverse inversePath) {
 		if (insideAlt) { // TODO: en alt se puede si todos son inverse
-			hasUnsuportedOp = true;
+			hasUnsupportedOp = true;
 			return;
 		}
 		currentInverse = !currentInverse;
@@ -190,7 +190,7 @@ public class GetCypherPathVisitor extends VisitorBase implements PathVisitor {
 		if (currentSuffix == null) {
 			currentSuffix = "*0..1";
 		} else if (currentSuffix != "*0..1") {
-			hasUnsuportedOp = true;
+			hasUnsupportedOp = true;
 		}
 		path.getSubPath().visit(this);
 	}
@@ -201,7 +201,7 @@ public class GetCypherPathVisitor extends VisitorBase implements PathVisitor {
 		if (currentSuffix == null) {
 			currentSuffix = "*0..";
 		} else if (currentSuffix != "*0..") {
-			hasUnsuportedOp = true;
+			hasUnsupportedOp = true;
 		}
 		path.getSubPath().visit(this);
 	}
@@ -212,14 +212,14 @@ public class GetCypherPathVisitor extends VisitorBase implements PathVisitor {
 		if (currentSuffix == null) {
 			currentSuffix = "*1..";
 		} else if (currentSuffix != "*1..") {
-			hasUnsuportedOp = true;
+			hasUnsupportedOp = true;
 		}
 		path.getSubPath().visit(this);
 	}
 
 	@Override
 	public void visit(P_NegPropSet pathNotOneOf) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override

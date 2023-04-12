@@ -36,7 +36,7 @@ public class GetCypherC2RPQ {
 				continue;
 			}
 
-			if (!visitor.hasUnsuportedOp) {
+			if (!visitor.hasUnsupportedOp) {
 				outputFile.write(cols[0]);
 				outputFile.write(",MATCH ");
 				outputFile.write(visitor.getCypherPattern());

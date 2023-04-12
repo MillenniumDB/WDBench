@@ -13,7 +13,7 @@ import org.apache.jena.sparql.algebra.op.OpPath;
 
 public class ExtractOptionalVisitor extends VisitorBase {
 	public OptionalNode optionalNode = new OptionalNode();
-	
+
 	private void addTriples(ArrayList<Triple> list, OptionalNode node) {
 		for (Triple triple : node.bgp) {
 			list.add(triple);
@@ -22,10 +22,10 @@ public class ExtractOptionalVisitor extends VisitorBase {
 			addTriples(list, child);
 		}
 	}
-	
+
 	public boolean hasCrossProduct() {
 		ArrayList<Triple> allBGPS = new ArrayList<Triple>();
-		
+
 		// TODO: rellenar BGPS
 		addTriples(allBGPS, optionalNode);
 
@@ -37,41 +37,41 @@ public class ExtractOptionalVisitor extends VisitorBase {
 			String s = triple.getSubject().toString();
 			String p = triple.getPredicate().toString();
 			String o = triple.getObject().toString();
-			
+
 			graph.put(s, new TreeSet<String>());
 			if (p.charAt(0) == '?') {
 				graph.put(p, new TreeSet<String>());
 			}
 			graph.put(o, new TreeSet<String>());
 		}
-		
+
 		for (Triple triple : allBGPS) {
 			String s = triple.getSubject().toString();
 			String p = triple.getPredicate().toString();
 			String o = triple.getObject().toString();
 			if (p.charAt(0) == '?') {
 				graph.get(s).add(p);
-				graph.get(p).add(s); 
+				graph.get(p).add(s);
 				graph.get(p).add(o);
 				graph.get(o).add(p);
 			}
 			graph.get(s).add(o);
 			graph.get(o).add(s);
 		}
-		
+
 		TreeSet<String> visited = new TreeSet<String>();
 		LinkedList<String> queue = new LinkedList<String>();
 		queue.add(allBGPS.get(0).getSubject().toString());
-		
+
 		while (!queue.isEmpty()) {
 			String current = queue.poll();
 			visited.add(current);
-			
-			for (String neighbour : graph.get(current)) {
-				System.out.println(current + "->" + neighbour);
-				if (!visited.contains(neighbour)) {
-					visited.add(neighbour);
-					queue.add(neighbour);
+
+			for (String neighbor : graph.get(current)) {
+				System.out.println(current + "->" + neighbor);
+				if (!visited.contains(neighbor)) {
+					visited.add(neighbor);
+					queue.add(neighbor);
 				}
 			}
 		}
@@ -80,7 +80,7 @@ public class ExtractOptionalVisitor extends VisitorBase {
 
 	@Override
 	public void visit(OpPath opPath) {
-		hasUnsuportedOp = true;
+		hasUnsupportedOp = true;
 	}
 
 	@Override
@@ -91,37 +91,37 @@ public class ExtractOptionalVisitor extends VisitorBase {
 			Node o = triple.getObject();
 
 			// Ignore queries having variables introduced by [] or path transformations
-			if (s.isVariable() && s.toString().charAt(0) == '?' && s.toString().charAt(1) == '?') hasUnsuportedOp = true;
-			if (p.isVariable() && p.toString().charAt(0) == '?' && p.toString().charAt(1) == '?') hasUnsuportedOp = true;
-			if (o.isVariable() && o.toString().charAt(0) == '?' && o.toString().charAt(1) == '?') hasUnsuportedOp = true;
+			if (s.isVariable() && s.toString().charAt(0) == '?' && s.toString().charAt(1) == '?') hasUnsupportedOp = true;
+			if (p.isVariable() && p.toString().charAt(0) == '?' && p.toString().charAt(1) == '?') hasUnsupportedOp = true;
+			if (o.isVariable() && o.toString().charAt(0) == '?' && o.toString().charAt(1) == '?') hasUnsupportedOp = true;
 
 			// Check s, p and o are not a label variable
-			if (s.isVariable() && s.getName().contains("Label")) hasUnsuportedOp = true;
-			if (p.isVariable() && p.getName().contains("Label")) hasUnsuportedOp = true;
-			if (o.isVariable() && o.getName().contains("Label")) hasUnsuportedOp = true;
+			if (s.isVariable() && s.getName().contains("Label")) hasUnsupportedOp = true;
+			if (p.isVariable() && p.getName().contains("Label")) hasUnsupportedOp = true;
+			if (o.isVariable() && o.getName().contains("Label")) hasUnsupportedOp = true;
 
 			// check triple is not 3 variables
-			if (s.isVariable() && p.isVariable() && o.isVariable()) hasUnsuportedOp = true;
+			if (s.isVariable() && p.isVariable() && o.isVariable()) hasUnsupportedOp = true;
 
 			// Check p is a direct property
-			if (p.isURI() && !p.getURI().contains("http://www.wikidata.org/prop/direct/P")) hasUnsuportedOp = true;
+			if (p.isURI() && !p.getURI().contains("http://www.wikidata.org/prop/direct/P")) hasUnsupportedOp = true;
 
 			// check s and o are wikidata entity or wikidata property
 			if (s.isURI()) {
 				if (!s.getURI().contains("http://www.wikidata.org/prop/direct/P")
 					&& !s.getURI().contains("http://www.wikidata.org/entity/Q"))
 				{
-					hasUnsuportedOp = true;
+					hasUnsupportedOp = true;
 				}
-			} else if (s.isLiteral()) hasUnsuportedOp = true;
+			} else if (s.isLiteral()) hasUnsupportedOp = true;
 
 			if (o.isURI()) {
 				if (!o.getURI().contains("http://www.wikidata.org/prop/direct/P")
 					&& !o.getURI().contains("http://www.wikidata.org/entity/Q"))
 				{
-					hasUnsuportedOp = true;
+					hasUnsupportedOp = true;
 				}
-			} else if (o.isLiteral()) hasUnsuportedOp = true;
+			} else if (o.isLiteral()) hasUnsupportedOp = true;
 
 			optionalNode.bgp.add(triple);
 		}
@@ -134,8 +134,8 @@ public class ExtractOptionalVisitor extends VisitorBase {
 		ExtractOptionalVisitor nestedVisitor = new ExtractOptionalVisitor();
 		opLeftJoin.getRight().visit(nestedVisitor);
 
-		if (nestedVisitor.hasUnsuportedOp) {
-			hasUnsuportedOp = true;
+		if (nestedVisitor.hasUnsupportedOp) {
+			hasUnsupportedOp = true;
 		}
 
 		if (nestedVisitor.optionalNode.bgp.size() > 0) {

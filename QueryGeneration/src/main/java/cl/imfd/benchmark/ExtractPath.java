@@ -34,7 +34,7 @@ public class ExtractPath {
 			ExtractPathVisitor visitor = new ExtractPathVisitor();
 			op.visit(visitor);
 
-			if (!visitor.hasUnsuportedOp) {
+			if (!visitor.hasUnsupportedOp) {
 				for (String path_str : visitor.pathsSet) {
 					pathQueries.add(path_str);
 				}
