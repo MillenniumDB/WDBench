@@ -8,6 +8,8 @@ import org.apache.jena.sparql.algebra.AlgebraGenerator;
 import org.apache.jena.sparql.algebra.Op;
 import org.junit.Test;
 
+import cl.imfd.benchmark.visitors.ExtractC2RPQVisitor;
+
 public class CrossProductTest {
 
 	@Test

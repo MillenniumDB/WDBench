@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.Triple;
+import org.apache.jena.query.QueryException;
 import org.apache.jena.sparql.algebra.op.OpBGP;
 import org.apache.jena.sparql.algebra.op.OpLeftJoin;
 import org.apache.jena.sparql.algebra.op.OpPath;
 
-import cl.imfd.benchmark.VisitorBase;
+import cl.imfd.benchmark.visitors.VisitorBase;
 
 public class GetCypherOptionalVisitor extends VisitorBase {
 	private ArrayList<String> optionalPattern = new ArrayList<String>();
@@ -41,7 +42,8 @@ public class GetCypherOptionalVisitor extends VisitorBase {
 			sb.append(")-[:");
 
 			if (p.isVariable()) {
-				sb.append(p.getName().replace("?", ""));
+//				sb.append(p.getName().replace("?", ""));
+				throw new QueryException();
 			} else {
 				sb.append(p.getURI().replace("http://www.wikidata.org/prop/direct/P", "P"));
 			}
@@ -50,11 +52,17 @@ public class GetCypherOptionalVisitor extends VisitorBase {
 			if (o.isVariable()) {
 				sb.append(o.getName().replace("?", ""));
 			} else {
-				sb.append(":Entity{id:'");
-				sb.append(o.getURI()
-						   .replace("http://www.wikidata.org/entity/Q", "Q")
-						   .replace("http://www.wikidata.org/prop/direct/P", "P"));
-				sb.append("'}");
+				if (o.isURI()) {
+					sb.append(":Entity{id:'");
+					sb.append(o.getURI()
+							   .replace("http://www.wikidata.org/entity/Q", "Q")
+							   .replace("http://www.wikidata.org/prop/direct/P", "P"));
+					sb.append("'}");
+				} else {
+					sb.append(":Value {id:'");
+					sb.append(o.toString());
+					sb.append("'}");
+				}
 			}
 			sb.append(")");
 

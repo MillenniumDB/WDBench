@@ -33,6 +33,7 @@ public class GetCypherPath {
 			} catch (QueryParseException e) {
 				continue;
 			} catch (QueryException e) {
+				System.out.println(line);
 				continue;
 			}
 

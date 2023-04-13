@@ -25,7 +25,7 @@ import org.apache.jena.sparql.path.P_ZeroOrMoreN;
 import org.apache.jena.sparql.path.P_ZeroOrOne;
 import org.apache.jena.sparql.path.PathVisitor;
 
-import cl.imfd.benchmark.VisitorBase;
+import cl.imfd.benchmark.visitors.VisitorBase;
 
 public class GetCypherC2RPQVisitor extends VisitorBase implements PathVisitor {
 	public ArrayList<String> sequence = new ArrayList<String>();

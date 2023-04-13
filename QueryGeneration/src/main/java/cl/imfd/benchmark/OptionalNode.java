@@ -176,7 +176,7 @@ public class OptionalNode {
 				}
 			}
 
-			transformedBgp.add(new Triple(newS, newP, newO));
+			transformedBgp.add(Triple.create(newS, newP, newO));
 		}
 		bgp = transformedBgp;
 	}
