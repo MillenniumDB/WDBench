@@ -20,7 +20,7 @@ PREFIX_NAME  = sys.argv[4]
 
 ###################### EDIT THIS PARAMETERS ######################
 TIMEOUT = 60 # Max time per query in seconds
-BENCHMARK_ROOT = '/data2/benchmark'
+BENCHMARK_ROOT = '/home/cbuil/benchmark'
 
 # Path to needed output and input files
 RESUME_FILE = f'{BENCHMARK_ROOT}/results/{PREFIX_NAME}_{ENGINE}_limit_{LIMIT}.csv'
@@ -33,11 +33,11 @@ VIRTUOSO_LOCK_FILE = f'{BENCHMARK_ROOT}/virtuoso/wikidata/virtuoso.lck'
 # use absolute paths to avoid problems with current directory
 ENGINES_PATHS = {
     'BLAZEGRAPH': f'{BENCHMARK_ROOT}/blazegraph/service',
-    'JENA':       f'{BENCHMARK_ROOT}/jena',
-    'JENA-HDT':   f'{BENCHMARK_ROOT}/jena-hdt',
+    'JENA':       f'{BENCHMARK_ROOT}/jena/apache-jena-fuseki-4.7.0',
+    'JENA-HDT':   f'{BENCHMARK_ROOT}/jena-hdt/apache-jena-fuseki-4.7.0',
     'VIRTUOSO':   f'{BENCHMARK_ROOT}/virtuoso',
     'QLEVER':     f'{BENCHMARK_ROOT}/qlever',
-    'RDF4J':      f'{BENCHMARK_ROOT}/rdf4j',
+    'RDF4J':      f'{BENCHMARK_ROOT}/rdf4j/apache-tomcat-9.0.70',
 }
 
 ENGINES_PORTS = {
@@ -46,25 +46,25 @@ ENGINES_PORTS = {
     'JENA-HDT':   3030,
     'VIRTUOSO':   1111,
     'QLEVER':     7001,
-    'RDF4J':      7001,
+    'RDF4J':      8080,
 }
 
 ENDPOINTS = {
     'BLAZEGRAPH': 'http://localhost:9999/bigdata/namespace/wdq/sparql',
     'JENA':       'http://localhost:3030/jena/sparql',
-    'JENA-HDT':   'http://localhost:3030/wikidata-hdt-service/sparql',
+    'JENA-HDT':   'http://localhost:3030/wikidata-hdt-service/query',
     'VIRTUOSO':   'http://localhost:8890/sparql',
     'QLEVER':     'http://localhost:7001/sparql',
-    'RDF4J':      'http://localhost:7001/sparql',
+    'RDF4J':      'http://localhost:8080/rdf4j-server/repositories/wikidata',
 }
 
 SERVER_CMD = {
     'BLAZEGRAPH': ['./runBlazegraph.sh'],
-    'JENA': f'java -Xmx64g -jar apache-jena-fuseki-4.1.0/fuseki-server.jar --loc=apache-jena-4.1.0/wikidata --timeout={TIMEOUT*1000} /jena'.split(' '),
-    'JENA-HDT': f'java -Xmx64g -jar apache-jena-fuseki-4.1.0-hdt/fuseki-server.jar --timeout={TIMEOUT*1000} /jena'.split(' '),
+    'JENA': f'java -Xmx64g -jar fuseki-server.jar --loc=wikidata --timeout={TIMEOUT*1000} /jena'.split(' '),
+    'JENA-HDT': ['./fuseki-server'],
     'VIRTUOSO': ['bin/virtuoso-t', '-c', 'wikidata.ini', '+foreground'],
     'QLEVER': f'TIMEOUT=600; PORT=7001; docker run --rm -v $QLEVER_HOME/qlever-indices/wikidata:/index  -p $PORT:7001 -e INDEX_PREFIX=wikidata --name qlever.wikidata qlever-docker',
-    'RDF4J': f'TIMEOUT=600; PORT=7001; docker run --rm -v $QLEVER_HOME/qlever-indices/wikidata:/index  -p $PORT:7001 -e INDEX_PREFIX=wikidata --name qlever.wikidata qlever-docker',
+    'RDF4J': ['./bin/catalina.sh', 'start'],
 }
 #######################################################
 
@@ -81,6 +81,8 @@ if os.path.exists(RESUME_FILE):
 # ================== Auxiliars ===============================
 def lsof(pid):
     process = subprocess.Popen(['lsof', '-a', f'-p{pid}', f'-i:{PORT}', '-t'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if ENGINE == 'RDF4J':
+        process = subprocess.Popen(['lsof', '-i', f'-i:{PORT}'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, _ = process.communicate()
     return out.decode('UTF-8').rstrip()
 
@@ -146,7 +148,6 @@ def start_server():
 
     server_log.write("[start server]\n")
     server_process = subprocess.Popen(SERVER_CMD[ENGINE], stdout=server_log, stderr=server_log)
-    print(f'pid: {server_process.pid}')
 
     # Sleep to wait server start
     while not lsof(server_process.pid):
@@ -161,6 +162,9 @@ def kill_server():
     server_log.write("[kill server]\n")
     if ENGINE == 'VIRTUOSO':
         kill_process = subprocess.Popen([f'{ENGINES_PATHS[ENGINE]}/bin/isql', f'localhost:{PORT}', '-K'])
+        kill_process.wait()
+    elif ENGINE == 'RDF4J':
+        kill_process = subprocess.Popen([f'{ENGINES_PATHS[ENGINE]}/bin/shutdown.sh'])
         kill_process.wait()
     else:
         server_process.kill()
@@ -191,6 +195,7 @@ def execute_sparql_wrapper(query_pattern, query_number):
     # sparql_wrapper.setTimeout(TIMEOUT+10) # Give 10 more seconds for a chance to graceful timeout
     sparql_wrapper.setReturnFormat(JSON)
     sparql_wrapper.setQuery(query)
+    print("running queries")
 
     count = 0
     start_time = time.time()
@@ -202,6 +207,7 @@ def execute_sparql_wrapper(query_pattern, query_number):
         for _ in json_results["results"]["bindings"]:
             count += 1
 
+        print(count)
         elapsed_time = int((time.time() - start_time) * 1000) # Truncate to milliseconds
 
         with open(RESUME_FILE, 'a') as file:

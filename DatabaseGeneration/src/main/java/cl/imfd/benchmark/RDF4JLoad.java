@@ -42,7 +42,6 @@ public class RDF4JLoad {
 		LmdbStore sail = new LmdbStore(dataDir, config);
 		Repository repo = new SailRepository(sail);
 		RepositoryConnection connection = repo.getConnection();
-
 		ParserConfig parserConfig = new ParserConfig();
 		for (RioSetting setting: NON_FATAL_ERRORS) {
 			parserConfig.addNonFatalError(setting).set(setting, false);
