@@ -41,11 +41,7 @@ public class ExtractOptional {
 					&& visitor.optionalNode.optionalChildren.size() > 0
 					&& !visitor.hasCrossProduct()) {
 				String str = visitor.optionalNode.toString();
-
-				visitor.optionalNode.toString(); // sets properly visitor.optionalNode.crossProduct
-				if (!visitor.optionalNode.crossProduct) {
-					optQueries.add(str);
-				}
+				optQueries.add(str);
 			}
 		}
 

@@ -16,9 +16,13 @@ public class ExtractOptionalVisitor extends VisitorBase {
 	
 	private boolean hasCrossProduct(ArrayList<Triple> parentTriples, OptionalNode node) {
 		ArrayList<Triple> currentScopeTriples = new ArrayList<Triple>();
+		for (Triple triple : parentTriples) {
+			currentScopeTriples.add(triple);
+		}
 		for (Triple triple : node.bgp) {
 			currentScopeTriples.add(triple);
 		}
+
 		if (CrossProductCheck.hasCrossProduct(currentScopeTriples)) {
 			return true;
 		}

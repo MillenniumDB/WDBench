@@ -13,6 +13,46 @@ import cl.imfd.benchmark.CrossProductCheck;
 public class ExtractBGPsVisitor extends VisitorBase {
 	public ArrayList<Triple> mainBGP = new ArrayList<Triple>();
 
+	public String toQueryPattern() {
+		StringBuilder sb = new StringBuilder();
+		for (Triple triple : mainBGP) {
+			Node s = triple.getSubject();
+			Node p = triple.getPredicate();
+			Node o = triple.getObject();
+
+			if (s.isURI()) {
+				sb.append('<');
+				sb.append(s);
+				sb.append('>');
+			} else {
+				sb.append(s);
+			}
+
+			sb.append(" ");
+
+			if (p.isURI()) {
+				sb.append('<');
+				sb.append(p);
+				sb.append('>');
+			} else {
+				sb.append(p);
+			}
+
+			sb.append(" ");
+
+			if (o.isURI()) {
+				sb.append('<');
+				sb.append(o);
+				sb.append('>');
+			} else {
+				sb.append(o);
+			}
+
+			sb.append(" . ");
+		}
+		return sb.toString();
+	}
+	
 	public boolean hasCrossProduct() {
 		return CrossProductCheck.hasCrossProduct(mainBGP);
 	}

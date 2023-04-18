@@ -44,14 +44,8 @@ public class ExtractPathVisitor extends VisitorBase implements PathVisitor {
 
 		if (!invalidPath) {
 			StringBuilder sb = new StringBuilder();
-			int variableCount = 1;
 			if (s.isVariable()) {
-				String newVarName = "?x" + variableCount;
-				sb.append(newVarName);
-
-				if (!o.toString().equals(s.toString())) {
-					variableCount++;
-				}
+				sb.append(s.toString());
 			} else if (s.isURI()) {
 				if (!s.getURI().contains("http://www.wikidata.org/prop/direct/P")
 					&& !s.getURI().contains("http://www.wikidata.org/entity/Q"))
@@ -69,8 +63,7 @@ public class ExtractPathVisitor extends VisitorBase implements PathVisitor {
 			sb.append(' ');
 			
 			if (o.isVariable()) {
-				String newVarName = "?x" + variableCount;
-				sb.append(newVarName);
+				sb.append(o.toString());
 			} else if (o.isURI()) {
 				if (!o.getURI().contains("http://www.wikidata.org/prop/direct/P")
 					&& !o.getURI().contains("http://www.wikidata.org/entity/Q"))
