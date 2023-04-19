@@ -9,6 +9,7 @@ In this repository you can find the data files and queries used in the benchmark
   - [Apache Jena](#data-loading-for-apache-jena)
   - [Virtuoso](#data-loading-for-virtuoso)
   - [Blazegraph](#data-loading-for-blazegraph)
+  - [Qlever](#data-loading-for-qlever)
   - [Neo4J](#data-loading-for-neo4j)
 - [Wikidata queries](#wikidata-queries)
 - [Running the benchmark](#running-the-benchmark)
@@ -192,6 +193,18 @@ Blazegraph can't load big files in a reasonable time, so we need to split the .n
 - Start the server: `./runBlazegraph.sh`
   - This process won't end until you interrupt it (Ctrl+C). Let this execute until the import ends. Run the next command in another terminal.
 - Start the import: `./loadRestAPI.sh -n wdq -d [path_of_splitted_nt_folder]`
+
+## Data loading for QLever
+
+### Download QLever
+
+- Download required packages for building the system:
+`apt-get update && apt-get install -y build-essential cmake libicu-dev tzdata pkg-config uuid-runtime uuid-dev git libjemalloc-dev ninja-build libzstd-dev libssl-dev libboost1.74-dev libboost-program-options1.74-dev libboost-iostreams1.74-dev`
+- Build the system using the following command: `cd build \ cmake -DCMAKE_BUILD_TYPE=Release -DLOGLEVEL=INFO -DUSE_PARALLEL=true -GNinja .. && ninja`
+- Run Qlever using the command `build/ServerMain -i ~/benchmark/qlever/qlever-indices/wikidata/wikidata -c 64 -m 70 -e 5 -j 8 -p 7001`
+- `chmod o+w . && docker run -it --rm -v $QLEVER_HOME/qlever-indices/wikidata:/index --entrypoint bash qlever-docker -c "cd /index && ulimit -Sn 1048576 && bzcat truthy_direct_properties.nt.bz2 | IndexBuilderMain -F ttl -f - -l -i wikidata -s wikidata.settings.json | tee wikidata.index-log.txt"`
+
+### Indexing the data
 
 ## Data loading for Neo4J
 

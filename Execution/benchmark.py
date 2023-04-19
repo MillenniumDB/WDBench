@@ -63,7 +63,7 @@ SERVER_CMD = {
     'JENA': f'java -Xmx64g -jar fuseki-server.jar --loc=wikidata --timeout={TIMEOUT*1000} /jena'.split(' '),
     'JENA-HDT': ['./fuseki-server'],
     'VIRTUOSO': ['bin/virtuoso-t', '-c', 'wikidata.ini', '+foreground'],
-    'QLEVER': f'TIMEOUT=600; PORT=7001; docker run --rm -v $QLEVER_HOME/qlever-indices/wikidata:/index  -p $PORT:7001 -e INDEX_PREFIX=wikidata --name qlever.wikidata qlever-docker',
+    'QLEVER': f'build/ServerMain -i qlever-indices/wikidata/wikidata -c 64 -m 70 -e 5 -j 8 -p 7001 /qlever'.split(' '),
     'RDF4J': ['./bin/catalina.sh', 'start'],
 }
 #######################################################
@@ -195,7 +195,6 @@ def execute_sparql_wrapper(query_pattern, query_number):
     # sparql_wrapper.setTimeout(TIMEOUT+10) # Give 10 more seconds for a chance to graceful timeout
     sparql_wrapper.setReturnFormat(JSON)
     sparql_wrapper.setQuery(query)
-    print("running queries")
 
     count = 0
     start_time = time.time()
