@@ -1,0 +1,280 @@
+SELECT DISTINCT  ?v0 ?v1 WHERE   { <http://www.wikidata.org/entity/Q10990>               ?v0  ?v1   } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { <http://www.wikidata.org/entity/Q1189327>               ?v0  ?v1   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q1236511>               <http://www.wikidata.org/prop/direct/P31>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q125928>               <http://www.wikidata.org/prop/direct/P1343>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q1339>               <http://www.wikidata.org/prop/direct/P40>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q1400>               <http://www.wikidata.org/prop/direct/P150>  ?v0   } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { <http://www.wikidata.org/entity/Q146>               ?v1  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q1492>               <http://www.wikidata.org/prop/direct/P625>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q159>               <http://www.wikidata.org/prop/direct/P31>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q159>               <http://www.wikidata.org/prop/direct/P625>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q159>               <http://www.wikidata.org/prop/direct/P721>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q16479662>               <http://www.wikidata.org/prop/direct/P186>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q16553>               <http://www.wikidata.org/prop/direct/P625>  ?v0   } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { <http://www.wikidata.org/entity/Q165947>               ?v0  ?v1   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q170277>               <http://www.wikidata.org/prop/direct/P2048>  ?v0   } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { <http://www.wikidata.org/entity/Q18338317>               ?v1  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q213361>               <http://www.wikidata.org/prop/direct/P3896>  ?v0   } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { <http://www.wikidata.org/entity/Q21>               ?v1  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q243>               <http://www.wikidata.org/prop/direct/P2048>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q2539>               <http://www.wikidata.org/prop/direct/P279>  ?v0   } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { <http://www.wikidata.org/entity/Q28665865>               ?v1  ?v0   } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { <http://www.wikidata.org/entity/Q28865>               ?v0  ?v1   } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { <http://www.wikidata.org/entity/Q327332>               ?v0  ?v1   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q3304492>               <http://www.wikidata.org/prop/direct/P26>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q42804>               <http://www.wikidata.org/prop/direct/P186>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q42804>               <http://www.wikidata.org/prop/direct/P279>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q42>               <http://www.wikidata.org/prop/direct/P31>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q463644>               <http://www.wikidata.org/prop/direct/P27>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q4876636>               <http://www.wikidata.org/prop/direct/P279>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q4876640>               <http://www.wikidata.org/prop/direct/P186>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q488383>               <http://www.wikidata.org/prop/direct/P279>  ?v0   } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { <http://www.wikidata.org/entity/Q5682>               ?v1  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q64>               <http://www.wikidata.org/prop/direct/P625>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q7259>               <http://www.wikidata.org/prop/direct/P106>  ?v0   } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { <http://www.wikidata.org/entity/Q7259>               ?v0  ?v1   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q762>               <http://www.wikidata.org/prop/direct/P800>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q76>               ?v0  <http://www.wikidata.org/entity/Q30>   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q83726>               <http://www.wikidata.org/prop/direct/P625>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q84>               <http://www.wikidata.org/prop/direct/P17>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q896916>               <http://www.wikidata.org/prop/direct/P31>  ?v0   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q9049>               ?v0  <http://www.wikidata.org/entity/Q14467526>   } 
+SELECT DISTINCT  ?v0 WHERE   { <http://www.wikidata.org/entity/Q9049>               ?v0  <http://www.wikidata.org/entity/Q30>   } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P105>  <http://www.wikidata.org/entity/Q7432> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1066>  <http://www.wikidata.org/entity/Q762> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P106>  <http://www.wikidata.org/entity/Q1186921> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P106>  <http://www.wikidata.org/entity/Q33999> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P106>  <http://www.wikidata.org/entity/Q593644> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P106>  <http://www.wikidata.org/entity/Q82594> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P106>  <http://www.wikidata.org/entity/Q82955> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P106>  <http://www.wikidata.org/entity/Q937857> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1080>  <http://www.wikidata.org/entity/Q81738> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P1082>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P123>  <http://www.wikidata.org/entity/Q45> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1279>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1301>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P131>  <http://www.wikidata.org/entity/Q1017> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P131>  <http://www.wikidata.org/entity/Q145> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P131>  <http://www.wikidata.org/entity/Q1524> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P131>  <http://www.wikidata.org/entity/Q16287> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P131>  <http://www.wikidata.org/entity/Q21590062> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P131>  <http://www.wikidata.org/entity/Q3183> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P131>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P136>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P138>  <http://www.wikidata.org/entity/Q676555> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1433>  <http://www.wikidata.org/entity/Q30689463> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P1433>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1435>  <http://www.wikidata.org/entity/Q9259> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1476>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P1566>  ?v0 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P159>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P161>  <http://www.wikidata.org/entity/Q295803> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P161>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P166>  <http://www.wikidata.org/entity/Q18844377> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P170>  <http://www.wikidata.org/entity/Q21727807> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P170>  <http://www.wikidata.org/entity/Q301> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P170>  <http://www.wikidata.org/entity/Q5598> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P170>  <http://www.wikidata.org/entity/Q5599> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P170>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P171>  <http://www.wikidata.org/entity/Q7019837> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P1741>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P176>  <http://www.wikidata.org/entity/Q312> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P1793>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P17>  <http://www.wikidata.org/entity/Q16> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P17>  <http://www.wikidata.org/entity/Q30> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P17>  <http://www.wikidata.org/entity/Q41> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P17>  <http://www.wikidata.org/entity/Q42722842> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P17>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P180>  <http://www.wikidata.org/entity/Q34038> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P186>  <http://www.wikidata.org/entity/Q287> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P195>  <http://www.wikidata.org/entity/Q3044768> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P19>  <http://www.wikidata.org/entity/Q1297> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P19>  <http://www.wikidata.org/entity/Q1741> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P2044>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P2046>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P2048>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P2067>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P2093>  ?v0 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P213>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P225>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P22>  <http://www.wikidata.org/entity/Q1339> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P268>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q15324> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q21198> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q482994> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q515> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q7725634> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q83620> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q864693> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P27>  <http://www.wikidata.org/entity/Q30> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P27>  <http://www.wikidata.org/entity/Q801> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P27>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P281>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P2860>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P2892>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P2949>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P297>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P304>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P3151>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P3192>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q101352> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q1032372> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q1107> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q11173> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q11344> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q11424> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q11446> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q11538> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q11812346> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q11879590> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q12308941> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q13100073> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q1330336> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q133311> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q13442814> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q1420> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q144> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q146> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q14770218> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q1549591> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q16521> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q166502> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q16970> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q171318> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q17318027> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q17519152> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q183342> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q185441> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q18656> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q209824> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q2225692> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q22276038> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q22808403> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q23310071> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q23442> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q235065> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q308891> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q3231690> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q3257686> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q32859630> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q3305213> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q33506> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q349> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q3918> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q4022> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q4167410> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q4167836> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q42722842> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q43501> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q482994> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q4830453> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q484170> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q484215> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q486972> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q494717> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q4> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q5119> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q515> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q534932> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q55488> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q5710433> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q5> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q6256> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q7075> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q7187> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q7366> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q7397> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q743488> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q747074> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q7889> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q7935> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q8072> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q82042> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q8225192> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q8274> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q831663> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q836688> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q8502> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q9135> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q9143> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q958314> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  ?v0 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P31>  ?v0 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P3265>  ?v0 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P345>  ?v0 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P356>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P374>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P382>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P3921>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P39>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P47>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P495>  <http://www.wikidata.org/entity/Q267877> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P4963>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P50>  <http://www.wikidata.org/entity/Q31737> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P50>  <http://www.wikidata.org/entity/Q35610> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P50>  <http://www.wikidata.org/entity/Q7724> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P50>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P54>  <http://www.wikidata.org/entity/Q191264> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P551>  <http://www.wikidata.org/entity/Q183> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P553>  <http://www.wikidata.org/entity/Q40629> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P571>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P577>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P57>  <http://www.wikidata.org/entity/Q191755> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P585>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P625>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q1456856> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q1754235> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q19038775> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q19124320> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q22249448> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q2665494> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q2864880> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q3226677> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q338034> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q384076> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q4659763> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q4943370> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q7209019> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P629>  <http://www.wikidata.org/entity/Q7719234> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P662>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P674>  <http://www.wikidata.org/entity/Q3244512> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P698>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P69>  <http://www.wikidata.org/entity/Q160302> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P69>  <http://www.wikidata.org/entity/Q16032> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P69>  <http://www.wikidata.org/entity/Q32751> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P69>  <http://www.wikidata.org/entity/Q51985> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P69>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P734>  <http://www.wikidata.org/entity/Q21504830> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P735>  <http://www.wikidata.org/entity/Q1089094> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P737>  <http://www.wikidata.org/entity/Q15777> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P793>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P84>  <http://www.wikidata.org/entity/Q78638> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P86>  <http://www.wikidata.org/entity/Q1178> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P902>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P937>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P971>  <http://www.wikidata.org/entity/Q34316> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  ?v1  <http://www.wikidata.org/entity/Q13442814> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  ?v1  <http://www.wikidata.org/entity/Q296> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  ?v0  <http://www.wikidata.org/entity/Q4167410> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  ?v1  <http://www.wikidata.org/entity/Q5812> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  ?v0  <http://www.wikidata.org/entity/Q5> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P106>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P1340>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P178>  <http://www.wikidata.org/entity/Q95> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P214>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P21>  ?v1 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P2456>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  <http://www.wikidata.org/entity/Q2160801> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P279>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q2934> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P31>  <http://www.wikidata.org/entity/Q839546> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P360>  <http://www.wikidata.org/entity/Q5> } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P360>  <http://www.wikidata.org/entity/Q6256> } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P495>  ?v0 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P509>  <http://www.wikidata.org/entity/Q3235597> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P685>  ?v0 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P921>  ?v0 } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P171>  ?v1 } 
+SELECT DISTINCT  ?v0 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P361>  <http://www.wikidata.org/entity/Q69641> } 
+SELECT DISTINCT  ?v0 ?v1 WHERE   { ?v0  <http://www.wikidata.org/prop/direct/P18>  ?v1 } 
+SELECT DISTINCT  ?v1 ?v0 WHERE   { ?v1  <http://www.wikidata.org/prop/direct/P4389>  ?v0 } 
