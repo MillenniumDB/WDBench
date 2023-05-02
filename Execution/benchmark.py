@@ -9,7 +9,7 @@ import time
 import traceback
 
 # Usage:
-# python benchmark.py <ENGINE> <QUERIES_FILE_ABSOLUTE_PATH> <LIMIT> <PREFIX_NAME>
+# python benchmark.py <ENGINE> <QUERIES_FILE_ABSOLUTE_PATH> <LIMIT> <PREFIX_NAME> <DISK>
 # LIMIT = 0 will not add a limit
 
 # Db engine that will execute queries
@@ -17,16 +17,17 @@ ENGINE       = sys.argv[1]
 QUERIES_FILE = sys.argv[2]
 LIMIT        = sys.argv[3]
 PREFIX_NAME  = sys.argv[4]
+DISK         = sys.argv[5]
 
 ###################### EDIT THIS PARAMETERS ######################
 TIMEOUT = 60 # Max time per query in seconds
 BENCHMARK_ROOT = '/home/cbuil/benchmark'
 
 # Path to needed output and input files
-RESUME_FILE = f'{BENCHMARK_ROOT}/results/{PREFIX_NAME}_{ENGINE}_limit_{LIMIT}.csv'
-ERROR_FILE  = f'{BENCHMARK_ROOT}/results/errors/{PREFIX_NAME}_{ENGINE}_limit_{LIMIT}.log'
+RESUME_FILE = f'{BENCHMARK_ROOT}/results/{PREFIX_NAME}_{ENGINE}_{DISK}_limit_{LIMIT}.csv'
+ERROR_FILE  = f'{BENCHMARK_ROOT}/results/errors/{PREFIX_NAME}_{ENGINE}_{DISK}_limit_{LIMIT}.log'
 
-SERVER_LOG_FILE  = f'{BENCHMARK_ROOT}/scripts/log/{PREFIX_NAME}_{ENGINE}_limit_{LIMIT}.log'
+SERVER_LOG_FILE  = f'{BENCHMARK_ROOT}/scripts/log/{PREFIX_NAME}_{ENGINE}_{DISK}_limit_{LIMIT}.log'
 
 VIRTUOSO_LOCK_FILE = f'{BENCHMARK_ROOT}/virtuoso/wikidata/virtuoso.lck'
 
