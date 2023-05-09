@@ -69,7 +69,7 @@ SERVER_CMD = {
     'VIRTUOSO': ['bin/virtuoso-t', '-c', 'wikidata.ini', '+foreground'],
     'QLEVER': f'build/ServerMain -i qlever-indices/wikidata/wikidata -c 64 -m 70 -e 5 -j 8 -p 7001 /qlever'.split(' '),
     'RDF4J': ['./bin/catalina.sh', 'start'],
-    'QENDPOINT': ['java -jar target/qendpoint-backend-1.12.0-exec.jar'],
+    'QENDPOINT': f'java -Xmx64g -jar target/qendpoint-backend-1.12.0-exec.jar',
 }
 #######################################################
 
