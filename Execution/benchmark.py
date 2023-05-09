@@ -39,6 +39,7 @@ ENGINES_PATHS = {
     'VIRTUOSO':   f'{BENCHMARK_ROOT}/virtuoso',
     'QLEVER':     f'{BENCHMARK_ROOT}/qlever',
     'RDF4J':      f'{BENCHMARK_ROOT}/rdf4j/apache-tomcat-9.0.70',
+    'QENDPOINT':  f'{BENCHMARK_ROOT}/qEndpoint/qendpoint-backend',
 }
 
 ENGINES_PORTS = {
@@ -48,6 +49,7 @@ ENGINES_PORTS = {
     'VIRTUOSO':   1111,
     'QLEVER':     7001,
     'RDF4J':      8080,
+    'QENDPOINT':  1235,
 }
 
 ENDPOINTS = {
@@ -57,6 +59,7 @@ ENDPOINTS = {
     'VIRTUOSO':   'http://localhost:8890/sparql',
     'QLEVER':     'http://localhost:7001/sparql',
     'RDF4J':      'http://localhost:8080/rdf4j-server/repositories/wikidata',
+    'QENDPOINT':  'http://localhost:1235/api/endpoint/sparql',
 }
 
 SERVER_CMD = {
@@ -66,6 +69,7 @@ SERVER_CMD = {
     'VIRTUOSO': ['bin/virtuoso-t', '-c', 'wikidata.ini', '+foreground'],
     'QLEVER': f'build/ServerMain -i qlever-indices/wikidata/wikidata -c 64 -m 70 -e 5 -j 8 -p 7001 /qlever'.split(' '),
     'RDF4J': ['./bin/catalina.sh', 'start'],
+    'QENDPOINT': ['java -jar target/qendpoint-backend-1.12.0-exec.jar'],
 }
 #######################################################
 
