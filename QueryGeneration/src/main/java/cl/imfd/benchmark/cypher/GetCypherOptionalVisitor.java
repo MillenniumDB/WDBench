@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import org.apache.jena.graph.Node;
 import org.apache.jena.graph.Triple;
-import org.apache.jena.query.QueryException;
 import org.apache.jena.sparql.algebra.op.OpBGP;
 import org.apache.jena.sparql.algebra.op.OpLeftJoin;
 import org.apache.jena.sparql.algebra.op.OpPath;
@@ -12,7 +11,7 @@ import org.apache.jena.sparql.algebra.op.OpPath;
 import cl.imfd.benchmark.visitors.VisitorBase;
 
 public class GetCypherOptionalVisitor extends VisitorBase {
-	private ArrayList<String> optionalPattern = new ArrayList<String>();
+//	private ArrayList<String> optionalPattern = new ArrayList<String>();
 
 	public String cypherPattern = "";
 
@@ -23,6 +22,7 @@ public class GetCypherOptionalVisitor extends VisitorBase {
 
 	@Override
 	public void visit(OpBGP opBGP) {
+		ArrayList<String> currentPatterns = new ArrayList<String>();
 		for (Triple triple : opBGP.getPattern().getList()) {
 			Node s = triple.getSubject();
 			Node p = triple.getPredicate();
@@ -39,12 +39,12 @@ public class GetCypherOptionalVisitor extends VisitorBase {
 						   .replace("http://www.wikidata.org/prop/direct/P", "P"));
 				sb.append("'}");
 			}
-			sb.append(")-[:");
+			sb.append(")-[");
 
 			if (p.isVariable()) {
-//				sb.append(p.getName().replace("?", ""));
-				throw new QueryException();
+				sb.append(p.getName().replace("?", ""));
 			} else {
+				sb.append(":");
 				sb.append(p.getURI().replace("http://www.wikidata.org/prop/direct/P", "P"));
 			}
 			sb.append("]->(");
@@ -65,28 +65,29 @@ public class GetCypherOptionalVisitor extends VisitorBase {
 				}
 			}
 			sb.append(")");
-
-			optionalPattern.add(sb.toString());
+			System.out.println(sb.toString());
+			currentPatterns.add(sb.toString());
 		}
+		cypherPattern += String.join(",", currentPatterns);
 	}
 
 	@Override
 	public void visit(OpLeftJoin opLeftJoin) {
-		optionalPattern = new ArrayList<String>();
+//		optionalPattern = new ArrayList<String>();
 		opLeftJoin.getLeft().visit(this);
 
-		cypherPattern += getCypherPattern();
+//		cypherPattern += getCypherPattern();
 
 		cypherPattern += " OPTIONAL MATCH ";
 
-		optionalPattern = new ArrayList<String>();
+//		optionalPattern = new ArrayList<String>();
 		opLeftJoin.getRight().visit(this);
-		cypherPattern += getCypherPattern();
+//		cypherPattern += getCypherPattern();
 
-		cypherPattern += ",";
+//		cypherPattern += ",";
 	}
 
-	public String getCypherPattern() {
-		return String.join(",", optionalPattern);
-	}
+//	public String getCypherPattern() {
+//		return String.join(",", optionalPattern);
+//	}
 }

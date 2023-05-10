@@ -13,11 +13,11 @@ import org.apache.jena.sparql.algebra.Op;
 
 public class GetCypherC2RPQ {
 
-	static String INPUT = "c2rpqs.txt";
+	static String INPUT = "../Queries/c2rpqs-can.txt";
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(INPUT));
-		FileWriter outputFile = new FileWriter("cypher_c2rpqs.txt");
+		FileWriter outputFile = new FileWriter("../Queries/Cypher/cypher_c2rpqs.txt");
 
 		for (String line = br.readLine(); line != null; line = br.readLine()) {
 			String[] cols = line.trim().split(",");
@@ -31,8 +31,12 @@ public class GetCypherC2RPQ {
 				op = (new AlgebraGenerator()).compile(QueryFactory.create(query));
 				op.visit(visitor);
 			} catch (QueryParseException e) {
+				System.out.println(line);
+				System.out.println(e);
 				continue;
 			} catch (QueryException e) {
+				System.out.println(line);
+				System.out.println(e);
 				continue;
 			}
 
