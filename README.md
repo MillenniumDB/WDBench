@@ -249,7 +249,7 @@ Now we have to create the index for entities:
 
 - Open the cypher console:
   - `bin/cypher-shell`, and inside the console run the command:
-    - `CREATE INDEX ON :Entity(id);`
+    - `CREATE INDEX FOR (n:Entity) ON (n.id);`
     - Even though the above command returns immediately, you have to wait until is finished before interrupting the server. You can see the status of the index with the command `SHOW INDEXES;`
 
 # Wikidata Queries
