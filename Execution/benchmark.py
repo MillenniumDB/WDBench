@@ -104,48 +104,6 @@ def parse_to_sparql(query):
     return f'SELECT * WHERE {{ {query} }} LIMIT {LIMIT}'
 
 
-def IRI_to_mdb(iri):
-    expressions = []
-
-    # property
-    expressions.append(re.compile(r"^<http://www\.wikidata\.org/prop/direct/([QqPp]\d+)>$"))
-
-    # entity
-    expressions.append(re.compile(r"^<http://www\.wikidata\.org/entity/([QqPp]\d+)>$"))
-
-    # string
-    expressions.append(re.compile(r'^("(?:[^"\\]|\\.)*")$'))
-
-    # something with schema
-    expressions.append(re.compile(r'^("(?:[^"\\]|\\.)*")\^\^<http://www\.w3\.org/2001/XMLSchema#\w+>$'))
-
-    # string with idiom
-    expressions.append(re.compile(r'^"((?:[^"\\]|\\.)*)"@(.+)$'))
-
-    # point
-    expressions.append(re.compile(r'^"((?:[^"\\]|\\.)*)"\^\^<http://www\.opengis\.net/ont/geosparql#wktLiteral>$'))
-
-    # anon
-    expressions.append(re.compile(r'^_:\w+$'))
-
-    # math
-    expressions.append(re.compile(r'^"((?:[^"\\]|\\.)*)"\^\^<http://www\.w3\.org/1998/Math/MathML>$'))
-
-    for expression in expressions:
-        match_iri = expression.match(iri)
-        if match_iri is not None:
-            return match_iri.groups()[0]
-
-
-    # other url
-    other_expression = re.compile(r"^<(.+)>$")
-    match_iri = other_expression.match(iri)
-    if match_iri is not None:
-        return f'"{match_iri.groups()[0]}"'
-    else:
-        raise Exception(f'unhandled iri: {iri}')
-
-
 def start_server():
     global server_process
     os.chdir(ENGINES_PATHS[ENGINE])
